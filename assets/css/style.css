@@ -10,9 +10,17 @@ body {
     font-family: Montserrat;
 }
 
-h1 {font-size: 5em;}
-h2 {font-size: 3.5em;}
-h3 {font-size: 2.5em;}
+h1 {
+    font-size: 5em;
+    font-weight: 700;
+}
+h2 {
+    font-size: 3em;
+    letter-spacing: -2px
+}
+h3 {
+    font-size: 2em;
+}
 
 span.meow {
     color: rgb(85, 85, 85);
@@ -39,12 +47,12 @@ span.meow {
     background: url('../img/background.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-color: rgb(120, 120, 120);
+    background-color: rgb(120, 120, 120);   
 }
 
 section {
     width: 100%;
-    padding-top: 60px;
+    padding-top: 30px;
     padding-bottom: 0px;
     position: relative;
 }
@@ -55,17 +63,17 @@ section.footer {
 }
 
 section.divide {
-    padding-bottom: 60px;
+    padding-bottom: 30px;
 }
 
 section.divide::after {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     content: '';
     pointer-events: none;
     position: absolute;
     left: 50%;
-    bottom: -50px;
+    bottom: -25px;
     content: '';
     z-index: 10;
     background: inherit;
