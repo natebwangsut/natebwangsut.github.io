@@ -18,6 +18,10 @@ span.meow {
     color: rgb(85, 85, 85);
 }
 
+.navbar.bg-nate {
+    background-color: rgba(40, 40, 40, 0.4);
+}
+
 .container-fluid.landing {
     padding: 0;
 }
@@ -73,5 +77,5 @@ section.orange {
 }
 
 section.grey {
-    background-color: rgb(104, 104, 104);
+    background-color: rgb(120, 120, 120);
 }

@@ -3,6 +3,6 @@ $(".navbar a[href^='#']").on('click', function(e) {
     e.preventDefault();
     // animate
     $('html, body').animate({
-        scrollTop: this.offsetTop
+        scrollTop: this.offsetTop - 20
     });
 });
