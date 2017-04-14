@@ -1,8 +1,69 @@
 html {
     padding: 0;
     margin: 0;
+    /*background-color: rgb(104, 104, 104);*/
 }
 body {
     padding: 0;
     margin: 0;
+}
+
+h1 {font-size: 5em;}
+h2 {font-size: 3.5em;}
+h3 {font-size: 2.5em;}
+
+.container-fluid.landing {
+    padding: 0;     
+}
+
+.landing_box {
+    width: 100%;
+    padding: 0;
+}
+
+.landing {
+    height: 0;
+    padding-bottom: 100%;
+    background: url('../img/background.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+section {
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 0px;
+    position: relative;
+}
+
+section.top {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+section.divide {
+    padding-bottom: 60px;
+}
+
+section.divide::after {
+    width: 100px;
+    height: 100px;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    content: '';
+    z-index: 10;
+    background: inherit;
+    -webkit-transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+section.orange {
+    background-color: rgb(233, 168, 86); 
+}
+
+section.grey {
+    background-color: rgb(104, 104, 104);
 }
