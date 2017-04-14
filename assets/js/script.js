@@ -10,7 +10,7 @@ $(".navbar a[href^='#']").on('click', function(e) {
 });
 
 function loadBG() {
-    document.getElementsByClassName('landing_bg')[0].style.background="url('../img/background.png')"
+    document.getElementsByClassName('landing_bg')[0].style.background="url('../assets/img/background.png')"
 }
 
 window.onload=loadBG();
