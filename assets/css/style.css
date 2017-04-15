@@ -1,5 +1,5 @@
 /******************************************************************************
- * Imports and Page setup
+ * Imports and Page Setup
  *****************************************************************************/
 
 @import url('https://fonts.googleapis.com/css?family=Lora|Montserrat');
@@ -8,6 +8,7 @@ html {
     padding: 0;
     margin: 0;
 }
+
 body {
     padding: 0;
     margin: 0;
@@ -21,11 +22,14 @@ body {
 h1 {
     font-size: 5em;
     font-weight: 700;
+    letter-spacing: -2px
 }
+
 h2 {
     font-size: 3em;
     letter-spacing: -2px
 }
+
 h3 {
     font-size: 2em;
 }
@@ -43,6 +47,7 @@ span.meow {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
 }
+
 .navbar-bg-nate {
     background-color: rgba(100, 100, 100, 0.8);
     border-top: 1px rgb(50, 50, 50) solid;
@@ -139,5 +144,23 @@ section.sharp {
 
 section.footer {
     font-size: 0.75em;
+    color: rgb(150, 150, 150);
     background-color: rgb(200, 200, 200);
+}
+
+/******************************************************************************
+ * Footer [License and Copyright]
+ *****************************************************************************/
+
+
+.license {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    color: rgb(150, 150, 150);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 30px;
 }
