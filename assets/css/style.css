@@ -27,8 +27,18 @@ span.meow {
 }
 
 .navbar.bg-nate {
-    background-color: rgba(40, 40, 40, 0.4);
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    background-color: rgba(100, 100, 100, 0.9);
+    /*animation: color 0s linear infinite;*/
 }
+
+.navbar.bg-nate:hover {
+    background-color: rgba(75, 75, 75, 0.9);
+}
+
+/**/
 
 .container-fluid.landing {
     padding: 0;
@@ -47,7 +57,7 @@ span.meow {
     background: url('../img/background.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-color: rgb(120, 120, 120);   
+    background-color: rgb(120, 120, 120);
 }
 
 section {
@@ -81,10 +91,18 @@ section.divide::after {
     transform: translateX(-50%) rotate(45deg);
 }
 
-section.orange {
-    background-color: rgb(233, 168, 86); 
+section.clean {
+    background-color: rgb(120, 120, 120);
 }
 
-section.grey {
-    background-color: rgb(120, 120, 120);
+section.bright {
+    background-color: rgb(233, 168, 86);
+}
+
+section.fresh {
+    background-color: rgb(130, 230, 190);
+}
+
+section.sharp {
+    background-color: rgb(255, 120, 120);
 }
