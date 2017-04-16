@@ -49,12 +49,12 @@ span.meow {
 }
 
 .navbar-bg-nate {
-    background-color: rgba(100, 100, 100, 0.8);
+    background-color: rgba(200, 200, 200, 0.8);
     border-top: 1px rgb(50, 50, 50) solid;
     border-bottom: 1px rgb(50, 50, 50) solid;
 }
 .navbar-bg-nate:hover {
-    background-color: rgba(80, 80, 80, 0.9);
+    background-color: rgba(220, 220, 220, 0.9);
 }
 
 .navbar .navbar-brand {
