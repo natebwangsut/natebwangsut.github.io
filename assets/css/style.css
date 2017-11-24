@@ -22,6 +22,7 @@ html {
 body {
     padding: 0;
     margin: 0;
+    background-color: rgb(120, 120, 120);
 }
 
 /******************************************************************************
@@ -67,7 +68,7 @@ span.title {
 }
 
 /******************************************************************************
- * Navigation
+ * Navigation [Top Bar]
  *****************************************************************************/
 
 .navbar {
@@ -77,12 +78,13 @@ span.title {
 }
 
 .navbar-bg-nate {
-    background-color: rgba(200, 200, 200, 0.8);
+    background-color: rgba(0, 0, 0, 0.2);
     border-top: 1px rgb(50, 50, 50) solid;
     border-bottom: 1px rgb(50, 50, 50) solid;
 }
 .navbar-bg-nate:hover {
-    background-color: rgba(220, 220, 220, 0.9);
+    /* background-color: rgba(220, 220, 220, 0.9); */
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .navbar .navbar-brand {
@@ -154,6 +156,10 @@ section:last-child {
     padding-bottom: 5px;
 }
 
+/******************************************************************************
+ * Section Themes
+ *****************************************************************************/
+
 section.clean {
     background-color: rgb(120, 120, 120);
 }
@@ -176,8 +182,12 @@ section.sharp {
 
 section.footer {
     font-size: 0.75em;
-    color: rgb(150, 150, 150);
-    background-color: rgb(200, 200, 200);
+    color: rgb(80, 80, 80);
+    background-color: rgb(120, 120, 120);
+}
+
+section.footer a {
+    color: rgb(40, 40, 40);
 }
 
 /******************************************************************************
@@ -190,7 +200,6 @@ section.footer {
 }
 
 .copyright {
-    color: rgb(150, 150, 150);
     margin-top: 20px;
     margin-bottom: 10px;
     line-height: 30px;
