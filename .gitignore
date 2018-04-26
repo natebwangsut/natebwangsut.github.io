@@ -1,5 +1,6 @@
 # Gitignore for natebwangsut.github.io
 
+/dev/.sass-cache*
 node-modules/
 
 ###############################################################################
