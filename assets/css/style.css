@@ -77,6 +77,11 @@ span.title {
     -moz-transition: all 0.2s ease-in-out;
 }
 
+.navbar-brand {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
 .navbar-bg-nate {
     background-color: rgba(0, 0, 0, 0.2);
     border-top: 1px rgb(50, 50, 50) solid;
