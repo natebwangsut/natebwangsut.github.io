@@ -1,8 +1,9 @@
 module.exports = {
-  title: '@natebwangsut',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Personal Blog',
+  tagline: 'Bhurinat Wangsutthitham (Nate) personal blog.',
+  url: 'https://natebwangsut.github.io',
   baseUrl: '/',
+  // headerIcon: '',
   favicon: 'img/favicon.ico',
   organizationName: 'natebwangsut', // Usually your GitHub org/user name.
   projectName: 'natebwangsut.github.io', // Usually your repo name.
@@ -14,9 +15,6 @@ module.exports = {
         src: 'img/logo.svg',
       },
       links: [
-        // Disable DOCS
-        // {to: 'docs/doc1', label: 'Docs', position: 'left'},
-        {to: 'blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/natebwangsut/natebwangsut.github.io',
           label: 'GitHub',
@@ -27,22 +25,6 @@ module.exports = {
     footer: {
       style: 'dark',
       links: [
-        // Something to replace docs
-        // {
-        //   title: 'Something Here',
-        //   items: [
-        //     {
-        //       //
-        //       label: 'Style Guide',
-        //       to: 'blog/',
-        //     },
-        //     {
-        //       //
-        //       label: 'Second Doc',
-        //       to: 'docs/doc2',
-        //     },
-        //   ],
-        // },
         // {
         //   title: 'Community',
         //   items: [
@@ -60,10 +42,6 @@ module.exports = {
           title: 'Social',
           items: [
             {
-              label: 'Blog',
-              to: 'blog',
-            },
-            {
               label: 'GitHub',
               href: 'https://github.com/natebwangsut',
             },
@@ -76,15 +54,27 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Nate Bhurinat Wangsutthihtam. Built with Docusaurus.`,
     },
+    algolia: {
+      apiKey: 'api-key',
+      indexName: 'index-name',
+      algoliaOptions: {}, // Optional, if provided by Algolia
+    },
   },
   presets: [
     [
       '@docusaurus/preset-classic',
       {
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+        // docs: {
+        //   // Sidebars filepath relative to the site dir.
+        //   sidebarPath: require.resolve('./sidebars.js'),
+        // },
+        blog: {
+          path: './blog',
+          routeBasePath: '/',
+          feedOptions: {
+            type: 'all',
+            copyright: `Copyright © ${new Date().getFullYear()} Nate Bhurinat Wangsutthihtam.`,
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
