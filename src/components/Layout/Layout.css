@@ -620,3 +620,24 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+/* Custom CSS */
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Space+Mono&display=swap");
+
+html,
+body {
+  /* background-color: var(--gunmetal); */
+  background-color: #000;
+  /* font-family: 'Calibre', sans-serif; */
+  /* color: var(--blue-munsell); */
+  font-family: "Airbnb Cereal App Medium", sans-serif;
+  /* font-family: "Questrial", sans-serif; */
+  /* font-family: 'SF Mono'; */
+  /* font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace; */
+  /* font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif; */
+}
+
+code {
+  /* color: --gunmetal; */
+  /* font-family: 'Space Mono', monospace; */
+}

@@ -8,10 +8,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "../Header/Header"
+import Header from "../header/Header"
 
 // Styling
+import "./Cereal.css"
 import "./Layout.css"
+import "./Layout-palette.css"
 
 // Component
 const Layout: React.FC = ({ children }) => {

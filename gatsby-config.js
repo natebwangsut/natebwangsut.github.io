@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Nate Bhurinat Wangsutthitham Site`,
+    title: `Nate Bhurinat Wangsutthitham`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `@natebwangsut`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -20,11 +20,34 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `contents`,
-        path: `${__dirname}/src/contents`,
+        name: `me`,
+        path: `${__dirname}/contents/me`,
+      },
+    },
+    // Markdown
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `github`,
+        path: `${__dirname}/contents/github`,
+      },
+    },
+    // Markdown
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/contents/projects`,
       },
     },
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+        displayName: false
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

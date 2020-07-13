@@ -1,10 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/Layout/Layout"
-import Image from "../components/Image/Image"
-import SEO from "../components/SEO/SEO"
-import Section from "../components/Section/Section"
+import Layout from "../components/layout/Layout"
+import Image from "../components/image/Image"
+import SEO from "../components/seo/SEO"
+import Section from "../components/section/Section"
 
 const IndexPage: React.FC = () => (
   <Layout>
