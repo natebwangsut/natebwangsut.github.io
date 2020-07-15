@@ -6,8 +6,10 @@ const StyledWrapper = styled.div`
   top: 0;
   bottom: 0;
   right: 0;
+
+  z-index: 10;
   width: 100%;
-  height: 100vh;
+  height: 0;
 `
 
 const StyledList = styled.ul`
@@ -18,12 +20,13 @@ const StyledList = styled.ul`
 `
 
 const StyledListItem = styled.li`
+
   float: left;
   color: var(--platinum);
   padding: 1.25rem;
-  textdecoration: none;
   font-size 13.5px;
   cursor: pointer;
+  textdecoration: none;
 
   // Transitions
   // transition: all 0.25s ease-in-out;
@@ -47,7 +50,6 @@ const StyledListItem = styled.li`
     color: var(--orange-web);
     border-bottom: 1px solid currentColor;
   }
-
 `
 
 const Menu = () => {
