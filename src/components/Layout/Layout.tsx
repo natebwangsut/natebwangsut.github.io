@@ -10,12 +10,24 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../header/Header"
 
+////////////////////////////////////////////////////////////////////////////////
 // Styling
-import "./Cereal.css"
-import "./Layout.css"
-import "./Layout-palette.css"
+////////////////////////////////////////////////////////////////////////////////
 
+// Normalised browsers
+import "normalize.css"
+
+// Import dependencies
+import "./fonts.css"
+import "./palette.css"
+
+// Actual layout styling
+import "./Layout.css"
+
+////////////////////////////////////////////////////////////////////////////////
 // Component
+////////////////////////////////////////////////////////////////////////////////
+
 const Layout: React.FC = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -34,12 +46,11 @@ const Layout: React.FC = ({ children }) => {
         style={{
           margin: `0 auto`,
           maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
         }}
       >
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Designed and Developed by @natebwangsut
+          © {new Date().getFullYear()}, designed and developed by <u>@natebwangsut</u>
         </footer>
       </div>
     </>

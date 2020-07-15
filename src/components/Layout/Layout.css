@@ -592,8 +592,9 @@ tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  /* font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace; */
+  font-family: "SF Mono Regular", monospace;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -621,23 +622,42 @@ pre tt:after {
   }
 }
 
-/* Custom CSS */
-@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Space+Mono&display=swap");
+/* ************************************************************************** *
+ * Personalised Styles
+ * ************************************************************************** */
 
 html,
 body {
-  /* background-color: var(--gunmetal); */
   background-color: #000;
-  /* font-family: 'Calibre', sans-serif; */
-  /* color: var(--blue-munsell); */
-  font-family: "Airbnb Cereal App Medium", sans-serif;
-  /* font-family: "Questrial", sans-serif; */
-  /* font-family: 'SF Mono'; */
-  /* font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace; */
-  /* font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif; */
+  font-family: "Cereal App Book", -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  color: #ddd;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cereal App Light", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+hr {
+  background-color: white;
+}
+
+pre {
+  background-color: hsla(0, 0%, 15%, 0.25);
+}
+
+pre code {
+  color: var(--blue-munsell);
+  /* background-color: transparent; */
 }
 
 code {
-  /* color: --gunmetal; */
-  /* font-family: 'Space Mono', monospace; */
+  color: var(--blue-munsell);
+  font-family: "SF Mono Regular"
 }
