@@ -2,11 +2,11 @@ import React from "react"
 import { graphql, PageProps, Link } from "gatsby"
 
 import Layout from "../components/layout/Layout"
-import Image from "../components/image/Image"
+// import Image from "../components/image/Image"
 import SEO from "../components/seo/SEO"
-import Section from "../components/section/Section"
+// import Section from "../components/section/Section"
 import Me from "../components/section/me/Me"
-import About from "../components/section/about/About"
+// import About from "../components/section/about/About"
 
 export const pageQuery = graphql`
   {
@@ -64,7 +64,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ location, data }) => {
       <p style={{ color: "white" }}>Welcome to your new Gatsby site.</p>
       <p style={{ color: "white" }}>Now go build something great.</p> */}
       <Me {...data.me.edges[0].node} />
-      <About></About>
+      {/* <About></About> */}
       {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div> */}

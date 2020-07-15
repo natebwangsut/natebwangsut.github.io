@@ -1,0 +1,17 @@
+/* CSS */
+:root {
+  --black: hsla(0, 0%, 0%, 1);
+  --oxford-blue: hsla(221, 67%, 24%, 1);
+  --orange-web: hsla(16, 93%, 60%, 1);
+  /* --orange: hsla(16, 88%, 54%, 1); */
+  --platinum: hsla(0, 0%, 90%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --gunmetal: hsla(220, 26%, 23%, 1);
+  --terra-cotta: hsla(7, 62%, 93%, 1);
+  --blue-munsell: hsla(190, 86%, 65%, 1);
+  --magic-mint: hsla(161, 40%, 91%, 1);
+  --cotton-candy: hsla(320, 23%, 100%, 1);
+  --pale-purple-pantone: hsla(267, 58%, 61%, 1);
+  --misty-rose: hsla(6, 9%, 95%, 1);
+  --deep-champagne: hsla(31, 36%, 99%, 1);
+}
