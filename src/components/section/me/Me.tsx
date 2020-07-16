@@ -33,7 +33,9 @@ const StyledTitle = styled.div`
 `
 
 const StyledAnimation = styled.div`
+
   height: 100%;
+  user-select: none;
   margin-bottom: 2rem;
 
   > div {
@@ -48,7 +50,7 @@ const StyledAnimation = styled.div`
     text-align: left;
 
     text-transform: uppercase;
-    font-family: "Cereal App Bold"
+    font-family: "Cereal App Bold";
   }
 `
 
