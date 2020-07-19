@@ -2,11 +2,8 @@ import React from "react"
 import { graphql, PageProps, Link } from "gatsby"
 
 import Layout from "../components/layout/Layout"
-// import Image from "../components/image/Image"
 import SEO from "../components/seo/SEO"
-// import Section from "../components/section/Section"
 import Me from "../components/section/me/Me"
-// import About from "../components/section/about/About"
 
 export const pageQuery = graphql`
   {
@@ -52,7 +49,6 @@ interface IndexPageProps extends PageProps {
 }
 
 const IndexPage: React.FC<IndexPageProps> = ({ location, data }) => {
-
   // Debug
   // console.log(data)
   // console.log(location)
