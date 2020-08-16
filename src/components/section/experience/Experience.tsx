@@ -3,13 +3,15 @@ import styled from "styled-components"
 // import { media } from "@styles"
 
 interface ExperienceProps {
-  frontmatter: {
-    preTitle: any
-    title: any
-    caption: any
-    subCaption: any
+  node: {
+    frontmatter: {
+      preTitle: any
+      title: any
+      caption: any
+      subCaption: any
+    }
+    html: any
   }
-  html: any
 }
 
 const StyledContainer = styled.section`
@@ -66,7 +68,7 @@ const StyledTabContent = styled.div`
   }
 `
 
-const Experience: React.FC<ExperienceProps[]> = node => {
+const Experience: React.FC<ExperienceProps[]> = edges => {
   return (
     <StyledContainer id="experience">
       Experience
