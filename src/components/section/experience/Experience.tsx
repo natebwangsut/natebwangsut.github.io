@@ -72,18 +72,18 @@ const Experience: React.FC<ExperienceProps[]> = node => {
       Experience
       <StyledTab>
         {/* Map data array into button */}
-        <StyledTabButtonGroup>
+        {/* <StyledTabButtonGroup>
           <StyledTabButton
           // isActive={activeTabId === i}
           >
             A
           </StyledTabButton>
           <StyledTabButton>B</StyledTabButton>
-        </StyledTabButtonGroup>
+        </StyledTabButtonGroup> */}
 
         {/* Map data array into content */}
-        <StyledTabContent>AAAAA</StyledTabContent>
-        <StyledTabContent style={{ display: "none" }}>BBBBB</StyledTabContent>
+        {/* <StyledTabContent>AAAAA</StyledTabContent>
+        <StyledTabContent style={{ display: "none" }}>BBBBB</StyledTabContent> */}
       </StyledTab>
     </StyledContainer>
   )
