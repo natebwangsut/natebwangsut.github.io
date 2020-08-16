@@ -12,14 +12,14 @@ const StyledWrapper = styled.div`
   height: 0;
 `
 
-const StyledList = styled.ul`
+const StyledList = styled.div`
   overflow: hidden;
   list-style-type: none;
   float: right;
   margin-right: 10rem;
 `
 
-const StyledListItem = styled.li`
+const StyledListItem = styled.div`
 
   float: left;
   color: var(--platinum);

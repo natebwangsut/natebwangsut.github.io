@@ -4,6 +4,8 @@ import { graphql, PageProps, Link } from "gatsby"
 import Layout from "../components/layout/Layout"
 import SEO from "../components/seo/SEO"
 import Me from "../components/section/me/Me"
+import About from "../components/section/about/About"
+import Experience from "../components/section/experience/Experience"
 
 export const pageQuery = graphql`
   {
@@ -19,6 +21,36 @@ export const pageQuery = graphql`
               item
               color
             }
+          }
+          html
+        }
+      }
+    }
+    about: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/about/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            preTitle
+            title
+            caption
+            subCaption
+          }
+          html
+        }
+      }
+    }
+    experience: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/experience/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            preTitle
+            title
+            caption
+            subCaption
           }
           html
         }
@@ -45,13 +77,43 @@ interface IndexPageProps extends PageProps {
         }
       ]
     }
+    about: {
+      edges: [
+        {
+          node: {
+            frontmatter: {
+              preTitle: any
+              title: any
+              caption: any
+              subCaption: any
+            }
+            html: any
+          }
+        }
+      ]
+    }
+    experience: {
+      edges: [
+        {
+          node: {
+            frontmatter: {
+              preTitle: any
+              title: any
+              caption: any
+              subCaption: any
+            }
+            html: any
+          }
+        }
+      ]
+    }
   }
 }
 
 const IndexPage: React.FC<IndexPageProps> = ({ location, data }) => {
   // Debug
-  // console.log(data)
-  // console.log(location)
+  console.log(data)
+  console.log(location)
 
   return (
     <Layout>
@@ -60,7 +122,8 @@ const IndexPage: React.FC<IndexPageProps> = ({ location, data }) => {
       <p style={{ color: "white" }}>Welcome to your new Gatsby site.</p>
       <p style={{ color: "white" }}>Now go build something great.</p> */}
       <Me {...data.me.edges[0].node} />
-      {/* <About></About> */}
+      <About {...data.about.edges[0].node} />
+      <Experience {...data.experience.edges } />
       {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div> */}

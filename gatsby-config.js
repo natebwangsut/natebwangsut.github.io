@@ -20,26 +20,10 @@ module.exports = {
     `gatsby-plugin-sharp`,
     // Markdown
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `me`,
-        path: `${__dirname}/contents/me`,
-      },
-    },
-    // Markdown
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `github`,
-        path: `${__dirname}/contents/github`,
-      },
-    },
-    // Markdown
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `projects`,
-        path: `${__dirname}/contents/projects`,
+        name: 'content',
+        path: `${__dirname}/contents/`,
       },
     },
     // `gatsby-transformer-remark`,

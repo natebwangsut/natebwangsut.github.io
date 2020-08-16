@@ -18,8 +18,8 @@ interface MeProps {
 const StyledContainer = styled.section`
   position: relative;
 
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+  padding-top: 20rem;
+  padding-bottom: 20rem;
 `
 
 const StyledHeading = styled.div`
@@ -29,11 +29,10 @@ const StyledHeading = styled.div`
 const StyledTitle = styled.div`
   font-size: 1.1rem;
   margin-bottom: 2rem;
-  color: var(--orange-web)
+  color: var(--orange-web);
 `
 
 const StyledAnimation = styled.div`
-
   height: 100%;
   user-select: none;
   margin-bottom: 2rem;
