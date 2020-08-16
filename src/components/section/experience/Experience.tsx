@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-// import { media } from "@styles"
 
 interface ExperienceProps {
   node: {
@@ -81,7 +80,7 @@ const Experience: React.FC<ExperienceProps[]> = edges => {
             A
           </StyledTabButton>
           <StyledTabButton>B</StyledTabButton>
-        </StyledTabButtonGroup> */}
+        </StyledTabButtonGroup> * /}
 
         {/* Map data array into content */}
         {/* <StyledTabContent>AAAAA</StyledTabContent>
