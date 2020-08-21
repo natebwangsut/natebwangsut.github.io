@@ -1,2 +1,6 @@
 ---
+preTitle: ""
+title: ""
+caption: ""
+subCaption: ""
 ---

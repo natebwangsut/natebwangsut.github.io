@@ -22,11 +22,11 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'content',
+        name: 'contents',
         path: `${__dirname}/contents/`,
       },
     },
-    // `gatsby-transformer-remark`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {

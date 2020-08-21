@@ -10,7 +10,12 @@ interface MeProps {
     title: any
     caption: any
     subCaption: any
-    iam: [{ item: string; color: string }]
+    iam: [
+      {
+        item: string
+        color: string
+      }
+    ]
   }
   html: any
 }
@@ -61,7 +66,7 @@ const Me: React.FC<MeProps> = ({ frontmatter, html }) => {
   const [index, setIndex] = useState(0)
   const onClick = useCallback(
     () => setIndex(state => (state + 1) % frontmatter.iam.length),
-    []
+    [frontmatter.iam.length]
   )
 
   const transitions = useTransition(index, p => p, {

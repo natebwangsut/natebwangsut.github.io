@@ -9,7 +9,7 @@ import Experience from "../components/section/experience/Experience"
 
 export const pageQuery = graphql`
   {
-    me: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/me/" } }) {
+    me: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/contents\/me/" } }) {
       edges {
         node {
           frontmatter {
@@ -27,7 +27,7 @@ export const pageQuery = graphql`
       }
     }
     about: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/about/" } }
+      filter: { fileAbsolutePath: { regex: "/contents\/about/" } }
     ) {
       edges {
         node {
@@ -42,7 +42,7 @@ export const pageQuery = graphql`
       }
     }
     experience: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/experience/" } }
+      filter: { fileAbsolutePath: { regex: "/contents\/experience/" } }
     ) {
       edges {
         node {
@@ -112,8 +112,8 @@ interface IndexPageProps extends PageProps {
 
 const IndexPage: React.FC<IndexPageProps> = ({ location, data }) => {
   // Debug
-  console.log(data)
-  console.log(location)
+  // console.log(data)
+  // console.log(location)
 
   return (
     <Layout>
@@ -123,7 +123,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ location, data }) => {
       <p style={{ color: "white" }}>Now go build something great.</p> */}
       <Me {...data.me.edges[0].node} />
       <About {...data.about.edges[0].node} />
-      <Experience { ...data.experience.edges } />
+      {/* <Experience {...data.experience.edges} /> */}
       {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div> */}
