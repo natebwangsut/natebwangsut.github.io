@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 
 interface AboutProps {
   frontmatter: {
@@ -10,8 +11,16 @@ interface AboutProps {
   html: any
 }
 
+const StyledContent = styled.div`
+`
+
 const About: React.FC<AboutProps> = ({ frontmatter, html }) => {
-  return(<>About</>)
+  return (
+    <div style={{fontSize: "1em"}}>
+        {frontmatter.preTitle} <b style={{ color: "var(--orange-web)" }}>ME</b>
+        <StyledContent dangerouslySetInnerHTML={{ __html: html }} />
+    </div>
+  )
 }
 
 export default About

@@ -54,6 +54,7 @@ const StyledAnimation = styled.div`
     text-align: left;
 
     text-transform: uppercase;
+    font-weight: 700;
     font-family: "Cereal App Bold";
   }
 `

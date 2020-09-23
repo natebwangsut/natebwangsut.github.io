@@ -70,7 +70,7 @@ const StyledTabContent = styled.div`
 const Experience: React.FC<ExperienceProps[]> = edges => {
   return (
     <StyledContainer id="experience">
-      Experience
+      Experience [TO BE ADDED]
       <StyledTab>
         {/* Map data array into button */}
         {/* <StyledTabButtonGroup>
