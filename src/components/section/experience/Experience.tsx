@@ -1,16 +1,22 @@
-import React from "react"
+import React, { PropsWithChildren, Props } from "react"
 import styled from "styled-components"
+import Tabs from "../../tabs/Tabs"
+import TabPane from "../../tabpane/TabPane"
 
 interface ExperienceProps {
-  node: {
-    frontmatter: {
-      preTitle: any
-      title: any
-      caption: any
-      subCaption: any
+  edges: [
+    {
+      node: {
+        frontmatter: {
+          title: any
+          role: any
+          company: any
+          timeframe: any
+        }
+        html: any
+      }
     }
-    html: any
-  }
+  ]
 }
 
 const StyledContainer = styled.section`
@@ -18,6 +24,12 @@ const StyledContainer = styled.section`
 
   padding-top: 20rem;
   padding-bottom: 20rem;
+`
+
+const StyledTitle = styled.div`
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--orange-web);
 `
 
 const StyledTab = styled.div`
@@ -67,10 +79,13 @@ const StyledTabContent = styled.div`
   }
 `
 
-const Experience: React.FC<ExperienceProps[]> = edges => {
+const Experience: React.FC<ExperienceProps> = ({ edges }) => {
+
   return (
     <StyledContainer id="experience">
-      Experience [TO BE ADDED]
+      <code>
+        <StyledTitle>Experience</StyledTitle>
+      </code>
       <StyledTab>
         {/* Map data array into button */}
         {/* <StyledTabButtonGroup>
@@ -85,6 +100,20 @@ const Experience: React.FC<ExperienceProps[]> = edges => {
         {/* Map data array into content */}
         {/* <StyledTabContent>AAAAA</StyledTabContent>
         <StyledTabContent style={{ display: "none" }}>BBBBB</StyledTabContent> */}
+        <Tabs>
+          {edges.map(edge => {
+            return (
+              <TabPane
+                key={edge.node.frontmatter.title}
+                label={edge.node.frontmatter.title}
+                activeTab={true}
+                dangerouslySetInnerHTML={edge.node.html}
+              >
+                RANDOM
+              </TabPane>
+            )
+          })}
+        </Tabs>
       </StyledTab>
     </StyledContainer>
   )

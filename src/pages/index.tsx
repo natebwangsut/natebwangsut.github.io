@@ -47,10 +47,10 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            preTitle
             title
-            caption
-            subCaption
+            role
+            company
+            timeframe
           }
           html
         }
@@ -97,10 +97,10 @@ interface IndexPageProps extends PageProps {
         {
           node: {
             frontmatter: {
-              preTitle: any
               title: any
-              caption: any
-              subCaption: any
+              role: any
+              company: any
+              timeframe: any
             }
             html: any
           }
@@ -111,6 +111,9 @@ interface IndexPageProps extends PageProps {
 }
 
 const IndexPage: React.FC<IndexPageProps> = ({ location, data }) => {
+
+  console.log(data.experience.edges)
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -119,7 +122,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ location, data }) => {
       <p style={{ color: "white" }}>Now go build something great.</p> */}
       <Me {...data.me.edges[0].node} />
       <About {...data.about.edges[0].node} />
-      <Experience {...data.experience.edges} />
+      <Experience {...data.experience} />
       {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div> */}

@@ -4,12 +4,12 @@ title: "Nate Bhurinat Wangsutthitham"
 caption: ""
 subCaption: ""
 iam:
-  # I should hide this for now
-  # - { item: Lee Sung-Kyung Fanboy, color: "#d598a0" }
-  - { item: Jayce Main,                     color: "#0099ff" }
-  - { item: Redstone Designer,              color: "#ff98ff" }
-  - { item: Empty-stack Software Engineer,  color: "#fdd023" }
-  - { item: Henlo-fiesta Member,            color: "#98ff98" }
+  - { item: Jayce Main, color: "#0099ff" }
+  - { item: Redstone Architect, color: "#ff98ff" }
+  - { item: House Designer, color: "#66a4ae" }
+  - { item: Empty-stack Software Engineer, color: "#fdd023" }
+  # - { item: Henlo-fiesta Member, color: "#98ff98" }
+  - { item: Avid Photographer, color: "#d598a0" }
 ---
 
 <!-- I'm from Bangkok, Thailand -->
