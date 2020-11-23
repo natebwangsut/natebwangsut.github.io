@@ -1,11 +1,11 @@
 const config = {
-  siteTitle: "Nate Bhurinat Wangsutthitham's Blackhole", // Site title.
-  siteTitleShort: "natebwangsut", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: "@natebwangsut's Blackhole", // Alternative site title for SEO.
+  siteTitle: "@natebwangsut: Blackhole of thoughts", // Site title.
+  siteTitleShort: "Nate's PBT", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
+  siteTitleAlt: "@natebwangsut: Blackhole of thoughts", // Alternative site title for SEO.
   // siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "https://natebwangsut.github.io", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: "Personal blackhole for @natebwangsut - keeping track of what he's doing.", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "@natebwangsut: Blackhole of thoughts - Space for entropy of ideas.", // Website description used for RSS feeds/meta description tag.
   author: "@natebwangsut", // author for site metadata
   // siteRss: "/rss.xml", // Path to the RSS file.
   // siteRssTitle: "Gatsby Advanced Starter RSS feed", // Title of the RSS feed
@@ -43,24 +43,22 @@ const config = {
   // copyright: "Copyright © 2020. Advanced User", // Copyright string for the footer of the website and RSS feed.
   // themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   // backgroundColor: "#e0e0e0" // Used for setting manifest background color.
-}
+};
 
 // Validate
 
 // Make sure pathPrefix is empty if not needed
-if (config.pathPrefix === "/") {
-  config.pathPrefix = "";
-} else {
+if (config.pathPrefix !== "/") {
   // Make sure pathPrefix only contains the first forward slash
   config.pathPrefix = `/${config.pathPrefix.replace(/^\/|\/$/g, "")}`;
 }
 
 // Make sure siteUrl doesn't have an ending forward slash
-if (config.siteUrl.substr(-1) === "/")
-  config.siteUrl = config.siteUrl.slice(0, -1);
+if (config.siteUrl.substr(-1) === "/") config.siteUrl = config.siteUrl.slice(0, -1);
 
 // Make sure siteRss has a starting forward slash
 // if (config.siteRss && config.siteRss[0] !== "/")
 //   config.siteRss = `/${config.siteRss}`;
 
-module.exports = config;
+// module.exports = config;
+export default config;
