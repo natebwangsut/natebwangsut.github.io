@@ -60,5 +60,4 @@ if (config.siteUrl.substr(-1) === "/") config.siteUrl = config.siteUrl.slice(0, 
 // if (config.siteRss && config.siteRss[0] !== "/")
 //   config.siteRss = `/${config.siteRss}`;
 
-// module.exports = config;
-export default config;
+module.exports = config;
