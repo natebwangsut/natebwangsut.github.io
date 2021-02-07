@@ -6,17 +6,26 @@ const TabList = styled.ol`
   margin: 0;
 `;
 
+const TabItem = styled.div`
+  padding: 8px;
+  border: 1px solid #000;
+
+  :hover {
+    border: 1px solid var(--orange-web);
+  };
+`;
+
 const Tabs: React.FC<{ children: ReactElement<TabPaneProps>[] }> = ({ children }) => {
   const [activeTab, setActiveTab] = useState(children[0].props.label);
 
   return (
     <div className="tabs">
-      <TabList>
+      <TabList style={{ margin: "8px 0 8px 0" }}>
         {children.map(child => {
           return (
-            <div key={child.key} onClick={() => setActiveTab(child.key)}>
+            <TabItem key={child.key} onClick={() => setActiveTab(child.key)}>
               {child.props.label}
-            </div>
+            </TabItem>
           );
         })}
       </TabList>
