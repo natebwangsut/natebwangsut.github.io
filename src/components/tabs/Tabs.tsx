@@ -3,39 +3,58 @@ import TabPane, { TabPaneProps } from "./pane/TabPane";
 import styled from "styled-components";
 
 const TabList = styled.ol`
-  margin: 0;
+  flex: 1.25;
+  margin: 8px 0 8px 0;
 `;
 
-const TabItem = styled.div`
+const TabListItem = styled.div`
+  transition: 0.25s ease-out;
+  margin: 8px;
   padding: 8px;
-  border: 1px solid #000;
+  border: 1px solid transparent;
 
   :hover {
     border: 1px solid var(--orange-web);
-  };
+  }
+
+  :active {
+    border: 1px solid var(--orange-web);
+  }
+`;
+
+const TabContent = styled.div`
+  flex: 2;
+  margin: 8px;
+  padding: 8px;
+  height: 500px;
 `;
 
 const Tabs: React.FC<{ children: ReactElement<TabPaneProps>[] }> = ({ children }) => {
   const [activeTab, setActiveTab] = useState(children[0].props.label);
 
   return (
-    <div className="tabs">
-      <TabList style={{ margin: "8px 0 8px 0" }}>
+    <>
+      <TabList>
         {children.map(child => {
+          const isActive = child.props.label === activeTab;
           return (
-            <TabItem key={child.key} onClick={() => setActiveTab(child.key)}>
+            <TabListItem
+              key={child.key}
+              onClick={() => setActiveTab(child.key)}
+              style={{ border: isActive ? "1px solid var(--orange-web)" : "" }}
+            >
               {child.props.label}
-            </TabItem>
+            </TabListItem>
           );
         })}
       </TabList>
-      <div className="tab-content">
+      <TabContent>
         {children.map(child => {
           if (child.props.label !== activeTab) return;
           return <TabPane {...child.props} key={child.key} />;
         })}
-      </div>
-    </div>
+      </TabContent>
+    </>
   );
 };
 

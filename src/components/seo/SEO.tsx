@@ -5,24 +5,24 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
 
 ////////////////////////////////////////////////////////////////////////////////
 
 interface SEOPropTypes {
-  title: string
-  lang?: string
-  meta?: any[]
-  description?: string
+  title: string;
+  lang?: string;
+  meta?: any[];
+  description?: string;
 }
 
 const SEODefaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-}
+};
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -44,9 +44,9 @@ const SEO: React.FC<SEOPropTypes> = ({
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
 
   return (
     <Helmet
@@ -90,9 +90,9 @@ const SEO: React.FC<SEOPropTypes> = ({
         },
       ].concat(meta)}
     />
-  )
-}
+  );
+};
 
-SEO.defaultProps = SEODefaultProps
+SEO.defaultProps = SEODefaultProps;
 
-export default SEO
+export default SEO;

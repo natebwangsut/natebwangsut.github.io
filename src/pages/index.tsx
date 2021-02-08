@@ -1,15 +1,15 @@
-import React from "react"
-import { graphql, PageProps, Link } from "gatsby"
+import React from "react";
+import { graphql, PageProps, Link } from "gatsby";
 
-import Layout from "../components/layout/Layout"
-import SEO from "../components/seo/SEO"
-import Me from "../components/section/me/Me"
-import About from "../components/section/about/About"
-import Experience from "../components/section/experience/Experience"
+import Layout from "../components/layout/Layout";
+import SEO from "../components/seo/SEO";
+import Me from "../components/section/me/Me";
+import About from "../components/section/about/About";
+import Experience from "../components/section/experience/Experience";
 
 export const pageQuery = graphql`
   {
-    me: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/contents\/me/" } }) {
+    me: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/contents/me/" } }) {
       edges {
         node {
           frontmatter {
@@ -26,9 +26,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    about: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/contents\/about/" } }
-    ) {
+    about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/contents/about/" } }) {
       edges {
         node {
           frontmatter {
@@ -41,9 +39,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    experience: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/contents\/experience/" } }
-    ) {
+    experience: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/contents/experience/" } }) {
       edges {
         node {
           frontmatter {
@@ -57,7 +53,7 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
 interface IndexPageProps extends PageProps {
   data: {
@@ -66,53 +62,52 @@ interface IndexPageProps extends PageProps {
         {
           node: {
             frontmatter: {
-              preTitle: any
-              title: any
-              caption: any
-              subCaption: any
-              iam: [{ item: string; color: string }]
-            }
-            html: any
-          }
+              preTitle: any;
+              title: any;
+              caption: any;
+              subCaption: any;
+              iam: [{ item: string; color: string }];
+            };
+            html: any;
+          };
         }
-      ]
-    }
+      ];
+    };
     about: {
       edges: [
         {
           node: {
             frontmatter: {
-              preTitle: any
-              title: any
-              caption: any
-              subCaption: any
-            }
-            html: any
-          }
+              preTitle: any;
+              title: any;
+              caption: any;
+              subCaption: any;
+            };
+            html: any;
+          };
         }
-      ]
-    }
+      ];
+    };
     experience: {
       edges: [
         {
           node: {
             frontmatter: {
-              title: any
-              role: any
-              company: any
-              timeframe: any
-            }
-            html: any
-          }
+              title: any;
+              role: any;
+              company: any;
+              timeframe: any;
+            };
+            html: any;
+          };
         }
-      ]
-    }
-  }
+      ];
+    };
+  };
 }
 
 const IndexPage: React.FC<IndexPageProps> = ({ location, data }) => {
-
-  console.log(data.experience.edges)
+  console.log(data.experience.edges);
 
   return (
     <Layout>
@@ -129,7 +124,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ location, data }) => {
       {/* <Link to="/page-2/">Go to page 2</Link> <br /> */}
       {/* <Link to="/using-typescript/">Go to "Using TypeScript"</Link> */}
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

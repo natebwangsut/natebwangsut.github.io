@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import styled, { css } from "styled-components"
+import React, { useState } from "react";
+import styled, { css } from "styled-components";
 
 const StyledWrapper = styled.div`
   position: fixed;
@@ -10,14 +10,14 @@ const StyledWrapper = styled.div`
   z-index: 10;
   width: 100%;
   height: 0;
-`
+`;
 
 const StyledList = styled.div`
   overflow: hidden;
   list-style-type: none;
   float: right;
   margin-right: 10rem;
-`
+`;
 
 const StyledListItem = styled.div`
 
@@ -50,20 +50,20 @@ const StyledListItem = styled.div`
     color: var(--orange-web);
     border-bottom: 1px solid currentColor;
   }
-`
+`;
 
 const Menu = () => {
   // TODO: Adding responsive function like on https://airbnb.design/cereal/
-  const [isOpen, setOpen] = useState(false)
+  const [isOpen, setOpen] = useState(false);
   //
-  const [selected, setSelected] = useState("home")
+  const [selected, setSelected] = useState("home");
 
   const handleOnClick = (e: React.MouseEvent<HTMLUListElement, MouseEvent>) => {
     if (e.target instanceof Element) {
-      console.log(e.target.getAttribute(""))
+      console.log(e.target.getAttribute(""));
     }
-    e.preventDefault()
-  }
+    e.preventDefault();
+  };
 
   return (
     <StyledWrapper>
@@ -74,7 +74,7 @@ const Menu = () => {
         <StyledListItem key="blog">Blog</StyledListItem>
       </StyledList>
     </StyledWrapper>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

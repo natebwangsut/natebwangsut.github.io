@@ -20,9 +20,9 @@ module.exports = {
     `gatsby-plugin-sharp`,
     // Markdown
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'contents',
+        name: "contents",
         path: `${__dirname}/contents/`,
       },
     },
@@ -31,7 +31,7 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         // Add any options here
-        displayName: false
+        displayName: false,
       },
     },
     {
@@ -84,7 +84,7 @@ module.exports = {
               // you may use this to prevent Prism from re-processing syntax.
               // This is an uncommon use-case though;
               // If you're unsure, it's best to use the default value.
-              classPrefix: 'language-',
+              classPrefix: "language-",
               // This is used to allow setting a language for inline code
               // (i.e. single backticks) by creating a separator.
               // This separator is a string and will do no white-space
@@ -114,8 +114,8 @@ module.exports = {
               // existing language" below.
               languageExtensions: [
                 {
-                  language: 'superscript',
-                  extend: 'javascript',
+                  language: "superscript",
+                  extend: "javascript",
                   definition: {
                     superscript_types: /(SuperType)/,
                   },
@@ -129,18 +129,18 @@ module.exports = {
               // Customize the prompt used in shell output
               // Values below are default
               prompt: {
-                user: 'root',
-                host: 'localhost',
+                user: "root",
+                host: "localhost",
                 global: false,
               },
             },
           },
-        ]
-      }
+        ],
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     `gatsby-plugin-typescript`,
   ],
-}
+};

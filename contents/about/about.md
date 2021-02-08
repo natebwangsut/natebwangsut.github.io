@@ -11,7 +11,7 @@ Initally I was just enjoying the game itself, where later on I would try to brea
 Curiosity has introduced me to game trainers / mods / scripts and landed me on to programming in general.
 
 After attending the best university that the Southern Hemisphere can offer - University of Melbourne.  
-I started to work as a integration/architecture consultant on Accenture. I had been trained on multiple client-facing aspects.  
+I started to work as a integration/architecture consultant on Accenture. I had been trained on multiple client-facing aspects.
 
 After two years I decided to leave the company in order to challenge myself.  
 I landed on Agoda where everything is new and interesting for me.  
