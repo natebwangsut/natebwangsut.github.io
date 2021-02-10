@@ -107,8 +107,6 @@ interface IndexPageProps extends PageProps {
 }
 
 const IndexPage: React.FC<IndexPageProps> = ({ location, data }) => {
-  console.log(data.experience.edges);
-
   return (
     <Layout>
       <SEO title="Home" />

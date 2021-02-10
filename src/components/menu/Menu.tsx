@@ -58,10 +58,7 @@ const Menu = () => {
   //
   const [selected, setSelected] = useState("home");
 
-  const handleOnClick = (e: React.MouseEvent<HTMLUListElement, MouseEvent>) => {
-    if (e.target instanceof Element) {
-      console.log(e.target.getAttribute(""));
-    }
+  const handleOnClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
   };
 

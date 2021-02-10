@@ -8,16 +8,12 @@ const TabList = styled.ol`
 `;
 
 const TabListItem = styled.div`
-  transition: 0.25s ease-out;
   margin: 8px;
   padding: 8px;
+  transition: 0.25s ease-out;
   border: 1px solid transparent;
 
   :hover {
-    border: 1px solid var(--orange-web);
-  }
-
-  :active {
     border: 1px solid var(--orange-web);
   }
 `;
@@ -30,6 +26,8 @@ const TabContent = styled.div`
 `;
 
 const Tabs: React.FC<{ children: ReactElement<TabPaneProps>[] }> = ({ children }) => {
+
+  // Let's put the first children
   const [activeTab, setActiveTab] = useState(children[0].props.label);
 
   return (
@@ -41,6 +39,7 @@ const Tabs: React.FC<{ children: ReactElement<TabPaneProps>[] }> = ({ children }
             <TabListItem
               key={child.key}
               onClick={() => setActiveTab(child.key)}
+              // Show the coloured border if the tab is active
               style={{ border: isActive ? "1px solid var(--orange-web)" : "" }}
             >
               {child.props.label}
