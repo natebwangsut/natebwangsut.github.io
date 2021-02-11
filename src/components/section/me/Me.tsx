@@ -1,7 +1,5 @@
-import React, { useRef, useState, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { useTransition, animated } from "react-spring";
-import { PageProps } from "gatsby";
-// import Section from "../Section"
 import styled from "styled-components";
 
 interface MeProps {

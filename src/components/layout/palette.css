@@ -1,7 +1,8 @@
-/* CSS */
+/** CSS: Collections of useful colors */
 :root {
   --black: hsla(0, 0%, 0%, 1);
   --oxford-blue: hsla(221, 67%, 24%, 1);
+  --dark-orange: hsla(30, 100%, 7%, 1);
   --orange-web: hsla(16, 93%, 60%, 1);
   /* --orange: hsla(16, 88%, 54%, 1); */
   --platinum: hsla(0, 0%, 90%, 1);

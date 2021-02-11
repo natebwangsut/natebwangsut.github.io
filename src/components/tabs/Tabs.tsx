@@ -7,14 +7,30 @@ const TabList = styled.ol`
   margin: 8px 0 8px 0;
 `;
 
+interface TabListItemProps {
+  activeTabId: number;
+}
+
+// const TabListItem = styled.div`
+//   padding: 8px;
+//   transform: translateY(calc(${({ activeTabId }) => activeTabId} * var(--tab-height)));
+//   transition: 0.25s ease-out;
+//   border: 1px solid transparent;
+
+//   :hover {
+//     border: 1px solid var(--orange-web);
+//   }
+// `;
+
 const TabListItem = styled.div`
-  margin: 8px;
+  // margin: 8px;
   padding: 8px;
-  transition: 0.25s ease-out;
-  border: 1px solid transparent;
+  transition: 0.2s ease-out;
+  border-left: 1px solid transparent;
 
   :hover {
-    border: 1px solid var(--orange-web);
+    color: var(--orange-web);
+    cursor: pointer;
   }
 `;
 
@@ -26,32 +42,41 @@ const TabContent = styled.div`
 `;
 
 const Tabs: React.FC<{ children: ReactElement<TabPaneProps>[] }> = ({ children }) => {
-
   // Let's put the first children
   const [activeTab, setActiveTab] = useState(children[0].props.label);
 
   return (
     <>
       <TabList>
-        {children.map(child => {
-          const isActive = child.props.label === activeTab;
-          return (
-            <TabListItem
-              key={child.key}
-              onClick={() => setActiveTab(child.key)}
-              // Show the coloured border if the tab is active
-              style={{ border: isActive ? "1px solid var(--orange-web)" : "" }}
-            >
-              {child.props.label}
-            </TabListItem>
-          );
-        })}
+        {children &&
+          children.map(child => {
+            const isActive = child.props.label === activeTab;
+            return (
+              <TabListItem
+                // activeTabId={isActive ? 0 : index}
+                // tabId={index}
+                key={child.key}
+                onClick={() => {
+                  setActiveTab(child.key);
+                }}
+                // Show the coloured border if the tab is active
+                style={{
+                  color: isActive ? "var(--orange-web)" : "",
+                  background: isActive ? "var(--dark-orange)" : "",
+                  borderLeft: isActive ? "3px solid var(--orange-web)" : "",
+                }}
+              >
+                {child.props.label}
+              </TabListItem>
+            );
+          })}
       </TabList>
       <TabContent>
-        {children.map(child => {
-          if (child.props.label !== activeTab) return;
-          return <TabPane {...child.props} key={child.key} />;
-        })}
+        {children &&
+          children.map(child => {
+            if (child.props.label !== activeTab) return;
+            return <TabPane {...child.props} key={child.key} />;
+          })}
       </TabContent>
     </>
   );

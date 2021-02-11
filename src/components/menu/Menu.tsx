@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-const StyledWrapper = styled.div`
+const MenuWrapper = styled.div`
   position: fixed;
   top: 0;
   bottom: 0;
@@ -9,68 +9,74 @@ const StyledWrapper = styled.div`
 
   z-index: 10;
   width: 100%;
-  height: 0;
+  height: 4rem;
+  background-color: var(--black);
 `;
 
-const StyledList = styled.div`
+const MenuList = styled.div`
   overflow: hidden;
   list-style-type: none;
   float: right;
-  margin-right: 10rem;
+  margin-right: 4rem;
 `;
 
-const StyledListItem = styled.div`
-
+const MenuListItem = styled.div`
   float: left;
   color: var(--platinum);
   padding: 1.25rem;
-  font-size 13.5px;
   cursor: pointer;
   textdecoration: none;
+  border-bottom: 3px solid transparent;
 
   // Transitions
-  // transition: all 0.25s ease-in-out;
-  // -o-transition: all 0.25s ease-in-out;
-  // -moz-transition: all 0.25s ease-in-out;
-  // -webkit-transition: all 0.25s ease-in-out;
+  transition: 0.2s ease-out;
 
   // Hover
   &:hover {
     color: var(--orange-web);
-    border-bottom: 1px solid currentColor;
+    border-bottom: 3px solid currentColor;
   }
 
   // Active
   &:active {
     color: var(--orange-web);
-    border-bottom: 1px solid currentColor;
+    border-bottom: 3px solid currentColor;
   }
 
   &.active {
     color: var(--orange-web);
-    border-bottom: 1px solid currentColor;
+    border-bottom: 3px solid currentColor;
   }
 `;
 
+const menuItems = ["me", "experience", "project", "contributions", "blog"];
+
 const Menu = () => {
   // TODO: Adding responsive function like on https://airbnb.design/cereal/
-  const [isOpen, setOpen] = useState(false);
-  //
-  const [selected, setSelected] = useState("home");
-
-  const handleOnClick = (e: React.MouseEvent<HTMLElement>) => {
-    e.preventDefault();
-  };
+  const [selected, setSelected] = useState(menuItems[0]);
 
   return (
-    <StyledWrapper>
-      <StyledList onClick={handleOnClick}>
-        <StyledListItem key="home">Home</StyledListItem>
-        <StyledListItem key="about">About</StyledListItem>
-        <StyledListItem key="project">Projects</StyledListItem>
-        <StyledListItem key="blog">Blog</StyledListItem>
-      </StyledList>
-    </StyledWrapper>
+    <MenuWrapper>
+      <MenuList>
+        {menuItems.map(item => {
+          const isActive = selected === item;
+          return (
+            <MenuListItem
+              key={item}
+              onClick={() => setSelected(item)}
+              // Show the coloured border if the tab is active
+              // style={{
+              //   color: isActive ? "var(--orange-web)" : "",
+              //   background: isActive ? "var(--dark-orange)" : "",
+              //   borderBottom: isActive ? "3px solid var(--orange-web)" : "",
+              // }}
+            >
+              {item}
+            </MenuListItem>
+          );
+        })}
+      </MenuList>
+    </MenuWrapper>
   );
 };
 
