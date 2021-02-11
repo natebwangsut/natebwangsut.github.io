@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { useTransition, animated } from "react-spring";
 import styled from "styled-components";
+import MeTitle from "./MeTitle";
 
 interface MeProps {
   frontmatter: {
@@ -77,10 +78,12 @@ const Me: React.FC<MeProps> = ({ frontmatter, html }) => {
 
   return (
     <StyledContainer id="me">
-      Hi my name is...
-      <code>
-        <StyledTitle>{frontmatter.title}</StyledTitle>
-      </code>
+      {/* <code>
+        <StyledTitle>{frontmatter.title.split(" ")}</StyledTitle>
+      </code> */}
+      <MeTitle>
+        {frontmatter.title.split(" ").map((word: string) => <span>{word}</span>)}
+      </MeTitle>
       <StyledHeading>{frontmatter.preTitle}</StyledHeading>
       <StyledAnimation onClick={onClick}>
         {transitions.map(({ item, props: { ...rest }, key }) => (

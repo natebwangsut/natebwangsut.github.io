@@ -16,3 +16,31 @@
   --misty-rose: hsla(6, 9%, 95%, 1);
   --deep-champagne: hsla(31, 36%, 99%, 1);
 }
+
+/* OrangeWeb Palette */
+:root {
+  --orange-web-1: #fff6f0;
+  --orange-web-2: #ffebde;
+  --orange-web-3: #ffd0b5;
+  --orange-web-4: #ffb38c;
+  --orange-web-5: #ff9263;
+  --orange-web-6: #f86d3a; /* Main color */
+  --orange-web-7: #d14e26;
+  --orange-web-8: #ab3416;
+  --orange-web-9: #851f0b;
+  --orange-web-10: #5e1207;
+}
+
+/* GeekBlue Palette */
+:root {
+  --geek-blue-1: #f0f5ff;
+  --geek-blue-2: #d6e4ff;
+  --geek-blue-3: #adc6ff;
+  --geek-blue-4: #85a5ff;
+  --geek-blue-5: #597ef7;
+  --geek-blue-6: #2f54eb; /* Main color */
+  --geek-blue-7: #1d39c4;
+  --geek-blue-8: #10239e;
+  --geek-blue-9: #061178;
+  --geek-blue-10: #030852;
+}
