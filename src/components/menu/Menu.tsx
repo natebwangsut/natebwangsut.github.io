@@ -26,7 +26,7 @@ const MenuListItem = styled.div`
   padding: 1.25rem;
   cursor: pointer;
   textdecoration: none;
-  border-bottom: 3px solid transparent;
+  border-bottom: 0px solid transparent;
 
   // Transitions
   transition: 0.2s ease-out;
