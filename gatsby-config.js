@@ -2,9 +2,9 @@ const config = require("./src/config.ts");
 
 module.exports = {
   siteMetadata: {
+    author: config.author,
     title: config.siteTitle,
     description: config.siteDescription,
-    author: config.author,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
