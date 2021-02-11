@@ -1,12 +1,12 @@
-const config = {
-  siteTitle: "@natebwangsut: Blackhole of thoughts", // Site title.
+export const config = {
+  siteTitle: "natebwangsut's blackhole of thoughts", // Site title.
   siteTitleShort: "Nate's PBT", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: "@natebwangsut: Blackhole of thoughts", // Alternative site title for SEO.
+  siteTitleAlt: "natebwangsut's blackhole of thoughts", // Alternative site title for SEO.
   // siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "https://natebwangsut.github.io", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: "@natebwangsut: Blackhole of thoughts - Space for entropy of ideas.", // Website description used for RSS feeds/meta description tag.
-  author: "@natebwangsut", // author for site metadata
+  siteDescription: "natebwangsut's blackhole of thoughts - space for entropy of ideas.", // Website description used for RSS feeds/meta description tag.
+  author: "natebwangsut", // author for site metadata
   // siteRss: "/rss.xml", // Path to the RSS file.
   // siteRssTitle: "Gatsby Advanced Starter RSS feed", // Title of the RSS feed
   // siteFBAppID: "1825356251115265", // FB Application ID for using app insights
@@ -34,11 +34,6 @@ const config = {
   //     url: "https://twitter.com/Vagr9K",
   //     iconClassName: "fa fa-twitter"
   //   },
-  //   {
-  //     label: "Email",
-  //     url: "mailto:vagr9k@gmail.com",
-  //     iconClassName: "fa fa-envelope"
-  //   }
   // ],
   // copyright: "Copyright © 2020. Advanced User", // Copyright string for the footer of the website and RSS feed.
   // themeColor: "#c62828", // Used for setting manifest and progress theme colors.
