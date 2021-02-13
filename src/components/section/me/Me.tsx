@@ -79,7 +79,7 @@ const Me: React.FC<MeProps> = ({ frontmatter, html }) => {
       <StyledAnimation onClick={handleOnClick}>
         {transitions.map(({ item, props: { ...rest }, key }) => (
           <animated.div key={key} style={{ ...rest, color: frontmatter.iam[item].color }}>
-            {index > frontmatter.iam.length * 3
+            {index > frontmatter.iam.length * 10
               ? TRY_HARD_CLICKER + "!".repeat((index / 10) % 10)
               : frontmatter.iam[item].item}
           </animated.div>
