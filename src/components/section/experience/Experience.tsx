@@ -26,8 +26,7 @@ const StyledContainer = styled.section`
   padding-bottom: 20rem;
 `;
 
-const StyledTitle = styled.div`
-  font-size: 1.1rem;
+const StyledTitle = styled.h1`
   margin-bottom: 2rem;
   color: var(--orange-web);
 `;
@@ -82,9 +81,7 @@ const StyledTabContent = styled.div`
 const Experience: React.FC<ExperienceProps> = ({ edges }) => {
   return (
     <StyledContainer id="experience">
-      <code>
-        <StyledTitle>Experience</StyledTitle>
-      </code>
+      <StyledTitle>Experience</StyledTitle>
       <StyledTab>
         <Tabs>
           {edges.map(edge => {

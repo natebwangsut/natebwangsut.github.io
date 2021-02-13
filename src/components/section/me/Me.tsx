@@ -1,7 +1,7 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { useTransition, animated } from "react-spring";
 import styled from "styled-components";
-import MeTitle from "./MeTitle";
+import LandingTitle from "../landing/LandingTitle";
 
 interface MeProps {
   frontmatter: {
@@ -19,12 +19,7 @@ interface MeProps {
   html: any;
 }
 
-const StyledContainer = styled.section`
-  position: relative;
-
-  padding-top: 20rem;
-  padding-bottom: 20rem;
-`;
+const StyledContainer = styled.section``;
 
 const StyledHeading = styled.div`
   margin-bottom: 2rem;
@@ -62,11 +57,13 @@ const StyledContent = styled.div`
   margin-top: 6rem;
 `;
 
+const TRY_HARD_CLICKER = "Enough, stop clicking";
+
 const Me: React.FC<MeProps> = ({ frontmatter, html }) => {
   const [index, setIndex] = useState(0);
-  const onClick = useCallback(() => setIndex(state => (state + 1) % frontmatter.iam.length), [frontmatter.iam.length]);
+  const handleOnClick = useCallback(() => setIndex(state => state + 1), []);
 
-  const transitions = useTransition(index, p => p, {
+  const transitions = useTransition(index % frontmatter.iam.length, p => p, {
     from: {
       opacity: 0,
       position: "absolute",
@@ -78,17 +75,13 @@ const Me: React.FC<MeProps> = ({ frontmatter, html }) => {
 
   return (
     <StyledContainer id="me">
-      {/* <code>
-        <StyledTitle>{frontmatter.title.split(" ")}</StyledTitle>
-      </code> */}
-      <MeTitle>
-        {frontmatter.title.split(" ").map((word: string) => <span>{word}</span>)}
-      </MeTitle>
       <StyledHeading>{frontmatter.preTitle}</StyledHeading>
-      <StyledAnimation onClick={onClick}>
+      <StyledAnimation onClick={handleOnClick}>
         {transitions.map(({ item, props: { ...rest }, key }) => (
           <animated.div key={key} style={{ ...rest, color: frontmatter.iam[item].color }}>
-            {frontmatter.iam[item].item}
+            {index > frontmatter.iam.length * 3
+              ? TRY_HARD_CLICKER + "!".repeat((index / 10) % 10)
+              : frontmatter.iam[item].item}
           </animated.div>
         ))}
       </StyledAnimation>

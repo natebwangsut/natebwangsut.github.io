@@ -1,5 +1,5 @@
 ---
-preTitle: "Short profile about"
+preTitle: "Little bit about"
 title: "Nate Bhurinat Wangsutthitham"
 caption: ""
 subCaption: ""

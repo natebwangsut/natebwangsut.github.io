@@ -3,9 +3,11 @@ import { graphql, PageProps, Link } from "gatsby";
 
 import Layout from "../components/layout/Layout";
 import SEO from "../components/seo/SEO";
+import Landing from "../components/section/landing/Landing";
 import Me from "../components/section/me/Me";
 import About from "../components/section/about/About";
 import Experience from "../components/section/experience/Experience";
+import LandingTitle from "../components/section/landing/LandingTitle";
 
 export const pageQuery = graphql`
   {
@@ -113,10 +115,11 @@ const IndexPage: React.FC<IndexPageProps> = ({ location, data }) => {
       {/* <h1 style={{ color: "white" }}>Hi people</h1>
       <p style={{ color: "white" }}>Welcome to your new Gatsby site.</p>
       <p style={{ color: "white" }}>Now go build something great.</p> */}
+      <Landing />
       <Me {...data.me.edges[0].node} />
       <About {...data.about.edges[0].node} />
       <Experience {...data.experience} />
-      {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+      {/* <div style maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div> */}
       {/* <Link to="/page-2/">Go to page 2</Link> <br /> */}

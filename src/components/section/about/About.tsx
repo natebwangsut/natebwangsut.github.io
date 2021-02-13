@@ -12,13 +12,18 @@ interface AboutProps {
 }
 
 const StyledContent = styled.div``;
+const AboutHeader = styled.h1`
+  margin-top: 20rem;
+`;
 
 const About: React.FC<AboutProps> = ({ frontmatter, html }) => {
   return (
-    <div style={{ fontSize: "1em" }}>
-      {frontmatter.preTitle} <b style={{ color: "var(--orange-web)" }}>ME</b>
+    <>
+      <AboutHeader>
+        {frontmatter.preTitle} <b style={{ color: "var(--orange-web)" }}>ME</b>
+      </AboutHeader>
       <StyledContent dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
+    </>
   );
 };
 
