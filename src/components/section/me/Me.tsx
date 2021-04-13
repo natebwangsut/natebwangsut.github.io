@@ -1,7 +1,6 @@
-import React, { useState, useCallback, useEffect } from "react";
-import { useTransition, animated } from "react-spring";
+import React, { useState, useCallback } from "react";
+import { a, useSprings } from "react-spring";
 import styled from "styled-components";
-import LandingTitle from "../landing/LandingTitle";
 
 interface MeProps {
   frontmatter: {
@@ -63,30 +62,35 @@ const Me: React.FC<MeProps> = ({ frontmatter, html }) => {
   const [index, setIndex] = useState(0);
   const handleOnClick = useCallback(() => setIndex(state => state + 1), []);
 
-  // TODO: Rework on this after upgrading Gatsby
-  // const transitions = useTransition(index % frontmatter.iam.length, p => p, {
-  //   from: {
-  //     opacity: 0,
-  //     position: "absolute",
-  //     transform: "translate3d(0%,-100%,0)",
-  //   },
-  //   enter: { opacity: 1, transform: "translate3d(0,0,0)" },
-  //   leave: { opacity: 0, transform: "translate3d(0,0,0)" },
-  // });
+  const springs = useSprings(
+    frontmatter.iam.length,
+    frontmatter.iam.map((item, i) => ({
+      reset: true,
+      from: {
+        opacity: 0,
+        color: item.color,
+        position: "absolute" as any,
+        transform: "translate3d(0%,-100%,0)",
+      },
+      to: {
+        opacity: index % frontmatter.iam.length === i ? 1 : 0,
+        transform: "translate3d(0,0,0)",
+      },
+    }))
+  );
 
   return (
     <StyledContainer id="me">
       <StyledHeading>{frontmatter.preTitle}</StyledHeading>
-      {/* TODO: Rework on this after upgrading Gatsby */}
-      {/* <StyledAnimation onClick={handleOnClick}>
-        {transitions.map(({ item, props: { ...rest }, key }) => (
-          <animated.div key={key} style={{ ...rest, color: frontmatter.iam[item].color }}>
-            {index > frontmatter.iam.length * 10
-              ? TRY_HARD_CLICKER + "!".repeat((index / 10) % 10)
-              : frontmatter.iam[item].item}
-          </animated.div>
+      <StyledAnimation onClick={handleOnClick}>
+        {springs.map((props, i) => (
+          <a.div style={props}>
+            {index < frontmatter.iam.length * 5
+              ? frontmatter.iam[i].item
+              : TRY_HARD_CLICKER + "!".repeat((index / 10) % 10)}
+          </a.div>
         ))}
-      </StyledAnimation> */}
+      </StyledAnimation>
       <StyledContent dangerouslySetInnerHTML={{ __html: html }} />
     </StyledContainer>
   );
