@@ -63,20 +63,22 @@ const Me: React.FC<MeProps> = ({ frontmatter, html }) => {
   const [index, setIndex] = useState(0);
   const handleOnClick = useCallback(() => setIndex(state => state + 1), []);
 
-  const transitions = useTransition(index % frontmatter.iam.length, p => p, {
-    from: {
-      opacity: 0,
-      position: "absolute",
-      transform: "translate3d(0%,-100%,0)",
-    },
-    enter: { opacity: 1, transform: "translate3d(0,0,0)" },
-    leave: { opacity: 0, transform: "translate3d(0,0,0)" },
-  });
+  // TODO: Rework on this after upgrading Gatsby
+  // const transitions = useTransition(index % frontmatter.iam.length, p => p, {
+  //   from: {
+  //     opacity: 0,
+  //     position: "absolute",
+  //     transform: "translate3d(0%,-100%,0)",
+  //   },
+  //   enter: { opacity: 1, transform: "translate3d(0,0,0)" },
+  //   leave: { opacity: 0, transform: "translate3d(0,0,0)" },
+  // });
 
   return (
     <StyledContainer id="me">
       <StyledHeading>{frontmatter.preTitle}</StyledHeading>
-      <StyledAnimation onClick={handleOnClick}>
+      {/* TODO: Rework on this after upgrading Gatsby */}
+      {/* <StyledAnimation onClick={handleOnClick}>
         {transitions.map(({ item, props: { ...rest }, key }) => (
           <animated.div key={key} style={{ ...rest, color: frontmatter.iam[item].color }}>
             {index > frontmatter.iam.length * 10
@@ -84,7 +86,7 @@ const Me: React.FC<MeProps> = ({ frontmatter, html }) => {
               : frontmatter.iam[item].item}
           </animated.div>
         ))}
-      </StyledAnimation>
+      </StyledAnimation> */}
       <StyledContent dangerouslySetInnerHTML={{ __html: html }} />
     </StyledContainer>
   );

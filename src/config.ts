@@ -1,6 +1,6 @@
 const config = {
   siteTitle: "natebwangsut's blackhole of thoughts", // Site title.
-  siteTitleShort: "Nate's PBT", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
+  siteTitleShort: "Nate's PBoT", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "natebwangsut's blackhole of thoughts", // Alternative site title for SEO.
   // siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "https://natebwangsut.github.io", // Domain of your website without pathPrefix.
