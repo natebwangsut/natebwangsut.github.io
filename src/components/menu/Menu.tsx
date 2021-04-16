@@ -11,6 +11,10 @@ const MenuWrapper = styled.div`
   width: 100%;
   height: 4rem;
   background-color: var(--black);
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const MenuList = styled.div`

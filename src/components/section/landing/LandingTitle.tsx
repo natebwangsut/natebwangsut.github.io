@@ -11,12 +11,18 @@ const LandingTitleAnimation = styled(animated.div)`
   width: 100%;
   height: 110px;
   line-height: 85px;
-  // color: var(--orange-web);
   font-size: 4.5em;
   font-weight: 800;
   letter-spacing: -2px;
   will-change: transform, opacity;
   overflow: hidden;
+  white-space: nowrap;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 2.5rem;
+    line-height: 2rem;
+    height: 2.5rem
+  }
 `;
 
 const LandingTitle: React.FC<{ open: Boolean }> = ({ open, children, ...props }) => {

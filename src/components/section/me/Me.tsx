@@ -21,6 +21,7 @@ interface MeProps {
 const StyledContainer = styled.section``;
 
 const StyledHeading = styled.div`
+  margin-top: 2rem;
   margin-bottom: 2rem;
 `;
 
@@ -34,7 +35,6 @@ const StyledAnimation = styled.div`
   height: 100%;
   user-select: none;
   margin-bottom: 2rem;
-
   > div {
     cursor: pointer;
     position: "absolute";
@@ -49,11 +49,20 @@ const StyledAnimation = styled.div`
     text-transform: uppercase;
     font-weight: 700;
     font-family: "Cereal App Bold";
+    letter-spacing: -1px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    > div {
+      letter-spacing: -1px;
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
   }
 `;
 
 const StyledContent = styled.div`
-  margin-top: 6rem;
+  margin-top: 8rem;
 `;
 
 const TRY_HARD_CLICKER = "Enough, stop clicking";
