@@ -1,4 +1,4 @@
-import React, { ReactNode, DetailedHTMLProps, HTMLAttributes } from "react";
+import React, { DetailedHTMLProps, HTMLAttributes } from "react";
 import styled from "styled-components";
 
 export interface TabPaneProps {

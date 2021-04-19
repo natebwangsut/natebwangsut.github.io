@@ -9,19 +9,21 @@ const LandingWrapper = styled.div`
 const LandingTitleAnimation = styled(animated.div)`
   position: relative;
   width: 100%;
-  height: 110px;
-  line-height: 85px;
-  font-size: 4.5em;
-  font-weight: 800;
-  letter-spacing: -2px;
+  height: 100px;
+  line-height: 90px;
+  font-size: 5.5rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.25rem;
   will-change: transform, opacity;
   overflow: hidden;
   white-space: nowrap;
 
   @media only screen and (max-width: 600px) {
     font-size: 2.5rem;
-    line-height: 2rem;
-    height: 2.5rem
+    line-height: 3rem;
+    letter-spacing: -0.25rem;
+    height: 3rem
   }
 `;
 

@@ -4,12 +4,12 @@ title: "Nate Bhurinat Wangsutthitham"
 caption: ""
 subCaption: ""
 iam:
-  - { item: Empty-stack Software Engineer, color: "#f86d3a" }
-  - { item: Jayce Main, color: "#0099ff" }
-  - { item: Redstone Architect, color: "#ff98ff" }
-  - { item: House Designer, color: "#66a4ae" }
-  # - { item: Henlo-fiesta Member, color: "#98ff98" }
-  - { item: Avid Photographer, color: "#d598a0" }
+  - { item: Software Engineer,    color: "#f86d3a" }
+  - { item: Jayce Main,           color: "#0099ff" }
+  - { item: Redstone Architect,   color: "#ff98ff" }
+  - { item: Room Designer,       color: "#66a4ae" }
+  - { item: Café Hopper,          color: "#98ff98" }
+  - { item: Avid Photographer,    color: "#d598a0" }
 ---
 
 <!-- I'm from Bangkok, Thailand -->

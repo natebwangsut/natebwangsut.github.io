@@ -50,6 +50,19 @@ const SEO: React.FC<SEOPropTypes> = ({
 
   return (
     <Helmet
+      link={[
+        {
+          // DNS Prefetching
+          rel: "dns-fetch",
+          href: "https://fonts.gstatic.com/",
+        },
+        {
+          // Allowing web to preload font(s)
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com/",
+          crossOrigin: "anonymous",
+        },
+      ]}
       htmlAttributes={{
         lang,
       }}

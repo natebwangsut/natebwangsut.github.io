@@ -629,8 +629,10 @@ pre tt:after {
 html,
 body {
   background-color: #000;
-  /* font-family: "Kumbh Sans"; */
-  font-family: "Cereal App Book", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Kumbh Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  /* font-family: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif; */
+  font-weight: 300;
+  /* font-family: "Cereal App Book", -apple-system, BlinkMacSystemFont, sans-serif; */
   color: #ddd;
   font-size: 16px;
 }
@@ -641,8 +643,10 @@ h3,
 h4,
 h5,
 h6 {
-  /* font-family: "Kumbh Sans"; */
-  font-family: "Cereal App Light", -apple-system, BlinkMacSystemFont, sans-serif;
+  /* font-family: "Kumbh Sans", -apple-system, BlinkMacSystemFont, sans-serif; */
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  /* font-family: "Cereal App Light", -apple-system, BlinkMacSystemFont, sans-serif; */
 }
 
 hr {
@@ -660,5 +664,5 @@ pre code {
 
 code {
   color: var(--blue-munsell);
-  font-family: "SF Mono Regular";
+  font-family: monospace;
 }

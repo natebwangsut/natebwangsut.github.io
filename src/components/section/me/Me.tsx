@@ -47,14 +47,13 @@ const StyledAnimation = styled.div`
     text-align: left;
 
     text-transform: uppercase;
-    font-weight: 700;
-    font-family: "Cereal App Bold";
-    letter-spacing: -1px;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 300;
+    letter-spacing: -0.1rem;
   }
 
   @media only screen and (max-width: 600px) {
     > div {
-      letter-spacing: -1px;
       font-size: 2rem;
       line-height: 2.5rem;
     }
