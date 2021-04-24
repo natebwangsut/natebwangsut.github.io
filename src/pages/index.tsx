@@ -1,17 +1,17 @@
 import React from "react";
-import { graphql, PageProps, Link } from "gatsby";
+import { graphql, PageProps } from "gatsby";
 
 import Layout from "../components/layout/Layout";
 import SEO from "../components/seo/SEO";
 import Landing from "../components/section/landing/Landing";
-import Me from "../components/section/me/Me";
 import About from "../components/section/about/About";
 import Experience from "../components/section/experience/Experience";
-import LandingTitle from "../components/section/landing/LandingTitle";
+
+import { DefaultSectionProps, ExperienceProps, LandingProps } from "../interface/props/section";
 
 export const pageQuery = graphql`
   {
-    me: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/contents/me/" } }) {
+    landing: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/contents/landing/" } }) {
       edges {
         node {
           frontmatter {
@@ -59,64 +59,22 @@ export const pageQuery = graphql`
 
 interface IndexPageProps extends PageProps {
   data: {
-    me: {
-      edges: [
-        {
-          node: {
-            frontmatter: {
-              preTitle: any;
-              title: any;
-              caption: any;
-              subCaption: any;
-              iam: [{ item: string; color: string }];
-            };
-            html: any;
-          };
-        }
-      ];
-    };
-    about: {
-      edges: [
-        {
-          node: {
-            frontmatter: {
-              preTitle: any;
-              title: any;
-              caption: any;
-              subCaption: any;
-            };
-            html: any;
-          };
-        }
-      ];
-    };
-    experience: {
-      edges: [
-        {
-          node: {
-            frontmatter: {
-              title: any;
-              role: any;
-              company: any;
-              timeframe: any;
-            };
-            html: any;
-          };
-        }
-      ];
-    };
+    about: { edges: [{ node: DefaultSectionProps }] };
+    landing: { edges: [{ node: LandingProps }] };
+    experience: { edges: [{ node: ExperienceProps }] };
   };
 }
 
 const IndexPage: React.FC<IndexPageProps> = ({ location, data }) => {
+  console.log(data);
   return (
     <Layout>
       <SEO title="Home" />
       {/* <h1 style={{ color: "white" }}>Hi people</h1>
       <p style={{ color: "white" }}>Welcome to your new Gatsby site.</p>
       <p style={{ color: "white" }}>Now go build something great.</p> */}
-      <Landing />
-      <Me {...data.me.edges[0].node} />
+      <Landing {...data.landing.edges[0].node} />
+      {/* <Me {...data.me.edges[0].node} /> */}
       <About {...data.about.edges[0].node} />
       <Experience {...data.experience} />
       {/* <div style maxWidth: `300px`, marginBottom: `1.45rem` }}>

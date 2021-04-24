@@ -11,10 +11,10 @@ const LandingTitleAnimation = styled(animated.div)`
   width: 100%;
   height: 100px;
   line-height: 90px;
-  font-size: 5.5rem;
+  font-size: 5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 300;
-  letter-spacing: -0.25rem;
+  letter-spacing: -0.5rem;
   will-change: transform, opacity;
   overflow: hidden;
   white-space: nowrap;

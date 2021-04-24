@@ -2,21 +2,7 @@ import React, { useState, useCallback } from "react";
 import { a, useSprings } from "react-spring";
 import styled from "styled-components";
 
-interface MeProps {
-  frontmatter: {
-    preTitle: any;
-    title: any;
-    caption: any;
-    subCaption: any;
-    iam: [
-      {
-        item: string;
-        color: string;
-      }
-    ];
-  };
-  html: any;
-}
+import { LandingProps } from "../../../../interface/props/section"
 
 const StyledContainer = styled.section``;
 
@@ -66,7 +52,7 @@ const StyledContent = styled.div`
 
 const TRY_HARD_CLICKER = "Enough, stop clicking";
 
-const Me: React.FC<MeProps> = ({ frontmatter, html }) => {
+const LandingMe: React.FC<LandingProps> = ({ frontmatter, html }) => {
   const [index, setIndex] = useState(0);
   const handleOnClick = useCallback(() => setIndex(state => state + 1), []);
 
@@ -104,4 +90,4 @@ const Me: React.FC<MeProps> = ({ frontmatter, html }) => {
   );
 };
 
-export default Me;
+export default LandingMe;

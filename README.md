@@ -1,5 +1,12 @@
 # natebwangsut Personal Blackhole
 
+Personal website 
+
+## Framework
+
+- React
+- Gatsby
+
 ## Design
 
 > To be added
@@ -8,6 +15,6 @@
 
 > To be added
 
-## CI/CD
+## Deployment
 
 > To be added
