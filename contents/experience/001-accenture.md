@@ -2,7 +2,8 @@
 title: "Digital Transformation (Mobile Banking)"
 role: "Business and Integration Architecture Senior Analyst"
 company: "Accenture"
-timeframe: "2018 - 2020"
+start_date: "2018"
+end_date: "2020"
 ---
 
 With Accenture, I've joined in a project where we would revolutionised how our client worked.  

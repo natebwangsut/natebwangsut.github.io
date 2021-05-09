@@ -63,17 +63,11 @@ const Menu = () => {
     <MenuWrapper>
       <MenuList>
         {menuItems.map(item => {
-          const isActive = selected === item;
+          // const isActive = selected === item;
           return (
             <MenuListItem
               key={item}
               onClick={() => setSelected(item)}
-              // Show the coloured border if the tab is active
-              // style={{
-              //   color: isActive ? "var(--orange-web)" : "",
-              //   background: isActive ? "var(--dark-orange)" : "",
-              //   borderBottom: isActive ? "3px solid var(--orange-web)" : "",
-              // }}
             >
               {item}
             </MenuListItem>

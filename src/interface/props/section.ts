@@ -26,7 +26,9 @@ export interface ExperienceProps {
     title: any;
     role: any;
     company: any;
-    timeframe: any;
+    start_date: any;
+    end_date: any;
+    date: any;
   };
   html: any;
 }

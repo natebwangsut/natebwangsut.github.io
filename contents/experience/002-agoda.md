@@ -1,8 +1,9 @@
 ---
-title: "Integrating DevSecOps practice to Agoda"
+title: "Integrating DevSecOps practice"
 role: "DevSecOps Engineer"
 company: "Agoda"
-timeframe: "2020 - Present"
+start_date: "2020"
+end_date: ""
 ---
 
 After my journey with Accenture, I joined Agoda as a software engineer to embark on integrating Agoda with security best-practices.
