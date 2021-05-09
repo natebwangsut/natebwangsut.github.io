@@ -29,13 +29,13 @@ const StyledAnimation = styled.div`
     alignitems: "center";
     willchange: "transform, opacity";
 
-    font-size: 3rem;
+    font-size: 3.5rem;
     text-align: left;
 
     text-transform: uppercase;
-    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
-    font-weight: 300;
-    letter-spacing: -0.1rem;
+    font-family: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
   }
 
   @media only screen and (max-width: 600px) {

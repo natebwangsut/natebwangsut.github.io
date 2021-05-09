@@ -12,18 +12,18 @@ const LandingTitleAnimation = styled(animated.div)`
   height: 100px;
   line-height: 90px;
   font-size: 5rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 300;
-  letter-spacing: -0.5rem;
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.1rem;
   will-change: transform, opacity;
   overflow: hidden;
   white-space: nowrap;
 
   @media only screen and (max-width: 600px) {
-    font-size: 2.5rem;
-    line-height: 3rem;
-    letter-spacing: -0.25rem;
-    height: 3rem
+    font-size: 3rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.1rem;
+    height: 4rem
   }
 `;
 
