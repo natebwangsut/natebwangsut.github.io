@@ -1,5 +1,5 @@
 ---
-title: "Developer Portal Project"
+title: "Developer Portal"
 role: "Senior DevSecOps Engineer"
 company: "Agoda"
 start_date: "2021"

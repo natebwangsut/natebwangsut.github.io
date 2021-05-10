@@ -54,12 +54,12 @@ const SEO: React.FC<SEOPropTypes> = ({
         {
           // DNS Prefetching
           rel: "dns-fetch",
-          href: "https://fonts.gstatic.com/",
+          href: "https://natebwangsut.github.io/",
         },
         {
           // Allowing web to preload font(s)
           rel: "preconnect",
-          href: "https://fonts.gstatic.com/",
+          href: "https://natebwangsut.github.io/",
           crossOrigin: "anonymous",
         },
       ]}
