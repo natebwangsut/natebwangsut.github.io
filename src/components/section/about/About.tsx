@@ -11,7 +11,16 @@ interface AboutProps {
   html: any;
 }
 
-const StyledContent = styled.div``;
+const StyledContent = styled.div`
+  a {
+    text-decoration: none;
+    color: var(--orange-web);
+  }
+  a:visited {
+    text-decoration: none;
+    color: var(--orange-web);
+  }
+`;
 const AboutHeader = styled.h1`
   margin-top: 20rem;
 `;
