@@ -15,7 +15,8 @@ const HeaderDefaultProps = {
 
 ////////////////////////////////////////////////////////////////////////////////
 
-const Header: React.FC<HeaderPropTypes> = ({ siteTitle }) => <Menu />;
+// const Header: React.FC<HeaderPropTypes> = ({ siteTitle }) => <Menu />;
+const Header: React.FC<HeaderPropTypes> = ({ siteTitle }) => <></>;
 
 Header.defaultProps = {
   siteTitle: ``,
