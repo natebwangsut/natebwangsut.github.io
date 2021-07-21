@@ -86,8 +86,9 @@ const Experience: React.FC<ExperienceProps> = ({ edges }) => {
       <StyledTab>
         <Tabs>
           {edges.map(edge => {
+            const frontmatter = edge.node.frontmatter;
             return (
-              <TabPane key={edge.node.frontmatter.title} label={edge.node.frontmatter.title}>
+              <TabPane key={frontmatter.company} label={frontmatter.company} {...frontmatter}>
                 {edge.node.html}
               </TabPane>
             );

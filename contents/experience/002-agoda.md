@@ -1,12 +1,11 @@
 ---
-title: "Integrating DevSecOps practice"
-role: "DevSecOps Engineer"
+title: "Security Shift-left"
+role: "Software Engineer"
 company: "Agoda"
 start_date: "2020"
 end_date: ""
 ---
 
-After my journey with Accenture, I joined Agoda as a software engineer to embark on integrating Agoda with security best-practices.
-Don't get me wrong, Agoda had its security practices in-place. My work is to `shift-left` those security hurdles.
-
-I will be adding more context to this section once I got more stories to be told.
+- Led the engineers on the DevSecOps team, incorporated security into the process, and created a security-aware culture.
+- Contributed to multiple teams, tackling tech debts, improving development processes, and building a culture of security.
+- Improved SDLC by implementing security in the process, allowing developers to have a better feedback cycle.
