@@ -5,9 +5,10 @@ export interface TabPaneProps {
   activeTab?: any;
   key: any;
   label: any;
-  role: any;
-  start_date: any;
-  end_date: any;
+  header: any;
+  // start_date: any;
+  // end_date: any;
+  subHeader: string;
   children?: string;
   dangerouslySetInnerHTML?: any | DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 }
@@ -25,15 +26,15 @@ const TabPaneHeader = styled.header`
 
   color: var(--orange-web);
 `;
-const TabPaneDate = styled.p`
+const TabPaneSubHeader = styled.p`
   margin-bottom: 1rem;
 `;
 
-const TabPane: React.FC<TabPaneProps> = ({ role, start_date, end_date, children }) => {
+const TabPane: React.FC<TabPaneProps> = ({ header, subHeader, children }) => {
   return (
     <StyledTabPane>
-      <TabPaneHeader>{role}</TabPaneHeader>
-      <TabPaneDate>{end_date ? `${start_date} - ${end_date}` : start_date + `- Present`}</TabPaneDate>
+      <TabPaneHeader>{header}</TabPaneHeader>
+      <TabPaneSubHeader>{subHeader}</TabPaneSubHeader>
       <div dangerouslySetInnerHTML={{ __html: children ? children : "" }} />
     </StyledTabPane>
   );

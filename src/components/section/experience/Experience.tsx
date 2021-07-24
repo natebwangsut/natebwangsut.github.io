@@ -87,8 +87,14 @@ const Experience: React.FC<ExperienceProps> = ({ edges }) => {
         <Tabs>
           {edges.map(edge => {
             const frontmatter = edge.node.frontmatter;
+            const subHeader = frontmatter.end_date ? `${frontmatter.start_date} - ${frontmatter.end_date}` : frontmatter.start_date + ` - Present`
             return (
-              <TabPane key={frontmatter.company} label={frontmatter.company} {...frontmatter}>
+              <TabPane
+                key={frontmatter.company}
+                label={frontmatter.company}
+                header={frontmatter.role}
+                subHeader={subHeader}
+              >
                 {edge.node.html}
               </TabPane>
             );
