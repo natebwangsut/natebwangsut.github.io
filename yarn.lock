@@ -12482,6 +12482,7 @@ fsevents@~2.3.2:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-helmet: ^6.1.0
+    react-icons: ^4.2.0
     react-spring: ^9.2.4
     spectre.css: ^0.5.9
     styled-components: ^5.3.0
@@ -14728,6 +14729,15 @@ fsevents@~2.3.2:
   peerDependencies:
     react: ">=16.3.0"
   checksum: 56fd795b0aecc89bac8d2733268751f0ef463bf6764090f8a801778741d4a6eaf135234cdaa50188bbda29c8e2d3ec43e9a42d1ec06b60092645c8754c7bad81
+  languageName: node
+  linkType: hard
+
+"react-icons@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "react-icons@npm:4.2.0"
+  peerDependencies:
+    react: "*"
+  checksum: 0052e25c6aacab93da3328ab856e4971214dce082de4bce857801802903366c7a8f9f490fe02ecd4ce181512b7b55cac12d6273c3c8dccc0e3b71b30dfd28256
   languageName: node
   linkType: hard
 

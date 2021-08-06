@@ -3,7 +3,7 @@ import TabPane, { TabPaneProps } from "./pane/TabPane";
 import styled from "styled-components";
 
 const TabList = styled.ol`
-  flex: 1.25;
+  flex: 1;
   margin: 8px 0 8px 0;
 `;
 

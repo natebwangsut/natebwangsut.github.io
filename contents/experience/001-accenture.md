@@ -6,6 +6,9 @@ start_date: "2018"
 end_date: "2020"
 ---
 
-- Working with the client to migrate to AWS, designing technical architecture and planning migration process.
-- Improved developer experience, including tools, processes by using automations and continuous integration.
+- Working closely with the client to migrate to AWS, designing technical architecture and planning migration strategies.
+  - Assisted clients in migration process, starting from adoption of cloud model.
+  - Presented key changes/challenges to cloud's best practices.
+- Improved client's developer experience, including tools, processes by using automations and continuous integration.
 - Implemented infrastructure as code using Terraform, improving resources utilisation and performance whilst reducing cost.
+  - Modernised client's technology stack across enterprise.

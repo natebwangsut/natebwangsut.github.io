@@ -6,6 +6,6 @@ start_date: "2020"
 end_date: ""
 ---
 
-- Led the engineers on the DevSecOps team, incorporated security into the process, and created a security-aware culture.
-- Contributed to multiple teams, tackling tech debts, improving development processes, and building a culture of security.
+- Led company-wide developer-portal project (Golang and ReactJS) that serves as an all-in-one self-service platform across the company, improving productivity and unifying engineers' experience.
+- Contributed to multiple teams, tackling tech debts, fixing developers pain-points and encourage coding best-practices.
 - Improved SDLC by implementing security in the process, allowing developers to have a better feedback cycle.
