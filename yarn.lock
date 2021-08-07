@@ -8156,6 +8156,15 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"gatsby-plugin-root-import@npm:^2.0.6":
+  version: 2.0.6
+  resolution: "gatsby-plugin-root-import@npm:2.0.6"
+  peerDependencies:
+    gatsby: ">=1"
+  checksum: a7339ea229c8c2aef57b46e6e5add2278f233c2720a8989336845a64798cac239e32f735acf4d1dcd3c76eca407644ad8e06243a19f77fac194f38a8ecbef73b
+  languageName: node
+  linkType: hard
+
 "gatsby-plugin-sharp@npm:^3.10.2":
   version: 3.10.2
   resolution: "gatsby-plugin-sharp@npm:3.10.2"
@@ -12468,6 +12477,7 @@ fsevents@~2.3.2:
     gatsby-plugin-manifest: ^3.10.0
     gatsby-plugin-offline: ^4.10.0
     gatsby-plugin-react-helmet: ^4.10.0
+    gatsby-plugin-root-import: ^2.0.6
     gatsby-plugin-sharp: ^3.10.2
     gatsby-plugin-styled-components: ^4.10.0
     gatsby-plugin-typescript: ^3.10.0

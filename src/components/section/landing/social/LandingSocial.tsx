@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { LandingProps } from "../../../../interface/props/section"
+import { LandingProps } from "../../../../interface/props/section";
+import { FaTwitter, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
-import { FaTwitter, FaInstagram, FaLinkedin, FaGithub, FaGitlab } from 'react-icons/fa';
+// TODO: Use ESM import once Gatsby supports it
+const config = require("/src/config.ts");
 
 const SocialBar = styled.div`
   display: flex;
@@ -26,6 +28,10 @@ const Social = styled.div`
   }
 `;
 
+const SocialLink = styled.a`
+  color: inherit;
+`;
+
 const Divider = styled.hr`
   flex: 1;
   display: block;
@@ -35,27 +41,33 @@ const Divider = styled.hr`
   margin-top: calc(4rem / 2 + 1px);
   margin-bottom: calc(4rem / 2 + 1px);
   padding: 0;
-`
+`;
 
 const iconProps = {
-  size: "3rem"
-}
-
+  size: "3rem",
+};
 
 const LandingSocial: React.FC<LandingProps> = ({ frontmatter, html }) => {
-
   const items = [
-    <FaTwitter {...iconProps}/>,
-    <FaInstagram {...iconProps}/>,
-    <FaLinkedin {...iconProps}/>,
-    <FaGithub {...iconProps}/>,
-    // <FaGitlab {...iconProps}/>,
-  ]
+    <SocialLink href={config.links.twitter} target="_blank">
+      <FaTwitter {...iconProps} />
+    </SocialLink>,
+    <SocialLink href={config.links.instagram} target="_blank">
+      <FaInstagram {...iconProps} />
+    </SocialLink>,
+    <SocialLink href={config.links.linkedin} target="_blank">
+      <FaLinkedin {...iconProps} />
+    </SocialLink>,
+    <SocialLink href={config.links.github} target="_blank">
+      <FaGithub {...iconProps} />
+    </SocialLink>,
+  ];
 
   return (
     <SocialBar>
-      {items.map(icon => <Social>{icon}</Social>)}
-      {/* {items.map(icon => icon)} */}
+      {items.map(icon => (
+        <Social>{icon}</Social>
+      ))}
       <Divider />
     </SocialBar>
   );
