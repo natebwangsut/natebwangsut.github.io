@@ -56,8 +56,8 @@ export const pageQuery = graphql`
             title
             role
             company
-            start_date(formatString: "MMM YYYY")
-            end_date(formatString: "MMM YYYY")
+            start_date(formatString: "MMMM YYYY")
+            end_date(formatString: "MMMM YYYY")
           }
           html
         }
