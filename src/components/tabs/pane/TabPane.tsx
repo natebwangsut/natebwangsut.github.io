@@ -1,6 +1,9 @@
 import React, { DetailedHTMLProps, HTMLAttributes } from "react";
 import styled from "styled-components";
 
+// TODO: Use ESM import once Gatsby supports it
+const config = require("src/config.ts");
+
 export interface TabPaneProps {
   activeTab?: any;
   key: any;
@@ -24,7 +27,7 @@ const TabPaneHeader = styled.header`
   font-size: 1.5rem;
   font-weight: bold;
 
-  color: var(--orange-web);
+  color: var(${config.theme});
 `;
 const TabPaneSubHeader = styled.p`
   margin-bottom: 1rem;

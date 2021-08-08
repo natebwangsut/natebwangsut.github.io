@@ -4,6 +4,9 @@ import { Title } from "src/components/text/Text";
 import { ProjectProps } from "src/interface/props/section";
 import { FaCode, FaGithub } from "react-icons/fa";
 
+// TODO: Use ESM import once Gatsby supports it
+const config = require("src/config.ts");
+
 const ProjectWrapper = styled.div`
   margin-bottom: 20rem;
 `;
@@ -29,9 +32,9 @@ const ProjectGridItem = styled.div`
 
   transition: 0.2s ease-out;
 
-  border: 1px dashed var(--orange-web-3);
+  border: 1px dashed var(${config.theme}-3);
   :hover {
-    border: 1px dashed var(--orange-web-6);
+    border: 1px dashed var(${config.theme}-6);
   }
 `;
 

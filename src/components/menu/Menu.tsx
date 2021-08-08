@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+// TODO: Use ESM import once Gatsby supports it
+const config = require("src/config.ts");
+
 const MenuWrapper = styled.div`
   position: fixed;
   top: 0;
@@ -37,18 +40,18 @@ const MenuListItem = styled.div`
 
   // Hover
   &:hover {
-    color: var(--orange-web);
+    color: var(${config.theme});
     border-bottom: 3px solid currentColor;
   }
 
   // Active
   &:active {
-    color: var(--orange-web);
+    color: var(${config.theme});
     border-bottom: 3px solid currentColor;
   }
 
   &.active {
-    color: var(--orange-web);
+    color: var(${config.theme});
     border-bottom: 3px solid currentColor;
   }
 `;

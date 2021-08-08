@@ -24,7 +24,7 @@ const Social = styled.div`
   &:hover {
     cursor: pointer;
     color: black;
-    background-color: var(--orange-web);
+    background-color: var(${config.theme});
     border: 2px solid currentColor;
   }
 `;
@@ -38,7 +38,7 @@ const Divider = styled.hr`
   display: block;
   height: 0px;
   background-color: transparent;
-  border: 2px solid var(--orange-web);
+  border: 2px solid var(${config.theme});
   margin-top: calc(4rem / 2 + 1px);
   margin-bottom: calc(4rem / 2 + 1px);
   padding: 0;

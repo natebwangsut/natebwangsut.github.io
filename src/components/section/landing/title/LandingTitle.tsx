@@ -2,6 +2,9 @@ import React from "react";
 import { useTrail, animated } from "react-spring";
 import styled from "styled-components";
 
+// TODO: Use ESM import once Gatsby supports it
+const config = require("src/config.ts");
+
 const LandingWrapper = styled.div`
   margin-bottom: 24px;
 `;
@@ -45,7 +48,7 @@ const LandingTitle: React.FC<{ open: Boolean }> = ({ open, children, ...props })
             key={index}
             style={{ ...rest, transform: x.to(x => `translate3d(0,${x}px,0)`) }}
           >
-            <animated.div key={index} style={{ height, color: `var(--orange-web-${4 + index * 2})` }}>
+            <animated.div key={index} style={{ height, color: `var(${config.theme}-${4 + index * 2})` }}>
               {items[index]}
             </animated.div>
           </LandingTitleAnimation>

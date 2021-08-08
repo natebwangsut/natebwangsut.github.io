@@ -2,6 +2,9 @@ import React, { useState, ReactElement } from "react";
 import TabPane, { TabPaneProps } from "./pane/TabPane";
 import styled from "styled-components";
 
+// TODO: Use ESM import once Gatsby supports it
+const config = require("src/config.ts");
+
 const TabList = styled.ol`
   flex: 1;
   margin: 8px 0 8px 0;
@@ -18,7 +21,7 @@ interface TabListItemProps {
 //   border: 1px solid transparent;
 
 //   :hover {
-//     border: 1px solid var(--orange-web);
+//     border: 1px solid var(${config.theme});
 //   }
 // `;
 
@@ -29,7 +32,7 @@ const TabListItem = styled.div`
   border-left: 1px solid transparent;
 
   :hover {
-    color: var(--orange-web);
+    color: var(${config.theme});
     cursor: pointer;
   }
 `;
@@ -61,9 +64,9 @@ const Tabs: React.FC<{ children: ReactElement<TabPaneProps>[] }> = ({ children }
                 }}
                 // Show the coloured border if the tab is active
                 style={{
-                  color: isActive ? "var(--orange-web)" : "",
-                  background: isActive ? "var(--dark-orange)" : "",
-                  borderLeft: isActive ? "3px solid var(--orange-web)" : "",
+                  color: isActive ? `var(${config.theme})` : "",
+                  background: isActive ? `var(${config.theme}-bg)` : "",
+                  borderLeft: isActive ? `3px solid var(${config.theme})` : "",
                 }}
               >
                 {child.props.label}

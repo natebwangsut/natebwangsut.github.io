@@ -8,6 +8,13 @@ const config = {
   siteDescription: "natebwangsut's blackhole of thoughts - space for entropy of ideas.",  // Website description used for RSS feeds/meta description tag.
   author: "natebwangsut",                                                                 // author for site metadata
 
+  // TODO: Implement theme switching
+  theme: "--mint",
+  // Theme Options
+  // theme: "--orange-web",                                                                  // please see palette.css for more options
+  // theme: "--geek-blue",                                                                   // please see palette.css for more options
+  // theme: "--mint",                                                                        // please see palette.css for more options
+
   // External links
   links: {
     github: "https://github.com/natebwangsut",

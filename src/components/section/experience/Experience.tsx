@@ -4,6 +4,9 @@ import Tabs from "../../tabs/Tabs";
 import TabPane from "../../tabs/pane/TabPane";
 import { ExperienceProps } from "src/interface/props/section";
 
+// TODO: Use ESM import once Gatsby supports it
+const config = require("src/config.ts");
+
 interface ExperienceEdges {
   edges: [
     {
@@ -21,7 +24,7 @@ const StyledContainer = styled.section`
 
 const StyledTitle = styled.h1`
   margin-bottom: 2rem;
-  color: var(--orange-web);
+  color: var(${config.theme});
 `;
 
 const StyledTab = styled.div`
@@ -53,7 +56,7 @@ const StyledTabButton = styled.button`
   transition: 0.3s;
 
   :hover {
-    background-color: var(--orange-web);
+    background-color: var(${config.theme});
     // border: 1px solid currentColor;
   }
 `;
@@ -67,7 +70,7 @@ const StyledTabContent = styled.div`
 
   &:hover,
   &:focus {
-    background-color: var(--orange-web);
+    background-color: var(${config.theme});
   }
 `;
 

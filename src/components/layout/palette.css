@@ -2,8 +2,6 @@
 :root {
   --black: hsla(0, 0%, 0%, 1);
   --oxford-blue: hsla(221, 67%, 24%, 1);
-  --dark-orange: hsla(30, 100%, 7%, 1);
-  --orange-web: hsla(16, 93%, 60%, 1);
   /* --orange: hsla(16, 88%, 54%, 1); */
   --platinum: hsla(0, 0%, 90%, 1);
   --white: hsla(0, 0%, 100%, 1);
@@ -19,6 +17,8 @@
 
 /* OrangeWeb Palette */
 :root {
+  --orange-web: hsla(16, 93%, 60%, 1);
+  --orange-web-bg: hsla(30, 100%, 7%, 1);
   --orange-web-1: #fff6f0;
   --orange-web-2: #ffebde;
   --orange-web-3: #ffd0b5;
@@ -33,6 +33,8 @@
 
 /* GeekBlue Palette */
 :root {
+  --geek-blue: #2f54eb;
+  --geek-blue-bg: hsla(228 , 82%, 7%, 1);
   --geek-blue-1: #f0f5ff;
   --geek-blue-2: #d6e4ff;
   --geek-blue-3: #adc6ff;
@@ -43,4 +45,20 @@
   --geek-blue-8: #10239e;
   --geek-blue-9: #061178;
   --geek-blue-10: #030852;
+}
+
+/* Mint */
+:root {
+  --mint: #0fecb3;
+  --mint-bg: hsla(165, 88%, 7%, 1);
+  --mint-1: #e6fff4;
+  --mint-2: #b3ffe2;
+  --mint-3: #8affd6;
+  --mint-4: #61ffcd;
+  --mint-5: #37fac3;
+  --mint-6: #0fecb3;
+  --mint-7: #02c79c;
+  --mint-8: #00a183;
+  --mint-9: #007a68;
+  --mint-10: #00544a;
 }
