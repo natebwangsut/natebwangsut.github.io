@@ -72,7 +72,9 @@ const LandingSocial: React.FC<LandingProps> = ({ frontmatter, html }) => {
     <SocialBar>
       {socialLinks.map(link => (
         <Social key={link.href}>
-          <SocialLink href={link.href}>{link.icon}</SocialLink>
+          <SocialLink href={link.href} target="_blank">
+            {link.icon}
+          </SocialLink>
         </Social>
       ))}
       <Divider />
