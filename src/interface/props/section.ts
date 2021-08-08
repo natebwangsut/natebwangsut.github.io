@@ -26,9 +26,19 @@ export interface ExperienceProps {
     title: any;
     role: any;
     company: any;
-    start_date: any;
-    end_date: any;
-    date: any;
+    start_date: String;
+    end_date: String;
+  };
+  html: any;
+}
+
+export interface ProjectProps {
+  frontmatter: {
+    title: any;
+    date: String;
+    website: any;
+    github: any;
+    stack: any[];
   };
   html: any;
 }

@@ -1,8 +1,8 @@
 ---
 title: "Security Shift-left"
-role: "Software Engineer"
+role: "Senior DevSecOps Engineer"
 company: "Agoda"
-start_date: "2020"
+start_date: "2020-02"
 end_date: ""
 ---
 

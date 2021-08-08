@@ -1,6 +1,7 @@
 ---
-title: "Google Hash Code 2020"
-type: "team"
+title: "Hash Code (2020)"
+date: "2020"
+website: "https://codingcompetitions.withgoogle.com/hashcode"
 stack:
   - Golang
   - Dynamic Programming

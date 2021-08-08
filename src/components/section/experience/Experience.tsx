@@ -2,20 +2,12 @@ import React, { PropsWithChildren, Props } from "react";
 import styled from "styled-components";
 import Tabs from "../../tabs/Tabs";
 import TabPane from "../../tabs/pane/TabPane";
+import { ExperienceProps } from "src/interface/props/section";
 
-interface ExperienceProps {
+interface ExperienceEdges {
   edges: [
     {
-      node: {
-        frontmatter: {
-          title: any;
-          role: any;
-          company: any;
-          start_date: any;
-          end_date: any;
-        };
-        html: any;
-      };
+      node: ExperienceProps;
     }
   ];
 }
@@ -79,7 +71,7 @@ const StyledTabContent = styled.div`
   }
 `;
 
-const Experience: React.FC<ExperienceProps> = ({ edges }) => {
+const Experience: React.FC<ExperienceEdges> = ({ edges }) => {
   return (
     <StyledContainer id="experience">
       <StyledTitle>Experience</StyledTitle>
@@ -87,7 +79,10 @@ const Experience: React.FC<ExperienceProps> = ({ edges }) => {
         <Tabs>
           {edges.map(edge => {
             const frontmatter = edge.node.frontmatter;
-            const subHeader = frontmatter.end_date ? `${frontmatter.start_date} - ${frontmatter.end_date}` : frontmatter.start_date + ` - Present`
+            const subHeader =
+              frontmatter.end_date !== "Invalid date"
+                ? `${frontmatter.start_date} - ${frontmatter.end_date}`
+                : frontmatter.start_date + ` - Present`;
             return (
               <TabPane
                 key={frontmatter.company}

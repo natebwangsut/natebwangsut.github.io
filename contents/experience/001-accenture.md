@@ -2,8 +2,8 @@
 title: "Digital Transformation (Mobile Banking)"
 role: "Business and Integration Analyst"
 company: "Accenture"
-start_date: "2018"
-end_date: "2020"
+start_date: "2018-11"
+end_date: "2020-01"
 ---
 
 - Working closely with the client to migrate to AWS, designing technical architecture and planning migration strategies.

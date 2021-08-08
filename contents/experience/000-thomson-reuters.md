@@ -2,8 +2,8 @@
 title: "Software Engineer Intern"
 role: "Software Engineer Intern"
 company: "Thomson Reuters"
-start_date: "2015"
-end_date: "2016"
+start_date: "2015-11"
+end_date: "2016-02"
 ---
 
 - Modularised automated testing procedure by creating a template script that is used across multiple teams.
