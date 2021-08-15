@@ -115,8 +115,8 @@ const ProjectGridTag = styled.div`
 
   font-size: 0.8rem;
   text-transform: lowercase;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
 `;
 
 const ProjectGridTagItems = styled.div``;
