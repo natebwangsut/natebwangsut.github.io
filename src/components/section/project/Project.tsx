@@ -51,20 +51,21 @@ const ProjectGridDescription = styled.div`
   color: #aaa;
   font-size: 0.9rem;
 
+  // Not adding bottom margin for last child in the card
+  p:last-child {
+    margin-bottom: 0px;
+  }
+
+  // Links styling
   a {
-    text-decoration: none;
     transition: 0.2s ease-out;
-    color: var(${config.theme}-1);
+    text-decoration: none;
+    color: var(${config.theme}-4);
   }
 
   a:hover,
   a:active {
-    color: var(${config.theme}-6);
-  }
-
-  // Not adding bottom margin for last child in the card
-  p:last-child {
-    margin-bottom: 0px;
+    color: var(${config.theme}-8);
   }
 `;
 
