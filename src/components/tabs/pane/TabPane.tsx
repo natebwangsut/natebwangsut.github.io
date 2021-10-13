@@ -16,7 +16,7 @@ export interface TabPaneProps {
   dangerouslySetInnerHTML?: any | DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 }
 
-const StyledTabPane = styled.section`
+const TabPaneSection = styled.section`
   position: relative;
   // padding-top: 20rem;
   // padding-bottom: 20rem;
@@ -25,7 +25,7 @@ const StyledTabPane = styled.section`
 const TabPaneHeader = styled.header`
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 400;
 
   color: var(${config.theme});
 `;
@@ -35,11 +35,11 @@ const TabPaneSubHeader = styled.p`
 
 const TabPane: React.FC<TabPaneProps> = ({ header, subHeader, children }) => {
   return (
-    <StyledTabPane>
+    <TabPaneSection>
       <TabPaneHeader>{header}</TabPaneHeader>
       <TabPaneSubHeader>{subHeader}</TabPaneSubHeader>
-      <div dangerouslySetInnerHTML={{ __html: children ? children : "" }} />
-    </StyledTabPane>
+      <div dangerouslySetInnerHTML={{ __html: children ?? "" }} />
+    </TabPaneSection>
   );
 };
 

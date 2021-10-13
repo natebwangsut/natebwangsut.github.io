@@ -14,7 +14,7 @@ interface AboutProps {
   html: any;
 }
 
-const StyledContent = styled.div`
+const AboutContent = styled.div`
   a {
     text-decoration: none;
     color: var(${config.theme});
@@ -32,9 +32,9 @@ const About: React.FC<AboutProps> = ({ frontmatter, html }) => {
   return (
     <>
       <AboutHeader>
-        {frontmatter.preTitle} <b style={{ color: `var(${config.theme}-6)` }}>ME</b>
+        {frontmatter.preTitle} <span style={{ color: `var(${config.theme}-6)`, fontWeight: 400 }}>ME</span>
       </AboutHeader>
-      <StyledContent dangerouslySetInnerHTML={{ __html: html }} />
+      <AboutContent dangerouslySetInnerHTML={{ __html: html }} />
     </>
   );
 };

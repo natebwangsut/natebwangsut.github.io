@@ -20,6 +20,14 @@ const ProjectGrid = styled.div`
   // I want 3 cols
   grid-template-rows: auto;
   grid-template-columns: repeat(3, 1fr);
+
+  // Use single column for mobile
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+
+  //
+  margin-bottom: 20px;
 `;
 
 const ProjectGridItem = styled.div`
@@ -137,47 +145,39 @@ const Project: React.FC<ProjectEdges> = ({ edges }) => {
       <ProjectGrid>
         {edges.map((edge, n) => {
           const isExtended = n >= ROW * ROW_SIZE;
-
+          if (isExtended && isHidden) return;
           return (
-            <ProjectGridItem
-              key={edge.node.frontmatter.title}
-              style={{
-                visibility: isExtended ? (isHidden ? "collapse" : "inherit") : "inherit",
-                opacity: isExtended ? (isHidden ? "0" : "1") : "1",
-                height: isExtended ? (isHidden ? "0" : "auto") : "auto",
-                minHeight: isExtended ? (isHidden ? "0" : "auto") : "auto",
-
-                // Overwrites the styled
-                padding: isExtended ? (isHidden ? "0" : "20px") : "20px",
-              }}
-            >
+            <ProjectGridItem key={edge.node.frontmatter.title}>
               <ProjectGridHeading>
                 <ProjectGridTitle>{edge.node.frontmatter.title}</ProjectGridTitle>
                 {
                   // Do not show GitHub links if frontmatter is not present
-                  edge.node.frontmatter.github ? (
+                  edge.node.frontmatter.github && (
                     <ProjectGridHeadingLink href={edge.node.frontmatter.github} target="__blank">
                       <FaGithub size="1.5rem" />
                     </ProjectGridHeadingLink>
-                  ) : null
+                  )
                 }
                 {
                   // Do not show website links if frontmatter is not present
-                  edge.node.frontmatter.website ? (
+                  edge.node.frontmatter.website && (
                     <ProjectGridHeadingLink href={edge.node.frontmatter.website} target="__blank">
                       <FaCode size="1.5rem" />
                     </ProjectGridHeadingLink>
-                  ) : null
+                  )
                 }
               </ProjectGridHeading>
               <ProjectGridDescription dangerouslySetInnerHTML={{ __html: edge.node.html }} />
-              {edge.node.frontmatter.stack ? (
-                <ProjectGridTagWrapper>
-                  {edge.node.frontmatter.stack.map(tag => (
-                    <ProjectGridTag>{tag}</ProjectGridTag>
-                  ))}
-                </ProjectGridTagWrapper>
-              ) : null}
+              {
+                // Show tags
+                edge.node.frontmatter.stack && (
+                  <ProjectGridTagWrapper>
+                    {edge.node.frontmatter.stack.map(tag => (
+                      <ProjectGridTag key={tag}>{tag}</ProjectGridTag>
+                    ))}
+                  </ProjectGridTagWrapper>
+                )
+              }
             </ProjectGridItem>
           );
         })}
