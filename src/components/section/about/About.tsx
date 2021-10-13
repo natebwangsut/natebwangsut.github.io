@@ -16,14 +16,17 @@ interface AboutProps {
 
 const AboutContent = styled.div`
   a {
+    transition: 0.2s ease-out;
     text-decoration: none;
-    color: var(${config.theme});
+    color: var(${config.theme}-4);
   }
-  a:visited {
-    text-decoration: none;
-    color: var(${config.theme});
+
+  a:hover,
+  a:active {
+    color: var(${config.theme}-8);
   }
 `;
+
 const AboutHeader = styled.h1`
   margin-top: 20rem;
 `;
