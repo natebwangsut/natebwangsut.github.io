@@ -15,7 +15,7 @@ const SocialBar = styled.div`
 `;
 
 const Social = styled.div`
-  color: gray;
+  color: #aaa;
   padding: calc(3rem / 6);
   padding-bottom: 0px;
   border: 2px solid transparent;

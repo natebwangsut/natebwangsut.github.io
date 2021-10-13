@@ -26,7 +26,7 @@ const LandingTitleAnimation = styled(animated.div)`
     font-size: 3rem;
     line-height: 2.5rem;
     letter-spacing: -0.1rem;
-    height: 4rem
+    height: 4rem;
   }
 `;
 
@@ -44,10 +44,7 @@ const LandingTitle: React.FC<{ open: Boolean }> = ({ open, children, ...props })
       <div style={{ marginTop: "24px", marginBottom: "24px" }}>Hi my name is...</div>
       <h2>
         {trail.map(({ x, height, ...rest }, index) => (
-          <LandingTitleAnimation
-            key={index}
-            style={{ ...rest, transform: x.to(x => `translate3d(0,${x}px,0)`) }}
-          >
+          <LandingTitleAnimation key={index} style={{ ...rest, transform: x.to(x => `translate3d(0,${x}px,0)`) }}>
             <animated.div key={index} style={{ height, color: `var(${config.theme}-${4 + index * 2})` }}>
               {items[index]}
             </animated.div>

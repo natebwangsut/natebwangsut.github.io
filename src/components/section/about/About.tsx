@@ -15,6 +15,8 @@ interface AboutProps {
 }
 
 const AboutContent = styled.div`
+  color: #aaa;
+
   a {
     transition: 0.2s ease-out;
     text-decoration: none;

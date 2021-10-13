@@ -92,6 +92,7 @@ const Experience: React.FC<ExperienceEdges> = ({ edges }) => {
                 label={frontmatter.company}
                 header={frontmatter.role}
                 subHeader={subHeader}
+                childrenStyle={{ color: "#aaa" }}
               >
                 {edge.node.html}
               </TabPane>

@@ -9,7 +9,9 @@ const LandingHeader = styled.div`
   margin-top: 15rem;
 `;
 
-const LandingSubtitle = styled.div``;
+const LandingSubtitle = styled.div`
+  color: #aaa;
+`;
 
 const LANDING_TITLE_NAME = "Nate Bhurinat Wangsutthitham";
 

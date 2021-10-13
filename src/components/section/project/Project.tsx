@@ -48,13 +48,13 @@ const ProjectGridItem = styled.div`
 `;
 
 const ProjectGridDescription = styled.div`
-  color: gray;
+  color: #aaa;
   font-size: 0.9rem;
 
   // Links
   a {
-    transition: 0.2s ease-out;
     color: inherit;
+    transition: 0.2s ease-out;
   }
   a:hover {
     color: white;

@@ -13,6 +13,7 @@ export interface TabPaneProps {
   // end_date: any;
   subHeader: string;
   children?: string;
+  childrenStyle?: React.CSSProperties;
   dangerouslySetInnerHTML?: any | DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 }
 
@@ -33,12 +34,12 @@ const TabPaneSubHeader = styled.p`
   margin-bottom: 1rem;
 `;
 
-const TabPane: React.FC<TabPaneProps> = ({ header, subHeader, children }) => {
+const TabPane: React.FC<TabPaneProps> = ({ header, subHeader, children, childrenStyle }) => {
   return (
     <TabPaneSection>
       <TabPaneHeader>{header}</TabPaneHeader>
       <TabPaneSubHeader>{subHeader}</TabPaneSubHeader>
-      <div dangerouslySetInnerHTML={{ __html: children ?? "" }} />
+      <div style={{ ...childrenStyle }} dangerouslySetInnerHTML={{ __html: children ?? "" }} />
     </TabPaneSection>
   );
 };
