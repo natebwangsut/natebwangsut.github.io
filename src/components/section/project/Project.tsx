@@ -51,13 +51,15 @@ const ProjectGridDescription = styled.div`
   color: #aaa;
   font-size: 0.9rem;
 
-  // Links
   a {
-    color: inherit;
+    text-decoration: none;
     transition: 0.2s ease-out;
+    color: var(${config.theme}-1);
   }
-  a:hover {
-    color: white;
+
+  a:hover,
+  a:active {
+    color: var(${config.theme}-6);
   }
 
   // Not adding bottom margin for last child in the card
