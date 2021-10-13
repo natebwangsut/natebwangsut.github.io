@@ -8,4 +8,4 @@ stack:
   - "Python"
 ---
 
-Contributed to DefectDojo community, editing authentication flows and adding parsers for multiple security products. Improving templating engine in the process.
+Contributed to DefectDojo community, editing authentication flows and adding parsers for multiple security products. 
