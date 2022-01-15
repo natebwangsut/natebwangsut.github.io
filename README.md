@@ -1,4 +1,4 @@
-# natebwangsut Personal Blackhole
+# natebwangsut
 
 Personal website 
 

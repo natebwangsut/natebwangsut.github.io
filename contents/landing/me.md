@@ -12,10 +12,4 @@ iam:
   - { item: Avid Photographer,    color: "#d598a0" }
 ---
 
-<!-- I'm from Bangkok, Thailand -->
-<!-- I lived in Melbourne for 3-4 years pursuring my university degree -->
-
-I'm a software engineer living in Bangkok, Thailand.  
-I do everything computer releated: games, audiophile, network, etc.  
-My hobby is to make a pull-request on GitHub.  
-I also provide advice / consultation for public cloud implementation and architecture.
+Just another software engineer living on the planet as you do.  

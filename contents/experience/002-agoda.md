@@ -6,6 +6,8 @@ start_date: "2020-02"
 end_date: ""
 ---
 
-- Led company-wide developer-portal project (Golang and ReactJS) that serves as an all-in-one self-service platform across the company, improving productivity and unifying engineers' experience.
-- Contributed to multiple teams, tackling tech debts, fixing developers pain-points and encourage coding best-practices.
-- Improved SDLC by implementing security in the process, allowing developers to have a better feedback cycle.
+- Led cross-functional teams on a project to unify developer experience, improving the productivity of the developer across multiple teams by using Golang + React.js.
+  - Implemented microservices framework with event-driven mechanism using Kafka, allowing teams to contribute to a singular platform whilst being decoupled.
+  - Integrated with Elasticsearch and Grafana for observatory purposes, allowing performance monitoring and live analytics.
+- Refactored centralised ChatBot service, reducing the cost of cloud resources by 20%.
+- Integrated security into pipelines such as SAST, DAST, and container scanning.

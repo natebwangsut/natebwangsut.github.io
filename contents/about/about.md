@@ -5,12 +5,12 @@ caption: ""
 subCaption: ""
 ---
 
-Since I was very young, I've been enthusiastic on video games.  
-Initially I was just enjoying the game itself, where later on I would try to break it, tweak it, mingle with it.  
-I wanted to understand how the game functions and how to create one, eventually it introduced me to programming.  
+Since young, Nate is very enthusiastic about technology.  
+He first interact with a computer when he was five, playing a game of solitare.  
+From there onward, he would be intrigued on how does the computer system works and started to experiement with it.
 
-I've graduated from the [University of Melboune](http://www.unimelb.edu.au/), major in Computer and Software Systems.  
-I regularly contributed to open source projects on GitHub [(@natebwangsut)](https://github.com/natebwangsut).
+In school, he was introduced to the programming side of the world, and he was aspired to become a software engineer.  
+He went on to graduated from the [University of Melboune](http://www.unimelb.edu.au/), major in Computer and Software Systems.  
 
-I love cycling, and I love to read.
-If you found any books about psychology, self-improvement or anything else that I should read, please let me know. Feel free to discuss with me on Twitter [(@natebwangsut)](https://twitter.com/natebwangsut), thoughts and opinions are of my own.
+Nate has started his career as a consultant where he was exposed to the technology industry where he was inspired to use his knowledge and contribute to the world for a greater good.
+Since then, he has been regularly contributed to opensource projects on GitHub [(@natebwangsut)](https://github.com/natebwangsut) and started his own organisation [(digitaldove)](https://github.com/digitaldove) to be able to reach out to more people.  

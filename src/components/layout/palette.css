@@ -1,4 +1,5 @@
 /** CSS: Collections of useful colors */
+
 :root {
   --black: hsla(0, 0%, 0%, 1);
   --oxford-blue: hsla(221, 67%, 24%, 1);
@@ -61,4 +62,19 @@
   --mint-8: #00a183;
   --mint-9: #007a68;
   --mint-10: #00544a;
+}
+
+:root {
+  --veri-peri: #6666BB;
+  --veri-peri-bg: hsla(240, 38%, 7%, 1);
+  --veri-peri-1: #ebedfa;
+  --veri-peri-2: #dfe1ed;
+  --veri-peri-3: #d3d4e0;
+  --veri-peri-4: #b8bad4;
+  --veri-peri-5: #8d8fc7;
+  --veri-peri-6: #6666bb;
+  --veri-peri-7: #4c4a94;
+  --veri-peri-8: #35316e;
+  --veri-peri-9: #211d47;
+  --veri-peri-10: #100d21;
 }

@@ -1,11 +1,11 @@
 const config = {
-  siteTitle: "natebwangsut's blackhole of thoughts",                                      // Site title.
+  siteTitle: "natebwangsut",                                                              // Site title.
   siteTitleShort: "natebwangsut",                                                         // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: "natebwangsut's blackhole of thoughts",                                   // Alternative site title for SEO.
+  siteTitleAlt: "natebwangsut",                                                           // Alternative site title for SEO.
   // siteLogo: "/logos/logo-1024.png",                                                    // Logo used for SEO and manifest.
   siteUrl: "https://natebwangsut.github.io",                                              // Domain of your website without pathPrefix.
   pathPrefix: "/",                                                                        // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: "natebwangsut's blackhole of thoughts - space for entropy of ideas.",  // Website description used for RSS feeds/meta description tag.
+  siteDescription: "Just another software engineer living on the planet as you do.",       // Website description used for RSS feeds/meta description tag.
   author: "natebwangsut",                                                                 // author for site metadata
 
   // TODO: Implement theme switching
@@ -14,6 +14,7 @@ const config = {
   // theme: "--orange-web",                                                                  // please see palette.css for more options
   // theme: "--geek-blue",                                                                   // please see palette.css for more options
   // theme: "--mint",                                                                        // please see palette.css for more options
+  // theme: "--veri-peri",                                                                   // please see palette.css for more options
 
   // External links
   links: {
