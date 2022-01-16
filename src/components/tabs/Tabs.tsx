@@ -41,7 +41,7 @@ const TabContent = styled.div`
   flex: 2;
   margin: 8px;
   padding: 8px;
-  height: 500px;
+  min-height: 500px;
 `;
 
 const Tabs: React.FC<{ children: ReactElement<TabPaneProps>[] }> = ({ children }) => {
