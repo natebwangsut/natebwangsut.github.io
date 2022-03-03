@@ -1,12 +1,12 @@
 const config = {
-  siteTitle: "natebwangsut",                                                              // Site title.
+  siteTitle: "Nate Bhurinat Wangsutthitham",                                              // Site title.
+  siteTitleAlt: "Nate B. Wangsutthitham - natebwangsut",                                  // Alternative site title for SEO.
   siteTitleShort: "natebwangsut",                                                         // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: "natebwangsut",                                                           // Alternative site title for SEO.
   // siteLogo: "/logos/logo-1024.png",                                                    // Logo used for SEO and manifest.
   siteUrl: "https://natebwangsut.github.io",                                              // Domain of your website without pathPrefix.
   pathPrefix: "/",                                                                        // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: "Just another software engineer living on the planet as you do.",       // Website description used for RSS feeds/meta description tag.
-  author: "natebwangsut",                                                                 // author for site metadata
+  siteDescription: "Just another software engineer living on the planet as you do.",      // Website description used for RSS feeds/meta description tag.
+  author: "Nate Bhurinat Wangsutthitham <nate.bwangsut@gmail.com>",                       // author for site metadata
 
   // TODO: Implement theme switching
   theme: "--mint",
