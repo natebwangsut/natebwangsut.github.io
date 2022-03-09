@@ -12,4 +12,4 @@ iam:
   - { item: Avid Photographer,    color: "#d598a0" }
 ---
 
-Just another software engineer living on the planet as you do.  
+Just another software engineer living on the same planet as you do.  
