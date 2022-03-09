@@ -3222,6 +3222,43 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@prefresh/babel-plugin@npm:^0.4.1":
+  version: 0.4.3
+  resolution: "@prefresh/babel-plugin@npm:0.4.3"
+  checksum: 0bd68589b1491da7b5c4920a9958b74fbdf75f54c12b5713e1c708e4a21df7f47f9d265d8ee291bdc03c3c4fcd12bd97b34835b565292c0a69a5858ff37e556c
+  languageName: node
+  linkType: hard
+
+"@prefresh/core@npm:^1.3.3":
+  version: 1.3.4
+  resolution: "@prefresh/core@npm:1.3.4"
+  peerDependencies:
+    preact: ^10.0.0
+  checksum: 545cc3e678bf0669e5726ac4da5b5f95ae7f1ce20e850a2a824e662e1fae11422d9681b5cc253b07c1ebe09a8c42c4b2247a45afecc81014b799eb1a8d7447a0
+  languageName: node
+  linkType: hard
+
+"@prefresh/utils@npm:^1.1.2":
+  version: 1.1.3
+  resolution: "@prefresh/utils@npm:1.1.3"
+  checksum: a95b816d08a68f499489f1e0098effcda99ccba06c80986cb0dfbcda4fc9c8f8e3238603ead4ee35bb9fb7985de66b1a785d12c64fbc61600e0a8bd388fc2de0
+  languageName: node
+  linkType: hard
+
+"@prefresh/webpack@npm:^3.3.2":
+  version: 3.3.3
+  resolution: "@prefresh/webpack@npm:3.3.3"
+  dependencies:
+    "@prefresh/core": ^1.3.3
+    "@prefresh/utils": ^1.1.2
+  peerDependencies:
+    "@prefresh/babel-plugin": ^0.4.0
+    preact: ^10.4.0
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: 6c12f78267d4a0f45caf8956ad5bea7c50e2fc6e33a5cb77fd23b73a87770931b802ac1d3bf5e35482867a1dd82ef40a78490c0da9224d7df881ae4ccea89d76
+  languageName: node
+  linkType: hard
+
 "@react-spring/animated@npm:~9.4.3-beta.0":
   version: 9.4.3
   resolution: "@react-spring/animated@npm:9.4.3"
@@ -8423,6 +8460,22 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"gatsby-plugin-preact@npm:^6.9.0":
+  version: 6.9.0
+  resolution: "gatsby-plugin-preact@npm:6.9.0"
+  dependencies:
+    "@babel/runtime": ^7.15.4
+    "@gatsbyjs/webpack-hot-middleware": ^2.25.2
+    "@prefresh/babel-plugin": ^0.4.1
+    "@prefresh/webpack": ^3.3.2
+  peerDependencies:
+    gatsby: ^4.0.0-next
+    preact: ^10.3.4
+    preact-render-to-string: ^5.1.8
+  checksum: 7090636681ce7f3671779120192ea648b7acf8844c6af74a109f4bd1354ac86dd2fc3ee79d19100e974516d26c203c0220b9fac2bf45888f8ce48f98377d6a00
+  languageName: node
+  linkType: hard
+
 "gatsby-plugin-react-helmet@npm:^5.9.0":
   version: 5.9.0
   resolution: "gatsby-plugin-react-helmet@npm:5.9.0"
@@ -12135,6 +12188,7 @@ fsevents@~2.3.2:
     gatsby-image: ^3.11.0
     gatsby-plugin-manifest: ^4.9.0
     gatsby-plugin-offline: ^5.9.0
+    gatsby-plugin-preact: ^6.9.0
     gatsby-plugin-react-helmet: ^5.9.0
     gatsby-plugin-root-import: ^2.0.8
     gatsby-plugin-sharp: ^4.9.0
@@ -12146,6 +12200,8 @@ fsevents@~2.3.2:
     gatsby-transformer-remark: ^5.9.0
     gatsby-transformer-sharp: ^4.9.0
     normalize.css: ^8.0.1
+    preact: ^10.6.6
+    preact-render-to-string: ^5.1.20
     prettier: 2.5.1
     prismjs: ^1.27.0
     prop-types: ^15.8.1
@@ -13645,6 +13701,24 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"preact-render-to-string@npm:^5.1.20":
+  version: 5.1.20
+  resolution: "preact-render-to-string@npm:5.1.20"
+  dependencies:
+    pretty-format: ^3.8.0
+  peerDependencies:
+    preact: ">=10"
+  checksum: 69e36751415cd81b68ac23811122e674f761efca0f5365b5ac90e62498ee1f4d25abe718b6c21f52faa8764582a667378fe1817dadba69ad24259033fddd6d21
+  languageName: node
+  linkType: hard
+
+"preact@npm:^10.6.6":
+  version: 10.6.6
+  resolution: "preact@npm:10.6.6"
+  checksum: d6a9581b222c60595f987be28738b68dabb3045f72043e2619af81e9ca00b2b0942717642bcfcaab77a0afa50a97cd35039139c7f425a62a4f02ceb793d8ef83
+  languageName: node
+  linkType: hard
+
 "prebuild-install@npm:^7.0.1":
   version: 7.0.1
   resolution: "prebuild-install@npm:7.0.1"
@@ -13705,6 +13779,13 @@ fsevents@~2.3.2:
     lodash: ^4.17.20
     renderkid: ^2.0.4
   checksum: 16775d06f9a695d17103414d610b1281f9535ee1f2da1ce1e1b9be79584a114aa7eac6dcdcc5ef151756d3c014dfd4ac1c7303ed8016d0cec12437cfdf4021c6
+  languageName: node
+  linkType: hard
+
+"pretty-format@npm:^3.8.0":
+  version: 3.8.0
+  resolution: "pretty-format@npm:3.8.0"
+  checksum: 21a114d43ef06978f8f7f6212be4649b0b094f05d9b30e14e37550bf35c8ca24d8adbca9e5adc4cc15d9eaf7a1e7a30478a4dc37b30982bfdf0292a5b385484c
   languageName: node
   linkType: hard
 
