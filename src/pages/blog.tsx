@@ -6,7 +6,7 @@ import SEO from "../components/seo/SEO";
 const BlogPage: React.FC = () => (
   <Layout>
     <SEO title="Blog" />
-    <div style={{ marginTop: 100 }}></div>
+    <div style={{ marginTop: 100 }} />
     <h1>Random Blog</h1>
     <p>Blogs item here</p>
   </Layout>

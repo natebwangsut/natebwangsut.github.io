@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { LandingProps } from "../../../../interface/props/section";
 import { FaTwitter, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
-import { IconType } from "react-icons";
 
 // TODO: Use ESM import once Gatsby supports it
 const config = require("src/config.ts");
@@ -25,7 +24,6 @@ const Social = styled.div`
     cursor: pointer;
     color: black;
     background-color: var(${config.theme});
-    border: 2px solid currentColor;
   }
 `;
 

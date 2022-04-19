@@ -51,15 +51,14 @@ const SEO: React.FC<SEOPropTypes> = ({
   return (
     <Helmet
       link={[
+        // Warmup browser for loading Google fon
         {
-          // DNS Prefetching
-          rel: "dns-fetch",
-          href: "https://natebwangsut.github.io/",
+          rel: "preconnect",
+          href: "https://fonts.googleapis.com"
         },
         {
-          // Allowing web to preload font(s)
           rel: "preconnect",
-          href: "https://natebwangsut.github.io/",
+          href: "https://fonts.gstatic.com",
           crossOrigin: "anonymous",
         },
       ]}

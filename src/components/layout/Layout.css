@@ -627,7 +627,7 @@ pre tt:after {
 html,
 body {
   background-color: #000;
-  font-family: "Lexend Deca", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Lexend", -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 300;
   color: #ddd;
   font-size: 16px;
@@ -639,7 +639,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lexend Deca", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Lexend", -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 300;
 }
 
