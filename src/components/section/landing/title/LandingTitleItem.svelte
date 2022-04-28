@@ -17,7 +17,6 @@
   </h2>
 </div>
 
-<!-- color: `var(${config.theme}-${4 + index * 2})` -->
 <style>
   @keyframes animation {
     from {

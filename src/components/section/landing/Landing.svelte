@@ -1,7 +1,7 @@
 <script lang="ts">
   // import React from "react";
   // import styled from "styled-components";
-  import LandingSocial from "./social/LandingSocial";
+  import LandingSocial from "./social/LandingSocial.svelte";
   import LandingTitle from "./title/LandingTitle.svelte";
   import LandingTitleItem from "./title/LandingTitleItem.svelte";
 
@@ -29,6 +29,6 @@ const LandingSubtitle = styled.div`
       <LandingTitleItem index={index}>{word}</LandingTitleItem>
     {/each}
   </LandingTitle>
-  <!-- <LandingSocial {...props} /> -->
+  <LandingSocial />
   <!-- <LandingSubtitle dangerouslySetInnerHTML={{ __html: props.html }}></LandingSubtitle> -->
 </div>
