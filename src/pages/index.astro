@@ -1,0 +1,44 @@
+---
+import Layout from "../components/layout/Layout.svelte";
+import Landing from "../components/section/landing/Landing.svelte";
+import config from "../config"
+---
+
+<html lang="en">
+	<head>
+		<!-- Title -->
+		<title>{config.siteTitle}</title>
+
+		<!-- Preconnecting Google Fonts API -->
+		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin />
+
+		<!-- Base metadata -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={config.siteDescription} />
+
+		<!-- OpenGraph -->
+		<meta name="og:title" content={config.siteTitle} />
+		<meta name="og:description" content={config.siteDescription} />
+		<meta name="og:type" content="website" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@{config.twitterHandle}" />
+		<meta name="twitter:creator" content="@{config.twitterHandle}" />
+		<meta name="twitter:title" content={config.siteTitle} />
+		<meta name="twitter:description" content={config.siteDescription} />
+		<!-- <meta name="twitter:image" content={config.siteLogo} /> -->
+	</head>
+	<body>
+		<Layout>
+      <!-- <Landing {...data.landing.edges[0].node} /> -->
+			<Landing />
+
+      <!-- <About {...data.about.edges[0].node} />
+      <Experience {...data.experience} />
+      <Project {...data.project}/> -->
+    </Layout>
+	</body>
+</html>
