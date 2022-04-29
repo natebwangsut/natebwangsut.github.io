@@ -1,7 +1,15 @@
 ---
-import Layout from "../components/layout/Layout.svelte";
-import Landing from "../components/section/landing/Landing.svelte";
 import config from "../config"
+
+// import Layout from "../components/section/layout/Layout.svelte";
+// import About from "../components/section/about/About.svelte";
+
+import Landing from "../components/section/landing/Landing.svelte";
+
+import About from "../components/About.astro";
+import Layout from "../components/layout/Layout.svelte";
+
+const content = "# Foo";
 ---
 
 <html lang="en">
@@ -33,8 +41,8 @@ import config from "../config"
 	</head>
 	<body>
 		<Layout>
-      <!-- <Landing {...data.landing.edges[0].node} /> -->
 			<Landing />
+			<About />
 
       <!-- <About {...data.about.edges[0].node} />
       <Experience {...data.experience} />

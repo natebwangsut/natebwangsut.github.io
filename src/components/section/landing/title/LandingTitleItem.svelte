@@ -31,19 +31,21 @@
 
   .animation {
     opacity: 0;
-    position: relative;
     width: 100%;
     height: 100px;
     line-height: 90px;
     font-size: 5rem;
-    font-family: Manrope, -apple-system, BlinkMacSystemFont, sans-serif;
-    font-weight: 400;
-    letter-spacing: -0.1rem;
-    will-change: transform, opacity;
+    margin-bottom: 0;
     overflow: hidden;
     white-space: nowrap;
 
-    /*   */
+    /* Fonts */
+    font-family: Lexend, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 200;
+    letter-spacing: -0.2rem;
+
+    /* Transition / Animation */
+    will-change: transform, opacity;
     animation: 0.5s ease-in calc(var(--index) * 0.1s) 1 animation forwards;
   }
 </style>

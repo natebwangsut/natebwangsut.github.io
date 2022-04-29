@@ -1,0 +1,39 @@
+---
+import config from '../config';
+import { frontmatter, Content } from '../contents/about/about.md'
+---
+
+<style>
+  div {
+    color: #aaa;
+  }
+
+  h1.title {
+    margin-top: 20rem;
+  }
+
+  h1.title > span {
+    color: var(--mint-6);
+    font-weight: 400;
+  }
+
+  /* Need to pass down the style to children */
+  :global(a) {
+    color: var(--mint);
+    transition: 0.2s ease-out;
+    text-decoration: none;
+  }
+
+  :global(a:hover),
+  :global(a:active) {
+    color: var(--mint-8);
+  }
+</style>
+
+<div>
+  <h1 class="title">
+    {frontmatter.title}
+    <span>{frontmatter.accent}</span>
+  </h1>
+  <Content />
+</div>

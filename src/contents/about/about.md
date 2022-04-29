@@ -1,8 +1,6 @@
 ---
-preTitle: "Small things about"
-title: "Nate Bhurinat Wangsutthitham"
-caption: ""
-subCaption: ""
+title: "Small things about"
+accent: "ME"
 ---
 
 Since young, Nate has been very enthusiastic about technology.  

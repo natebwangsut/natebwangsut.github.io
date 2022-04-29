@@ -1,25 +1,35 @@
 <script lang="ts">
   import config from "../../../../config";
-  import Instragram from "../../../../svg/instagram.svg"; // svg === '/src/image.svg'
+  import GitHub from "../../../../svg/github.svelte";
+  import Instragram from "../../../../svg/instagram.svelte";
+  import Linkedin from "../../../../svg/linkedin.svelte";
+  import Twitter from "../../../../svg/twitter.svelte";
 
-  const socialLinks: { icon: any; alt:string, href: string }[] = [
+  // import GitHub from "../../../../svg/github.svg";
+  // import Instragram from "../../../../svg/instagram.svg";
+  // import Linkedin from "../../../../svg/linkedin.svg";
+  // import Twitter from "../../../../svg/twitter.svg";
+
+  const socialLinks: { icon: any; alt: string; href: string }[] = [
     {
-      icon: "",
+      icon: Twitter,
+      // icon: "",
       alt: "twitter",
       href: config.links.twitter,
     },
     {
       icon: Instragram,
+      // icon: "",
       alt: "instragram",
       href: config.links.instagram,
     },
     {
-      icon: "",
+      icon: Linkedin,
       alt: "linkedin",
       href: config.links.linkedin,
     },
     {
-      icon: "",
+      icon: GitHub,
       alt: "github",
       href: config.links.github,
     },
@@ -28,11 +38,14 @@
 
 <div class="bar">
   {#each socialLinks as sl}
-    <div class="social" style="--theme:var({config.theme});">
-      <a href={sl.href} class="link" target="_blank">
-        {sl.alt}
-      </a>
-    </div>
+    <!-- <a href={sl.href} class="link" target="_blank"> -->
+    <a href="#">
+      <div class="social" style="--theme:var({config.theme});--themeBg:var({config.themeBg})">
+        <!-- {@html sl.icon} -->
+        <!-- <img src={sl.icon} style="fill: white; stroke: white;"/> -->
+        <svelte:component this={sl.icon}/>
+      </div>
+    </a>
   {/each}
   <hr class="divider" style="--theme:var({config.theme});" />
 </div>
@@ -48,20 +61,14 @@
   div.social {
     width: 4rem;
     height: 4rem;
-    color: #aaa;
+    fill: rgba(255, 255, 255, 0.3);
     padding: calc(3rem / 6);
-    padding-bottom: 0px;
     border: 2px solid transparent;
-    transition: 0.2s ease-out;
+    transition: 0.25s ease-out;
   }
   div.social:hover {
     cursor: pointer;
-    color: black;
-    background-color: var(--theme);
-  }
-
-  a.link {
-    color: inherit;
+    fill: var(--theme);
   }
 
   hr.divider {
