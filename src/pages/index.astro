@@ -1,4 +1,9 @@
 ---
+
+import "../styles/global.css";
+import "../styles/fonts.css";
+import "../styles/palette.css";
+
 import config from "../config"
 
 // import Layout from "../components/section/layout/Layout.svelte";
@@ -7,9 +12,8 @@ import config from "../config"
 import Landing from "../components/section/landing/Landing.svelte";
 
 import About from "../components/About.astro";
+import Experience from "../components/Experience.astro";
 import Layout from "../components/layout/Layout.svelte";
-
-const content = "# Foo";
 ---
 
 <html lang="en">
@@ -43,10 +47,10 @@ const content = "# Foo";
 		<Layout>
 			<Landing />
 			<About />
+			<Experience />
 
-      <!-- <About {...data.about.edges[0].node} />
-      <Experience {...data.experience} />
-      <Project {...data.project}/> -->
+      <!-- <Experience {...data.experience} /> -->
+      <!-- <Project {...data.project}/> -->
     </Layout>
 	</body>
 </html>

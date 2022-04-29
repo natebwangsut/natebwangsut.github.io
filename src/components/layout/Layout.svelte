@@ -3,17 +3,6 @@
  * Styling
  ******************************************************************************/
 -->
-<script lang="ts">
-  // Normalised browsers
-  // import "normalize.css";
-
-  // Import dependencies
-  import "./fonts.css";
-  import "./palette.css";
-
-  // Actual layout styling
-  import "./Layout.css";
-</script>
 
 <!--
 /******************************************************************************
@@ -30,7 +19,7 @@
   <main>
     <slot />
   </main>
-  <footer style="marginBottom: 2rem;">
+  <footer style="margin-bottom: 2rem;">
     © {new Date().getFullYear()} | designed and developed by
     <u>@natebwangsut</u>
   </footer>

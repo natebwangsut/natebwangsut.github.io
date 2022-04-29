@@ -10,6 +10,13 @@ const TabList = styled.ol`
   margin: 8px 0 8px 0;
 `;
 
+<<<<<<< HEAD:src/components/Tabs.tsx
+=======
+interface TabListItemProps {
+  activeTabId: number;
+}
+
+>>>>>>> WIP: migrating experience component:src/components/tabs/Tabs.tsx
 const TabListItem = styled.div`
   padding: 8px;
   transition: 0.2s ease-out;
