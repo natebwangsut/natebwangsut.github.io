@@ -1,5 +1,5 @@
 import React, { useState, ReactElement } from "react";
-import TabPane, { TabPaneProps } from "./pane/TabPane";
+import { TabPaneProps } from "./TabPane";
 import styled from "styled-components";
 
 // TODO: Use ESM import once Gatsby supports it
@@ -10,23 +10,7 @@ const TabList = styled.ol`
   margin: 8px 0 8px 0;
 `;
 
-interface TabListItemProps {
-  activeTabId: number;
-}
-
-// const TabListItem = styled.div`
-//   padding: 8px;
-//   transform: translateY(calc(${({ activeTabId }) => activeTabId} * var(--tab-height)));
-//   transition: 0.25s ease-out;
-//   border: 1px solid transparent;
-
-//   :hover {
-//     border: 1px solid var(${config.theme});
-//   }
-// `;
-
 const TabListItem = styled.div`
-  // margin: 8px;
   padding: 8px;
   transition: 0.2s ease-out;
   border-left: 1px solid transparent;
@@ -38,7 +22,7 @@ const TabListItem = styled.div`
 `;
 
 const TabContent = styled.div`
-  flex: 2;
+  flex: 3;
   margin: 8px;
   padding: 8px;
   min-height: 500px;
@@ -46,22 +30,17 @@ const TabContent = styled.div`
 
 const Tabs: React.FC<{ children: ReactElement<TabPaneProps>[] }> = ({ children }) => {
   // Let's put the first children
-  const [activeTab, setActiveTab] = useState(children[0].props.label);
-
+  const [activeTab, setActiveTab] = useState(0);
   return (
     <>
       <TabList>
         {children &&
-          children.map(child => {
-            const isActive = child.props.label === activeTab;
+          children.map((child, index) => {
+            const isActive = activeTab === index;
             return (
               <TabListItem
-                // activeTabId={isActive ? 0 : index}
-                // tabId={index}
-                key={child.key}
-                onClick={() => {
-                  setActiveTab(child.key);
-                }}
+                key={index}
+                onClick={() => setActiveTab(index)}
                 // Show the coloured border if the tab is active
                 style={{
                   color: isActive ? `var(${config.theme})` : "",
@@ -69,16 +48,16 @@ const Tabs: React.FC<{ children: ReactElement<TabPaneProps>[] }> = ({ children }
                   borderLeft: isActive ? `3px solid var(${config.theme})` : "",
                 }}
               >
-                {child.props.label}
+                {child.key}
               </TabListItem>
             );
           })}
       </TabList>
       <TabContent>
         {children &&
-          children.map(child => {
-            if (child.props.label !== activeTab) return;
-            return <TabPane {...child.props} key={child.key} />;
+          children.map((child,index) => {
+            if (index !== activeTab) return;
+            return child;
           })}
       </TabContent>
     </>

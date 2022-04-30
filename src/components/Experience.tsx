@@ -1,7 +1,7 @@
 import React, { PropsWithChildren, Props } from "react";
 import styled from "styled-components";
-import Tabs from "../../tabs/Tabs";
-import TabPane from "../../tabs/pane/TabPane";
+import Tabs from "./Tabs";
+import TabPane from "./TabPane";
 import { ExperienceProps } from "src/interface/props/section";
 
 // TODO: Use ESM import once Gatsby supports it

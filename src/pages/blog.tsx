@@ -1,7 +1,7 @@
 import React from "react";
 
-import Layout from "../components/layout/Layout";
-import SEO from "../components/seo/SEO";
+import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
 const BlogPage: React.FC = () => (
   <Layout>

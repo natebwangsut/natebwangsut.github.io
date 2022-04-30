@@ -15,8 +15,7 @@ const LandingTitleAnimation = styled(animated.div)`
   height: 100px;
   line-height: 90px;
   font-size: 5rem;
-  font-family: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 400;
+  font-weight: 200;
   letter-spacing: -0.1rem;
   will-change: transform, opacity;
   overflow: hidden;
@@ -35,16 +34,16 @@ const LandingTitle: React.FC<{ open: Boolean }> = ({ open, children, ...props })
   const trail = useTrail(items.length, {
     config: { mass: 5, tension: 2000, friction: 200 },
     opacity: 1,
-    x: open ? 0 : 20,
+    y: open ? 0 : 20,
     height: open ? 110 : 0,
-    from: { opacity: 0, x: 20, height: 0 },
+    from: { opacity: 0, y: 40, height: 0 },
   });
   return (
     <LandingWrapper {...props}>
       <div style={{ marginTop: "24px", marginBottom: "24px" }}>Hi my name is...</div>
       <h2>
-        {trail.map(({ x, height, ...rest }, index) => (
-          <LandingTitleAnimation key={index} style={{ ...rest, transform: x.to(x => `translate3d(0,${x}px,0)`) }}>
+        {trail.map(({ y, height, ...rest }, index) => (
+          <LandingTitleAnimation key={index} style={{ ...rest, transform: y.to(y => `translate3d(0,${y}px,0)`) }}>
             <animated.div key={index} style={{ height, color: `var(${config.theme}-${4 + index * 2})` }}>
               {items[index]}
             </animated.div>

@@ -1,13 +1,13 @@
 import React from "react";
 import { graphql, PageProps } from "gatsby";
 
-import Layout from "../components/layout/Layout";
+import Layout from "../components/Layout";
 
-import SEO from "../components/seo/SEO";
-import Landing from "../components/section/landing/Landing";
-import About from "../components/section/about/About";
-import Experience from "../components/section/experience/Experience";
-import Project from "src/components/section/project/Project";
+import SEO from "../components/SEO";
+import Landing from "../components/Landing";
+import About from "../components/About";
+import Experience from "../components/Experience";
+import Project from "src/components/Project";
 
 import { DefaultSectionProps, ExperienceProps, LandingProps, ProjectProps } from "../interface/props/section";
 

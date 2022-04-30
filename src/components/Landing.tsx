@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import LandingSocial from "./social/LandingSocial";
-import LandingTitle from "./title/LandingTitle";
+import LandingSocial from "./LandingSocial";
+import LandingTitle from "./LandingTitle";
 
-import { LandingProps } from "../../../interface/props/section";
+import { LandingProps } from "../interface/props/section";
 
 const LandingHeader = styled.div`
   margin-top: 15rem;

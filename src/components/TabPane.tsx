@@ -19,8 +19,6 @@ export interface TabPaneProps {
 
 const TabPaneSection = styled.section`
   position: relative;
-  // padding-top: 20rem;
-  // padding-bottom: 20rem;
 `;
 
 const TabPaneHeader = styled.header`

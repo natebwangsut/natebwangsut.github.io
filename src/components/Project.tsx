@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Title } from "src/components/text/Text";
 import { ProjectProps } from "src/interface/props/section";
 import { FaCode, FaGithub } from "react-icons/fa";
 
+const ROW = 2;
+const ROW_SIZE = 3;
+
 // TODO: Use ESM import once Gatsby supports it
 const config = require("src/config.ts");
+
+const Title = styled.h1`
+  margin-bottom: 2rem;
+  color: var(${config.theme});
+`;
 
 const ProjectWrapper = styled.div`
   margin-bottom: 20rem;
@@ -17,9 +24,8 @@ const ProjectGrid = styled.div`
   row-gap: 20px;
   column-gap: 20px;
 
-  // I want 3 cols
   grid-template-rows: auto;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(${ROW_SIZE}, 1fr);
 
   // Use single column for mobile
   @media only screen and (max-width: 600px) {
@@ -136,8 +142,6 @@ interface ProjectEdges {
   edges: [{ node: ProjectProps }];
 }
 
-const ROW = 2;
-const ROW_SIZE = 3;
 
 const Project: React.FC<ProjectEdges> = ({ edges }) => {
   const [isHidden, setIsHidden] = useState<boolean>(true);

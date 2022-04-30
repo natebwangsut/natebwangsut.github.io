@@ -7,8 +7,9 @@
 
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
 
-import Header from "../header/Header";
+const config = require("src/config.ts");
 
 /******************************************************************************
  * Styling
@@ -18,15 +19,31 @@ import Header from "../header/Header";
 import "normalize.css";
 
 // Import dependencies
-import "./fonts.css";
-import "./palette.css";
+import "../styles/fonts.css";
+import "../styles/palette.css";
 
 // Actual layout styling
-import "./Layout.css";
+import "../styles/layout.css";
 
 /******************************************************************************
  * Component
  ******************************************************************************/
+
+const Footer = styled.footer`
+  color: #aaa;
+  margin-bottom: 2rem;
+
+  a {
+    transition: 0.2s ease-out;
+    text-decoration: none;
+    color: var(${config.theme}-4);
+  }
+
+  a:hover,
+  a:active {
+    color: var(${config.theme}-8);
+  }
+`;
 
 const Layout: React.FC = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -41,7 +58,6 @@ const Layout: React.FC = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
           margin: "0 auto",
@@ -50,13 +66,12 @@ const Layout: React.FC = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer
-          style={{
-            marginBottom: "2rem",
-          }}
-        >
-          © {new Date().getFullYear()} | designed and developed by <u>@natebwangsut</u>
-        </footer>
+        <Footer>
+          © {new Date().getFullYear()} | designed and developed by{" "}
+          <a target="_blank" href="https://natebwangsut.github.io">
+            <u>@natebwangsut</u>
+          </a>
+        </Footer>
       </div>
     </>
   );

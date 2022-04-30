@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { LandingProps } from "../../../../interface/props/section";
+import { LandingProps } from "../interface/props/section";
 import { FaTwitter, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 // TODO: Use ESM import once Gatsby supports it
