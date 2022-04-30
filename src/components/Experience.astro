@@ -1,6 +1,6 @@
 ---
-// import Tab from './Tab.svelte';
 import Tab from './Tab';
+// import Tab from './Tab.svelte';
 
 let experience = await Astro.glob("../contents/experience/*.md")
 let items = experience.map((exp, index) => ({
@@ -17,7 +17,6 @@ let items = experience.map((exp, index) => ({
   return 0;
 });
 ---
-
 <style>
   div {
     color: #aaa
@@ -56,8 +55,9 @@ let items = experience.map((exp, index) => ({
   }
 </style>
 
-<h1>Experience</h1>
-<!-- <Tab items={items} activeTab={0}> -->
-<Tab>
-  {items.map(item => <item.component />)}
-</Tab>
+<div>
+  <h1>Experience</h1>
+  <Tab items={items} client:load>
+    {items.map(item => <item.component />)}
+  </Tab>
+</div>

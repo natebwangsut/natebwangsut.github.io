@@ -6,15 +6,12 @@
 <script lang="ts">
   export let items = [];
 
-  export let activeTab = 0;
+  let activeTab = 0;
   const setActiveTab = (tab) => {
     activeTab = tab;
   };
 </script>
 
-<button on:click|preventDefault={() => (activeTab = activeTab++)}>
-  Active tab = {activeTab}
-</button>
 <div
   style="
   display: flex;
@@ -28,20 +25,14 @@
       {#if activeTab === index}
         <div
           class="active-tab-list tab-list"
-          on:click={() => {
-            console.error(index);
-            setActiveTab(index);
-          }}
+          on:click={() => setActiveTab(index)}
         >
           {item.company}
         </div>
       {:else}
         <div
           class="tab-list"
-          on:click={() => {
-            console.error(index);
-            setActiveTab(index);
-          }}
+          on:click={() => setActiveTab(index)}
         >
           {item.company}
         </div>
