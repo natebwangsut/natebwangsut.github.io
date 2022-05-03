@@ -17,7 +17,7 @@ const LandingTitleAnimation = styled(animated.div)`
 
   font-size: 4.5rem;
   font-weight: 200;
-  line-height: 90px;
+  line-height: 4.5rem;
   letter-spacing: -0.1rem;
   white-space: nowrap;
 
