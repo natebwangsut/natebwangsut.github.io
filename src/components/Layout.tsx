@@ -45,35 +45,29 @@ const Footer = styled.footer`
   }
 `;
 
-const Layout: React.FC = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+const Container = styled.section`
+  margin: 0 auto;
+  padding: 24px;
+  max-width: 960px;
+`;
 
+const Paragraph = styled.p`
+  margin-bottom: 0.5rem;
+`;
+
+const Layout: React.FC = ({ children }) => {
   return (
-    <>
-      <div
-        style={{
-          margin: "0 auto",
-          padding: "24px",
-          maxWidth: 960,
-        }}
-      >
-        <main>{children}</main>
-        <Footer>
+    <Container>
+      <main>{children}</main>
+      <Footer>
+        <Paragraph>
           © {new Date().getFullYear()} | designed and developed by{" "}
-          <a target="_blank" href="https://natebwangsut.github.io">
-            <u>@natebwangsut</u>
+          <a href={config.links.github} target="_blank">
+            @natebwangsut
           </a>
-        </Footer>
-      </div>
-    </>
+        </Paragraph>
+      </Footer>
+    </Container>
   );
 };
 

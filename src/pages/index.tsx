@@ -2,14 +2,15 @@ import React from "react";
 import { graphql, PageProps } from "gatsby";
 
 import Layout from "../components/Layout";
+import { DefaultSectionProps, ExperienceProps, LandingProps, ProjectProps } from "../interface/props/section";
 
 import SEO from "../components/SEO";
 import Landing from "../components/Landing";
 import About from "../components/About";
 import Experience from "../components/Experience";
 import Project from "src/components/Project";
+import Featured from "src/components/Featured";
 
-import { DefaultSectionProps, ExperienceProps, LandingProps, ProjectProps } from "../interface/props/section";
 
 export const pageQuery = graphql`
   {
@@ -93,12 +94,12 @@ interface IndexPageProps extends PageProps {
 }
 
 const IndexPage: React.FC<IndexPageProps> = ({ location, data }) => {
-  // console.log(data);
   return (
     <Layout>
       <SEO title="Home" />
       <Landing {...data.landing.edges[0].node} />
       <About {...data.about.edges[0].node} />
+      <Featured />
       <Experience {...data.experience} />
       <Project {...data.project}/>
     </Layout>

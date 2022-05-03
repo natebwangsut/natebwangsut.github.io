@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { LandingProps } from "../interface/props/section";
 import { FaTwitter, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
+import "../styles/icon.css"
+
 // TODO: Use ESM import once Gatsby supports it
 const config = require("src/config.ts");
 
@@ -33,17 +35,19 @@ const SocialLink = styled.a`
 
 const Divider = styled.hr`
   flex: 1;
-  display: block;
-  height: 0px;
+  height: 100%;
+  padding: 0;
   background-color: transparent;
   border: 2px solid var(${config.theme});
-  margin-top: calc(4rem / 2 + 1px);
-  margin-bottom: calc(4rem / 2 + 1px);
-  padding: 0;
+
+  display: flex;
+  align-self: center;
+  margin: 0;
 `;
 
+// Allowing
 const iconProps = {
-  size: "3rem",
+  className: "social-icon"
 };
 
 const socialLinks: { icon: React.ReactNode; href: string }[] = [
@@ -75,7 +79,7 @@ const LandingSocial: React.FC<LandingProps> = ({ frontmatter, html }) => {
           </SocialLink>
         </Social>
       ))}
-      <Divider />
+      <Divider className="divider"/>
     </SocialBar>
   );
 };
