@@ -9,8 +9,6 @@ import Landing from "../components/Landing";
 import About from "../components/About";
 import Experience from "../components/Experience";
 import Project from "src/components/Project";
-import Featured from "src/components/Featured";
-
 
 export const pageQuery = graphql`
   {
@@ -99,7 +97,6 @@ const IndexPage: React.FC<IndexPageProps> = ({ location, data }) => {
       <SEO title="Home" />
       <Landing {...data.landing.edges[0].node} />
       <About {...data.about.edges[0].node} />
-      <Featured />
       <Experience {...data.experience} />
       <Project {...data.project}/>
     </Layout>
