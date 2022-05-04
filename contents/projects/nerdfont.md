@@ -7,7 +7,7 @@ stack:
   - Font
   - Python
   - Powerline
-  - Terminal GUI
+  - Terminal
 ---
 
 Patching fonts and creating pull requests to the main repository.

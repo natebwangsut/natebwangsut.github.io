@@ -6,4 +6,4 @@ reference: "https://github.com/golang/go/issues/39189"
 stack: ["golang", "encoding"]
 ---
 
-Discovered a bug in standard library, provide evidences and discussed with language maintainer to implement a fix to the encoder.
+Discovered a bug in the standard library, provided evidence and discussed with maintainers to implement a fix to the encoder.
