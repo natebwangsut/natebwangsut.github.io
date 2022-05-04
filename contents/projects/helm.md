@@ -5,4 +5,4 @@ github: "https://github.com/helm/charts"
 stack: ["helm", "kubernetes"]
 ---
 
-Maintained application templates which serves as centralised charts for many users.
+Maintained application templates which serve as centralised charts for many users.

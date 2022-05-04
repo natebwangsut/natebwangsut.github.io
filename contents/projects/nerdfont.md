@@ -10,4 +10,4 @@ stack:
   - Terminal GUI
 ---
 
-Patching fonts and created pull requests to the main repository.
+Patching fonts and creating pull requests to the main repository.

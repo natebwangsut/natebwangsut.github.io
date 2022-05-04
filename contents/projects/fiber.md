@@ -7,4 +7,4 @@ stack:
   - "web framework"
 ---
 
-Contributed to Fiber web framework. Fixing bug on session implementation and flaky unit tests.
+Contributed to the Fiber web framework. Fixing bugs on session implementation and flaky unit tests.

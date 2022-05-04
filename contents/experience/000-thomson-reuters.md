@@ -6,6 +6,5 @@ start_date: "2015-11"
 end_date: "2016-02"
 ---
 
-- Modularised automated testing procedure by creating a template script that is used across multiple teams.
-  - Resulted in enhanced stability and velocity of build systems.
+- Improved team's automated testing procedure by creating a template script that is used across multiple teams. This resulted in enhanced stability and speed of the automated testing system.
 - Contributed to the team (backend & frontend) in developing the product for the consumer involving real-time financial analytics using agile methodology.

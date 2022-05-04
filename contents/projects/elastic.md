@@ -5,4 +5,4 @@ github: "https://github.com/elastic/helm-charts"
 stack: []
 ---
 
-Modified Kibana templates so that it is compatible with AWS EKS installations.
+Open pull request to Kibana and modify the Kubernetes deployment templates so that it is compatible with AWS EKS installations.

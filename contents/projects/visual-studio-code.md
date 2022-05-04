@@ -5,4 +5,4 @@ github: "https://github.com/microsoft/vscode"
 stack: []
 ---
 
-Reported bugs and helped with investigation on issues regarding Chromium rendering.
+Reported bugs and helped with investigation on issues regarding the Chromium rendering methods.
