@@ -1,5 +1,7 @@
 ---
+import { Debug } from 'astro/components';
 import Tab from './Tab';
+// import Tab from './Tab-solid';
 // import Tab from './Tab.svelte';
 
 let experience = await Astro.glob("../contents/experience/*.md")
@@ -10,6 +12,7 @@ let items = experience.map((exp, index) => ({
   start_date: exp.frontmatter.start_date,
   end_date: exp.frontmatter.end_date || "Present",
   value: index,
+  compiled: exp.compiledContent(),
   component: exp.Content,
 })).sort((a, b) => {
   if (a.start_date > b.start_date) return -1;
@@ -57,7 +60,12 @@ let items = experience.map((exp, index) => ({
 
 <div>
   <h1>Experience</h1>
-  <Tab items={items} client:load>
+  <Tab items={items} client:only="react" />
+
+  <!-- <Tab items={items} client:only>
     {items.map(item => <item.component />)}
-  </Tab>
+  </Tab> -->
+  <!-- <Tab items={items} client:only="solid">
+    {items.map(item => <item.component />)}
+  </Tab> -->
 </div>

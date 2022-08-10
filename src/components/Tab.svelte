@@ -2,7 +2,6 @@
   NOTE: Forget about using interactive svelte until
   https://github.com/withastro/astro/issues/2456 is resolved.
 -->
-
 <script lang="ts">
   export let items = [];
 
@@ -30,10 +29,7 @@
           {item.company}
         </div>
       {:else}
-        <div
-          class="tab-list"
-          on:click={() => setActiveTab(index)}
-        >
+        <div class="tab-list" on:click={() => setActiveTab(index)}>
           {item.company}
         </div>
       {/if}
