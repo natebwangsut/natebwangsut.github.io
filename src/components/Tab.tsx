@@ -1,4 +1,4 @@
-import { Children, FC, useState } from "react";
+import { FC, useState } from "react";
 import config from "../config";
 
 const TabPane = ({ header, subHeader, children, childrenStyle = {} }) => {
@@ -44,6 +44,7 @@ const Tabs: FC<{
               style={{
                 cursor: "pointer",
                 padding: 8,
+                transition: "all 0.2s ease-out",
                 color: isActive ? `var(${config.theme})` : "",
                 background: isActive ? `var(${config.theme}-bg)` : "",
                 borderLeft: isActive ? `3px solid var(${config.theme})` : "",

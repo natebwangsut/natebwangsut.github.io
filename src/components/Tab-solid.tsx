@@ -1,5 +1,4 @@
-import { Component, children, createSignal, For, createEffect } from "solid-js";
-
+import { createSignal } from "solid-js";
 import config from "../config";
 
 const TabPane = ({ header, subHeader, children, childrenStyle = {} }) => {
@@ -27,17 +26,23 @@ const Tabs = (props) => {
               // tabId={index}
               // key={index}
               onClick={() => {
-                console.log("clicked");
                 setActiveTab(index);
               }}
               // Show the coloured border if the tab is active
               style={{
                 cursor: "pointer",
                 padding: "8px",
+                transition: "all 0.2s ease-out",
                 // transition: "all 0.1s ease-out",
                 color: isActive ? `var(${config.theme})` : "",
                 background: isActive ? `var(${config.theme}-bg)` : "",
-                borderLeft: isActive ? `3px solid var(${config.theme})` : "",
+
+
+                // "border-left": isActive ? `3px solid var(${config.theme})` : "",
+
+                "&:hover": {
+                  color: `var(${config.theme})`
+                },
               }}
             >
               {item.company}
@@ -46,23 +51,13 @@ const Tabs = (props) => {
         })}
       </ol>
       <div style={{ flex: 3 }}>
-        {props.component}
-        {/* <For each={props.children}>
-          {(item) => {
-            console.log(item);
-            return item;
-          }}
-        </For> */}
-        {/* {props.children.map((item, index) => {
+        {props.items.map((item, index) => {
           const isActive = index === activeTab();
-          if (isActive) return item;
-          else return <></>;
-        })} */}
-        {/* {props.children} */}
-
-        {console.log(props.component)}
-        {console.log(props.children)}
-        {props.children}
+          console.log(isActive, item.compiled);
+          if (!isActive) return <></>;
+          else
+            return <div innerHTML={item.compiled} />;
+        })}
       </div>
     </div>
   );
