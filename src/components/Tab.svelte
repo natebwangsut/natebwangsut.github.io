@@ -21,18 +21,13 @@
   <!-- TabList -->
   <ol style="flex: 1; margin: 8px 0 8px 0;">
     {#each items as item, index}
-      {#if activeTab === index}
-        <div
-          class="active-tab-list tab-list"
-          on:click={() => setActiveTab(index)}
-        >
-          {item.company}
-        </div>
-      {:else}
-        <div class="tab-list" on:click={() => setActiveTab(index)}>
-          {item.company}
-        </div>
-      {/if}
+      <div
+        class="tab-list"
+        class:active="{activeTab === index}"
+        on:click={() => setActiveTab(index)}
+      >
+        {item.company}
+      </div>
     {/each}
   </ol>
   <!-- TabPane -->
@@ -65,7 +60,7 @@
 
   div.tab-list {
     padding: 8px;
-    transition: 0.2s ease-out;
+    transition: all 0.2s ease-out;
     border-left: 1px solid transparent;
   }
 
@@ -74,7 +69,7 @@
     color: var(--mint-6);
   }
 
-  div.active-tab-list {
+  div.tab-list.active {
     color: var(--mint-6);
     background: var(--mint-bg);
     border-left: 3px solid var(--mint-6);

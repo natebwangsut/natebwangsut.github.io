@@ -1,7 +1,7 @@
 ---
-import { Debug } from 'astro/components';
-import Tab from './Tab';
-// import Tab from './Tab-solid';
+// import { Debug } from 'astro/components';
+// import Tab from './Tab';
+import Tab from './Tab-solid';
 // import Tab from './Tab.svelte';
 
 let experience = await Astro.glob("../contents/experience/*.md")
@@ -41,12 +41,12 @@ let items = experience.map((exp, index) => ({
 
   div.tab-list {
     padding: 8px;
-    transition: 0.2s ease-out;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
     border-left: 1px solid transparent;
   }
 
   div.tab-list:hover {
-    cursor: pointer;
     color: var(--mint-6);
   }
 
@@ -60,13 +60,15 @@ let items = experience.map((exp, index) => ({
 
 <div>
   <h1>Experience</h1>
-  <Tab items={items} client:only="react" />
-  <!-- <Tab items={items} client:only="solid" /> -->
+  <!-- <Tab items={items} client:only="react" /> -->
+  <!-- <Tab items={items} client:load /> -->
 
-  <!-- <Tab items={items} client:only>
-    {items.map(item => <item.component />)}
+  <!-- Svelte -->
+  <!-- <Tab items={items} client:visible>
+    {items.map(item => <div set:html={item.compiled}></div>)}
   </Tab> -->
-  <!-- <Tab items={items} client:only="solid">
-    {items.map(item => <item.component />)}
-  </Tab> -->
+
+  <!-- Solidjs -->
+  <Tab items={items} client:visible />
+  <!-- {items.map(item => <item.component />)} -->
 </div>

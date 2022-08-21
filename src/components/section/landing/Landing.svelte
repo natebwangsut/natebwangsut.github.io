@@ -3,7 +3,7 @@
   import LandingTitle from "./title/LandingTitle.svelte";
   import LandingTitleItem from "./title/LandingTitleItem.svelte";
 
-    const LANDING_TITLE_NAME = "Nate Bhurinat Wangsutthitham";
+  const LANDING_TITLE_NAME = "Nate Bhurinat Wangsutthitham";
 </script>
 
 <div>
