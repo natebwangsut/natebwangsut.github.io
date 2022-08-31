@@ -1,3 +1,5 @@
+/** @jsxImportSource solid-js */
+
 import { createSignal, For, Show } from "solid-js";
 
 import "./Tab.css";

@@ -1,0 +1,77 @@
+div.project-grid {
+  display: grid;
+  row-gap: 20px;
+  column-gap: 20px;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+
+  /*  */
+  margin-bottom: 20px;
+}
+
+/* Use single column for mobile */
+@media only screen and (max-width: 600px) {
+  div.project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+div.project-grid-item {
+  min-height: 100px;
+  place-self: stretch stretch;
+
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s ease-out;
+  border: 1px dashed var(--mint-2);
+}
+
+div.project-grid-item:hover {
+  border: 1px dashed var(--mint-8);
+}
+
+div.project-grid-heading {
+  display: flex;
+  align-items: stretch;
+}
+
+a.project-grid-heading-link {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: gray;
+  transition: 0.2s ease-out;
+}
+
+a.project-grid-heading-link:hover {
+  color: white;
+}
+
+h4.project-grid-heading-title {
+  color: #ddd;
+  flex: 3;
+  font-size: 1.3rem;
+}
+
+div.project-grid-description {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+div.project-grid-tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+div.project-grid-tags-item {
+  color: var(--mint-7);
+  border: 1px solid var(--mint-7);
+  background-color: var(--mint-bg);
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}

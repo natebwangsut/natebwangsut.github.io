@@ -19,8 +19,8 @@
   <main>
     <slot />
   </main>
-  <footer style="margin-bottom: 2rem;">
+  <footer style="margin-top: 20rem; margin-bottom: 5rem;">
     © {new Date().getFullYear()} | designed and developed by
-    <u>@natebwangsut</u>
+    <a href="https://github.com/natebwangsut" target="_blank">@natebwangsut</a>
   </footer>
 </div>

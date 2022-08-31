@@ -4,22 +4,14 @@
   import Instragram from "../../../../svg/instagram.svelte";
   import Linkedin from "../../../../svg/linkedin.svelte";
   import Twitter from "../../../../svg/twitter.svelte";
-
-  // import GitHub from "../../../../svg/github.svg";
-  // import Instragram from "../../../../svg/instagram.svg";
-  // import Linkedin from "../../../../svg/linkedin.svg";
-  // import Twitter from "../../../../svg/twitter.svg";
-
   const socialLinks: { icon: any; alt: string; href: string }[] = [
     {
       icon: Twitter,
-      // icon: "",
       alt: "twitter",
       href: config.links.twitter,
     },
     {
       icon: Instragram,
-      // icon: "",
       alt: "instragram",
       href: config.links.instagram,
     },

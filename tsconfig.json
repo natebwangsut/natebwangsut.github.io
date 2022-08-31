@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     // Solid specific settings
-    "jsx": "preserve",
-    "jsxImportSource": "solid-js",
+    // "jsx": "preserve",
+    // "jsxImportSource": "solid-js",
 
     // Enable top-level await, and other modern ESM features.
     // "target": "ESNext",
@@ -18,6 +18,7 @@
     // "isolatedModules": true,
 
     // Add type definitions for our Vite runtime.
-    "types": ["vite/client"]
+    // "types": ["vite/client"]
+    "types": ["astro/client"]
   }
 }

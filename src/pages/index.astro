@@ -6,16 +6,29 @@ import "../styles/palette.css";
 
 import config from "../config"
 
-// import Layout from "../components/section/layout/Layout.svelte";
-// import About from "../components/section/about/About.svelte";
-
-
 import About from "../components/About.astro";
 import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
 
 import Landing from "../components/section/landing/Landing.svelte";
 import Layout from "../components/layout/Layout.svelte";
 ---
+<!-- Global Styles -->
+<style>
+	/* Passing down to children */
+  :global(a) {
+    color: var(--mint);
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+  }
+
+  /* Change style on hover */
+  :global(a:hover),
+  :global(a:active) {
+    color: var(--mint-8);
+  }
+</style>
+
 <html lang="en">
 	<head>
 		<!-- Title -->
@@ -48,9 +61,7 @@ import Layout from "../components/layout/Layout.svelte";
 			<Landing />
 			<About />
 			<Experience />
-
-      <!-- <Experience {...data.experience} /> -->
-      <!-- <Project {...data.project}/> -->
+      <Projects />
     </Layout>
 	</body>
 </html>
