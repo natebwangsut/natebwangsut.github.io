@@ -7,15 +7,15 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "solid-js": "^1.4.8",
+    "solid-js": "^1.5.3",
     "svelte": "^3.49.0"
   },
   "devDependencies": {
-    "@astrojs/react": "^1.0.0",
-    "@astrojs/solid-js": "^1.0.0",
+    "@astrojs/react": "^1.1.1",
+    "@astrojs/solid-js": "^1.1.0",
     "@astrojs/svelte": "^1.0.0",
-    "astro": "1.0.6",
-    "sass": "^1.54.5"
+    "astro": "1.1.2",
+    "sass": "^1.54.7"
   },
   "license": "0BSD",
   "scripts": {
