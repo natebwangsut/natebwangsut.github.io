@@ -62,7 +62,7 @@ const Layout: React.FC = ({ children }) => {
       <Footer>
         <Paragraph>
           © {new Date().getFullYear()} | designed and developed by{" "}
-          <a href={config.links.github} target="_blank">
+          <a href={config.links.github} target="_blank" rel="noreferrer noopener">
             @natebwangsut
           </a>
         </Paragraph>
