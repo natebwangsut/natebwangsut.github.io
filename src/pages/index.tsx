@@ -43,11 +43,8 @@ export const pageQuery = graphql`
       }
     }
     experience: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/contents/experience/" } },
-      sort: {
-        fields: [frontmatter___start_date, frontmatter___end_date],
-        order: DESC
-      }
+      filter: { fileAbsolutePath: { regex: "/contents/experience/" } }
+      sort: [{ frontmatter: { start_date: DESC } }, { frontmatter: { end_date: DESC } }]
     ) {
       edges {
         node {
@@ -63,8 +60,8 @@ export const pageQuery = graphql`
       }
     }
     project: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/contents/projects/" } },
-      sort: { fields: [frontmatter___date, frontmatter___title], order: DESC }
+      filter: { fileAbsolutePath: { regex: "/contents/projects/" } }
+      sort: [{ frontmatter: { date: DESC } }, { frontmatter: { title: DESC } }]
     ) {
       edges {
         node {
@@ -87,7 +84,7 @@ interface IndexPageProps extends PageProps {
     about: { edges: [{ node: DefaultSectionProps }] };
     landing: { edges: [{ node: LandingProps }] };
     experience: { edges: [{ node: ExperienceProps }] };
-    project: { edges: [{ node: ProjectProps }] }
+    project: { edges: [{ node: ProjectProps }] };
   };
 }
 
@@ -98,7 +95,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ location, data }) => {
       <Landing {...data.landing.edges[0].node} />
       <About {...data.about.edges[0].node} />
       <Experience {...data.experience} />
-      <Project {...data.project}/>
+      <Project {...data.project} />
     </Layout>
   );
 };
