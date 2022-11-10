@@ -142,7 +142,6 @@ interface ProjectEdges {
   edges: [{ node: ProjectProps }];
 }
 
-
 const Project: React.FC<ProjectEdges> = ({ edges }) => {
   const [isHidden, setIsHidden] = useState<boolean>(true);
 
@@ -160,7 +159,11 @@ const Project: React.FC<ProjectEdges> = ({ edges }) => {
                 {
                   // Do not show GitHub links if frontmatter is not present
                   edge.node.frontmatter.github && (
-                    <ProjectGridHeadingLink href={edge.node.frontmatter.github} target="__blank">
+                    <ProjectGridHeadingLink
+                      href={edge.node.frontmatter.github}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
                       <FaGithub size="1.5rem" />
                     </ProjectGridHeadingLink>
                   )
@@ -168,7 +171,11 @@ const Project: React.FC<ProjectEdges> = ({ edges }) => {
                 {
                   // Do not show website links if frontmatter is not present
                   edge.node.frontmatter.website && (
-                    <ProjectGridHeadingLink href={edge.node.frontmatter.website} target="__blank">
+                    <ProjectGridHeadingLink
+                      href={edge.node.frontmatter.website}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
                       <FaCode size="1.5rem" />
                     </ProjectGridHeadingLink>
                   )

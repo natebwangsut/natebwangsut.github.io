@@ -4,30 +4,46 @@
   "description": "Just another software engineer living on the planet as you do.",
   "version": "0.1.0",
   "author": "Nate Bhurinat Wangsutthitham <nate.bwangsut@gmail.com>",
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "npm run develop",
+    "deploy": "gh-pages -d build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natebwangsut/natebwangsut.github.io"
+  },
   "dependencies": {
     "@types/react-helmet": "^6.1.5",
     "babel-plugin-styled-components": "^2.0.7",
-    "gatsby": "^4.24.1",
-    "gatsby-image": "^3.11.0",
-    "gatsby-plugin-manifest": "^4.24.0",
-    "gatsby-plugin-offline": "^5.24.0",
-    "gatsby-plugin-react-helmet": "^5.24.0",
+    "gatsby": "^5.0.0",
+    "gatsby-plugin-image": "^3.0.0",
+    "gatsby-plugin-manifest": "^5.0.0",
+    "gatsby-plugin-offline": "^6.0.0",
+    "gatsby-plugin-pnpm": "^1.2.10",
+    "gatsby-plugin-react-helmet": "^6.0.0",
     "gatsby-plugin-root-import": "^2.0.8",
-    "gatsby-plugin-sharp": "^4.24.0",
-    "gatsby-plugin-styled-components": "^5.24.0",
-    "gatsby-plugin-typescript": "^4.24.0",
+    "gatsby-plugin-sharp": "^5.0.0",
+    "gatsby-plugin-styled-components": "^6.0.0",
+    "gatsby-plugin-typescript": "^5.0.0",
     "gatsby-remark-external-links": "^0.0.4",
-    "gatsby-remark-prismjs": "^6.24.0",
-    "gatsby-source-filesystem": "^4.24.0",
-    "gatsby-transformer-remark": "^5.24.0",
-    "gatsby-transformer-sharp": "^4.24.0",
+    "gatsby-remark-prismjs": "^7.0.0",
+    "gatsby-source-filesystem": "^5.0.0",
+    "gatsby-transformer-remark": "^6.0.0",
+    "gatsby-transformer-sharp": "^5.0.0",
     "normalize.css": "^8.0.1",
     "prismjs": "^1.29.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "react-icons": "^4.4.0",
+    "react-icons": "^4.6.0",
     "react-spring": "^9.5.5",
     "spectre.css": "^0.5.9",
     "styled-components": "^5.3.6"
@@ -35,21 +51,6 @@
   "devDependencies": {
     "@types/styled-components": "^5.1.26",
     "prettier": "2.7.1"
-  },
-  "license": "0BSD",
-  "scripts": {
-    "build": "gatsby build",
-    "dev": "npm run develop",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/natebwangsut/natebwangsut.github.io"
   },
   "packageManager": "yarn@3.2.0"
 }
