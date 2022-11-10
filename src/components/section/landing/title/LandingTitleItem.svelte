@@ -9,8 +9,8 @@
   <h2
     class="animation"
     style="
-    --index:{index};
-    color: var({config.theme}-{4 + index * 2});
+      --index: {index};
+      color: var({config.theme}-{4 + index * 2});
     "
   >
     <slot />
@@ -33,7 +33,7 @@
     opacity: 0;
     width: 100%;
     height: 100px;
-    line-height: 90px;
+    line-height: 100px;
     font-size: 5rem;
     margin-bottom: 0;
     overflow: hidden;

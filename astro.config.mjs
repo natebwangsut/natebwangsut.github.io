@@ -6,5 +6,5 @@ import solid from "@astrojs/solid-js";
 // https://astro.build/config
 export default defineConfig({
   trailingSlash: "never",
-  integrations: [react(), solid(), svelte()],
+  integrations: [solid(), svelte()],
 });
