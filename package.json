@@ -4,13 +4,29 @@
   "description": "Just another software engineer living on the planet as you do.",
   "version": "0.1.0",
   "author": "Nate Bhurinat Wangsutthitham <nate.bwangsut@gmail.com>",
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "npm run develop",
+    "deploy": "gh-pages -d build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natebwangsut/natebwangsut.github.io"
+  },
   "dependencies": {
     "@types/react-helmet": "^6.1.5",
     "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "^5.0.0",
-    "gatsby-image": "^3.11.0",
+    "gatsby-plugin-image": "^3.0.0",
     "gatsby-plugin-manifest": "^5.0.0",
     "gatsby-plugin-offline": "^6.0.0",
+    "gatsby-plugin-pnpm": "^1.2.10",
     "gatsby-plugin-react-helmet": "^6.0.0",
     "gatsby-plugin-root-import": "^2.0.8",
     "gatsby-plugin-sharp": "^5.0.0",
@@ -35,21 +51,6 @@
   "devDependencies": {
     "@types/styled-components": "^5.1.26",
     "prettier": "2.7.1"
-  },
-  "license": "0BSD",
-  "scripts": {
-    "build": "gatsby build",
-    "dev": "npm run develop",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/natebwangsut/natebwangsut.github.io"
   },
   "packageManager": "yarn@3.2.0"
 }
