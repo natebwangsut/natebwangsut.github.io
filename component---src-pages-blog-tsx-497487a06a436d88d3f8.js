@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunknatebwangsut_github_io=self.webpackChunknatebwangsut_github_io||[]).push([[410],{8645:function(e,t,l){l.r(t);var n=l(7294),a=l(1858),u=l(1470);t.default=()=>n.createElement(a.Z,null,n.createElement(u.Z,{title:"Blog"}),n.createElement("div",{style:{marginTop:100}}),n.createElement("h1",null,"Random Blog"),n.createElement("p",null,"Blogs item here"))}}]);
+//# sourceMappingURL=component---src-pages-blog-tsx-497487a06a436d88d3f8.js.map
