@@ -1,5 +1,5 @@
 const config = {
-  siteTitle: "Nate Bhurinat Wangsutthitham",                                                // Site title.
+  siteTitle: "Bhurinat Wangsutthitham - @natebwangsut | Portfolio",                         // Site title.
   siteTitleAlt: "Nate Bhurinat Wangsutthitham - natebwangsut",                              // Alternative site title for SEO.
   siteTitleShort: "natebwangsut",                                                           // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   // siteLogo: "/logos/logo-1024.png",                                                      // Logo used for SEO and manifest.
@@ -10,6 +10,8 @@ const config = {
 
   // TODO: Implement theme switching
   theme: "--mint",
+  themeBg: "--mint-bg",
+
   // Theme Options
   // theme: "--orange-web",                                                                  // please see palette.css for more options
   // theme: "--geek-blue",                                                                   // please see palette.css for more options
@@ -40,4 +42,5 @@ if (config.siteUrl.substr(-1) === "/") config.siteUrl = config.siteUrl.slice(0, 
 // if (config.siteRss && config.siteRss[0] !== "/")
 //   config.siteRss = `/${config.siteRss}`;
 
-module.exports = config;
+// module.exports = config;
+export default config;

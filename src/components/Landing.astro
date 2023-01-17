@@ -1,0 +1,23 @@
+---
+import LandingSocial from "./section/landing/social/LandingSocial.svelte";
+import LandingTitle from "./section/landing/title/LandingTitle.svelte";
+import LandingTitleItem from "./section/landing/title/LandingTitleItem.svelte";
+
+const LANDING_TITLE_NAME = "Nate Bhurinat Wangsutthitham";
+const titles = LANDING_TITLE_NAME.split(" ");
+---
+
+<div>
+  <div style="margin-top: 15rem"></div>
+  <LandingTitle>
+    {
+      titles.map((value, index) => (
+        <LandingTitleItem index={index}>{value}</LandingTitleItem>
+      ))
+    }
+  </LandingTitle>
+  <LandingSocial />
+  <div style="color: #aaa">
+    Just another software engineer living on the same planet as you do.
+  </div>
+</div>
