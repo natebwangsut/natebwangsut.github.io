@@ -1,4 +1,4 @@
-name: Build Webpage
+name: Astro CI
 
 # Runs on all pull requests to main branch
 on:
