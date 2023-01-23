@@ -12,15 +12,12 @@ import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
 
 import Layout from "../components/layout/Layout.svelte";
-
-const theme = config.theme
-const themeBg = config.themeBg
 ---
 <!-- Global Styles -->
-<style is:global define:vars={{ theme, themeBg }}>
+<style>
 	/* Passing down to children */
   :global(a) {
-    color: var(--theme);
+    color: var(--mint);
     transition: all 0.2s ease-out;
     text-decoration: none;
   }
@@ -28,7 +25,7 @@ const themeBg = config.themeBg
   /* Change style on hover */
   :global(a:hover),
   :global(a:active) {
-    color: var(--themeBg);
+    color: var(--mint-8);
   }
 </style>
 
@@ -50,6 +47,7 @@ const themeBg = config.themeBg
 		<meta name="og:title" content={config.siteTitle} />
 		<meta name="og:description" content={config.siteDescription} />
 		<meta name="og:type" content="website" />
+		<meta name="og:image" content={`${config.siteUrl}/images/og-image.png`} />
 
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary" />
