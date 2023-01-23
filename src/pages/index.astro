@@ -12,12 +12,15 @@ import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
 
 import Layout from "../components/layout/Layout.svelte";
+
+const theme = config.theme
+const themeBg = config.themeBg
 ---
 <!-- Global Styles -->
-<style>
+<style is:global define:vars={{ theme, themeBg }}>
 	/* Passing down to children */
   :global(a) {
-    color: var(--mint);
+    color: var(--theme);
     transition: all 0.2s ease-out;
     text-decoration: none;
   }
@@ -25,7 +28,7 @@ import Layout from "../components/layout/Layout.svelte";
   /* Change style on hover */
   :global(a:hover),
   :global(a:active) {
-    color: var(--mint-8);
+    color: var(--themeBg);
   }
 </style>
 

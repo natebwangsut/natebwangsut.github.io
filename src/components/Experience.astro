@@ -1,28 +1,28 @@
 ---
-// import { Debug } from 'astro/components';
-// import Tab from './Tab';
-import Tab from './Tab-solid';
-// import Tab from './Tab.svelte';
+import Tab from "./Tab";
 
-let experience = await Astro.glob("../contents/experience/*.md")
-let items = experience.map((exp, index) => ({
-  title: exp.frontmatter.title,
-  role: exp.frontmatter.role,
-  company: exp.frontmatter.company,
-  start_date: exp.frontmatter.start_date,
-  end_date: exp.frontmatter.end_date || "Present",
-  value: index,
-  compiled: exp.compiledContent(),
-  component: exp.Content,
-})).sort((a, b) => {
-  if (a.start_date > b.start_date) return -1;
-  if (a.start_date < b.start_date) return 1;
-  return 0;
-});
+let experience = await Astro.glob("../contents/experience/*.md");
+let items = experience
+  .map((exp, index) => ({
+    title: exp.frontmatter.title,
+    role: exp.frontmatter.role,
+    company: exp.frontmatter.company,
+    start_date: exp.frontmatter.start_date,
+    end_date: exp.frontmatter.end_date || "Present",
+    value: index,
+    compiled: exp.compiledContent(),
+    component: exp.Content,
+  }))
+  .sort((a, b) => {
+    if (a.start_date > b.start_date) return -1;
+    if (a.start_date < b.start_date) return 1;
+    return 0;
+  });
 ---
+
 <style>
   div {
-    color: #aaa
+    color: #aaa;
   }
 
   h1 {
@@ -60,14 +60,5 @@ let items = experience.map((exp, index) => ({
 
 <div>
   <h1>Experience</h1>
-  <!-- <Tab items={items} client:load /> -->
-
-  <!-- Svelte -->
-  <!-- <Tab items={items} client:visible>
-    {items.map(item => <div set:html={item.compiled}></div>)}
-  </Tab> -->
-
-  <!-- Solidjs -->
   <Tab items={items} client:visible />
-  <!-- {items.map(item => <item.component />)} -->
 </div>
