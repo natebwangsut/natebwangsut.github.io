@@ -13,8 +13,11 @@ import Projects from "../components/Projects.astro";
 
 import Layout from "../components/layout/Layout.svelte";
 ---
-<!-- Global Styles -->
 <style>
+	/*
+	 * Global Styles
+	 */
+
 	/* Passing down to children */
   :global(a) {
     color: var(--mint);
@@ -50,12 +53,11 @@ import Layout from "../components/layout/Layout.svelte";
 		<meta property="og:image" content={`${config.siteUrl}${config.siteImage}`} />
 
 		<!-- Twitter -->
-		<meta name="twitter:card" content="summary" />
-		<!-- <meta name="twitter:site" content="@{config.twitterHandle}" /> -->
-		<!-- <meta name="twitter:creator" content="@{config.twitterHandle}" /> -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content={config.twitter.handle} />
 		<meta name="twitter:title" content={config.siteTitle} />
 		<meta name="twitter:description" content={config.siteDescription} />
-		<meta name="twitter:image" content={`${config.siteUrl}${config.siteImage}`} />
+		<meta name="twitter:image" content={`${config.siteUrl}${config.siteImageAlt}`} />
 	</head>
 	<body>
 		<Layout>
