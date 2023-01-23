@@ -29,7 +29,7 @@ import Layout from "../components/layout/Layout.svelte";
   }
 </style>
 
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 	<head>
 		<!-- Title -->
 		<title>{config.siteTitle}</title>
@@ -44,18 +44,18 @@ import Layout from "../components/layout/Layout.svelte";
 		<meta name="description" content={config.siteDescription} />
 
 		<!-- OpenGraph -->
-		<meta name="og:title" content={config.siteTitle} />
-		<meta name="og:description" content={config.siteDescription} />
-		<meta name="og:type" content="website" />
-		<meta name="og:image" content={`${config.siteUrl}/images/og-image.png`} />
+		<meta property="og:title" content={config.siteTitle} />
+		<meta property="og:description" content={config.siteDescription} />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content={`${config.siteUrl}${config.siteImage}`} />
 
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:site" content="@{config.twitterHandle}" />
-		<meta name="twitter:creator" content="@{config.twitterHandle}" />
+		<!-- <meta name="twitter:site" content="@{config.twitterHandle}" /> -->
+		<!-- <meta name="twitter:creator" content="@{config.twitterHandle}" /> -->
 		<meta name="twitter:title" content={config.siteTitle} />
 		<meta name="twitter:description" content={config.siteDescription} />
-		<meta name="twitter:image" content={`${config.siteUrl}/images/og-image.png`} />
+		<meta name="twitter:image" content={`${config.siteUrl}${config.siteImage}`} />
 	</head>
 	<body>
 		<Layout>

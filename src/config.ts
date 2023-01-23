@@ -1,8 +1,9 @@
 const config = {
-  siteTitle: "Bhurinat Wangsutthitham - @natebwangsut | Portfolio",                         // Site title.
-  siteTitleAlt: "Nate Bhurinat Wangsutthitham - natebwangsut",                              // Alternative site title for SEO.
+  siteTitle: "Nate - Bhurinat Wangsutthitham",                                              // Site title.
+  siteTitleAlt: "natebwangsut",                                                             // Alternative site title for SEO.
   siteTitleShort: "natebwangsut",                                                           // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   // siteLogo: "/logos/logo-1024.png",                                                      // Logo used for SEO and manifest.
+  siteImage: "/images/og-image.avif",                                                       // Default Open Graph image.
   siteUrl: "https://natebwangsut.github.io",                                                // Domain of your website without pathPrefix.
   pathPrefix: "/",                                                                          // Prefixes all links.
   siteDescription: "Just another software engineer living on the same planet as you do.",   // Website description used for RSS feeds/meta description tag.
