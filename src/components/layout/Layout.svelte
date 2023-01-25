@@ -21,6 +21,6 @@
   </main>
   <footer style="margin-top: 20rem; margin-bottom: 5rem;">
     © {new Date().getFullYear()} | designed and developed by
-    <a href="https://github.com/natebwangsut" target="_blank">@natebwangsut</a>
+    <a href="https://github.com/natebwangsut" target="_blank" rel="noreferrer">@natebwangsut</a>
   </footer>
 </div>
