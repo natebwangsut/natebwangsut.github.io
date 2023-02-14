@@ -30,8 +30,7 @@
 
 <div class="bar">
   {#each socialLinks as sl}
-    <!-- <a href={sl.href} class="link" target="_blank"> -->
-    <a href="#">
+    <a href={sl.href} class="link" target="_blank" rel="noreferrer">
       <div class="social" style="--theme:var({config.theme});--themeBg:var({config.themeBg})">
         <!-- {@html sl.icon} -->
         <!-- <img src={sl.icon} style="fill: white; stroke: white;"/> -->
