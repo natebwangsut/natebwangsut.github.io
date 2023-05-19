@@ -6,12 +6,12 @@ start_date: "2020-02"
 end_date: ""
 ---
 
-- Integrated security-scoring features into software catalog, allowing automated security analysis.
-  - Enabling security to be objectively expressed.
-  - Implemented historical data tracking, allowing stakeholders to view the changes over time as well as integrating the scoring into their department OKR/KPI.
-- Organise group efforts to improve CI infrastructure as well as engineering experience.
-- Introduced teams to new technology, improving productivity and reducing maintenance cost.
-- Planned team roadmap on technical integrations/implementation.
-  - Foresee and eliminate potential business/technical risk.
-  - Align the team development efforts with business vision.
-- Responsible for software engineers growth by giving feedback and mentorship in both soft skills and technical skills.
+- Led a team of ~20 developers in the development of internal portal and security integrations.
+- Integrated security-scoring into internal software libraries, automating security analysis and improving overall security posture.
+  - Implemented historical data tracking, enabling stakeholders to view changes to the software over time and improve decision-making.
+- Collaborated with the CTO, CISO, and other stakeholders, ensuring timely delivery of high-quality software and alignment with business vision.
+- Managed the full software development lifecycle, from requirements gathering to software delivery, ensuring effective team management and development.
+- Planned the team's roadmap for technical integrations and implementation, ensuring alignment with business vision and goals.
+  - Identified and mitigated potential business and technical risks, ensuring smooth project execution and delivery.
+  - Aligned the team's development efforts with the business vision and goals, ensuring efficient use of resources and effective delivery of software.
+- Mentored and guided software engineers, promoting growth in technical skills and career development.
