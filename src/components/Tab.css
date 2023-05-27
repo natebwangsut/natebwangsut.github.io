@@ -13,6 +13,7 @@ div.tab-content > p {
 
 li.tab-list {
   padding: 8px;
+  margin: 0px;
   transition: all 0.2s ease-out;
   /* Enable */
   /* border-left: 3px solid transparent; */
