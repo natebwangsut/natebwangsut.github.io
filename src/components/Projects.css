@@ -47,7 +47,7 @@ a.project-grid-heading-link:hover {
   color: white;
 }
 
-h4.project-grid-heading-title {
+h1.project-grid-heading-title {
   color: #ddd;
   flex: 3;
   font-size: 1.3rem;

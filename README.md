@@ -1,6 +1,6 @@
 # natebwangsut
 
-Personal website 
+Personal website
 
 ## Framework
 

@@ -1,14 +1,15 @@
 const config = {
-  siteTitle: "Nate - Bhurinat Wangsutthitham",                                              // Site title.
-  siteTitleAlt: "natebwangsut",                                                             // Alternative site title for SEO.
-  siteTitleShort: "natebwangsut",                                                           // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  // siteLogo: "/logos/logo-1024.png",                                                      // Logo used for SEO and manifest.
-  siteImage: "/images/banner.avif",                                                         // Default Open Graph image.
-  siteImageAlt: "/images/banner.jpg",                                                       // Alternative Open Graph image.
-  siteUrl: "https://natebwangsut.github.io",                                                // Domain of your website without pathPrefix.
-  pathPrefix: "/",                                                                          // Prefixes all links.
-  siteDescription: "Just another software engineer living on the same planet as you do.",   // Website description used for RSS feeds/meta description tag.
-  author: "Nate Bhurinat Wangsutthitham <nate.bwangsut@gmail.com>",                         // author for site metadata
+  siteTitle: "Nate - Bhurinat Wangsutthitham", // Site title.
+  siteTitleAlt: "natebwangsut", // Alternative site title for SEO.
+  siteTitleShort: "natebwangsut", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
+  // siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
+  siteImage: "/images/banner.avif", // Default Open Graph image.
+  siteImageAlt: "/images/banner.jpg", // Alternative Open Graph image.
+  siteUrl: "https://natebwangsut.github.io", // Domain of your website without pathPrefix.
+  pathPrefix: "/", // Prefixes all links.
+  siteDescription:
+    "Just another software engineer living on the same planet as you do.", // Website description used for RSS feeds/meta description tag.
+  author: "Nate Bhurinat Wangsutthitham <nate.bwangsut@gmail.com>", // author for site metadata
 
   // TODO: Implement theme switching
   theme: "--mint",
@@ -27,8 +28,8 @@ const config = {
   // External links
   links: {
     github: "https://github.com/natebwangsut",
-    instagram: "https://www.instagram.com/natebwangsut",
-    linkedin: "https://www.linkedin.com/in/natebwangsut",
+    instagram: "https://stagram.com/natebwangsut",
+    linkedin: "https://linkedin.com/in/natebwangsut/",
     twitter: "https://twitter.com/natebwangsut",
   },
 };
@@ -42,6 +43,7 @@ if (config.pathPrefix !== "/") {
 }
 
 // Make sure siteUrl doesn't have an ending forward slash
-if (config.siteUrl.substr(-1) === "/") config.siteUrl = config.siteUrl.slice(0, -1);
+if (config.siteUrl.substr(-1) === "/")
+  config.siteUrl = config.siteUrl.slice(0, -1);
 
 export default config;

@@ -11,19 +11,19 @@ div.tab-content > p {
   color: #fff;
 }
 
-div.tab-list {
+li.tab-list {
   padding: 8px;
   transition: all 0.2s ease-out;
   /* Enable */
   /* border-left: 3px solid transparent; */
 }
 
-div.tab-list:hover {
+li.tab-list:hover {
   cursor: pointer;
   color: var(--mint-6);
 }
 
-div.tab-list.active {
+li.tab-list.active {
   color: var(--mint-6);
   background: var(--mint-bg);
   border-left: 3px solid var(--mint-6);

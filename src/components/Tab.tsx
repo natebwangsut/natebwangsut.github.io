@@ -26,16 +26,16 @@ const Tabs = (props: {
   const [activeTab, setActiveTab] = createSignal(0);
   return (
     <div style={{ display: "flex" }}>
-      <ol style={{ flex: 1, margin: 0 }}>
+      <ol style={{ flex: 1, margin: 0, "list-style": "none" }}>
         <For each={props.items}>
           {(item, index) => (
-            <div
+            <li
               class="tab-list"
               classList={{ active: activeTab() === index() }}
               onClick={() => setActiveTab(index())}
             >
               {item.company}
-            </div>
+            </li>
           )}
         </For>
       </ol>

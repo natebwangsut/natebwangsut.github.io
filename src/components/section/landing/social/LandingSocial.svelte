@@ -30,11 +30,20 @@
 
 <div class="bar">
   {#each socialLinks as sl}
-    <a href={sl.href} class="link" target="_blank" rel="noreferrer">
-      <div class="social" style="--theme:var({config.theme});--themeBg:var({config.themeBg})">
+    <a
+      href={sl.href}
+      class="link"
+      target="_blank"
+      rel="noreferrer"
+      aria-label={sl.alt}
+    >
+      <div
+        class="social"
+        style="--theme:var({config.theme});--themeBg:var({config.themeBg})"
+      >
         <!-- {@html sl.icon} -->
         <!-- <img src={sl.icon} style="fill: white; stroke: white;"/> -->
-        <svelte:component this={sl.icon}/>
+        <svelte:component this={sl.icon} />
       </div>
     </a>
   {/each}
