@@ -8,13 +8,13 @@ const titles = LANDING_TITLE_NAME.split(" ");
 ---
 
 <div>
-  <div style="margin-top: 15rem"></div>
+  <div style="margin-top: 15rem" />
   <LandingTitle>
     {
       titles.map((value, index) => (
         <LandingTitleItem index={index}>{value}</LandingTitleItem>
-      ))
-    }
+        ))
+      }
   </LandingTitle>
   <LandingSocial />
   <div style="color: #aaa">

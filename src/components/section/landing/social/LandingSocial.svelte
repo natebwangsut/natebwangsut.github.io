@@ -36,6 +36,7 @@
       target="_blank"
       rel="noreferrer"
       aria-label={sl.alt}
+      style="margin: auto;"
     >
       <div
         class="social"
@@ -66,6 +67,7 @@
     border: 2px solid transparent;
     transition: 0.25s ease-out;
   }
+
   div.social:hover {
     cursor: pointer;
     fill: var(--theme);

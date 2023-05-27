@@ -1,0 +1,9 @@
+div.navbar {
+  width: 940px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  /* TODO: Use google font for all monospace */
+  font-family: monospace;
+}
