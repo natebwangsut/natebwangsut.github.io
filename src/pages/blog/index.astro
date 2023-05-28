@@ -1,0 +1,40 @@
+---
+import BaseLayout from "src/layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <div class="blog-wrapper">
+    <h1>Blog</h1>
+    <h2>./blog</h2>
+    <div class="blog-contents-wrapper">
+      <div class="blog-contents">
+        Blog Contents
+      </div>
+      <div class="blog-contents">
+        Blog Contents
+      </div>
+      <div class="blog-contents">
+        Blog Contents
+      </div>
+      <div class="blog-contents">
+        Blog Contents
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  div.blog-contents-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  div.blog-contents {
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    border: 2px dashed var(--mint-10);
+  }
+</style>

@@ -44,7 +44,7 @@ import Footer from "@components/Footer";
   <body>
     <!-- TODO: Enable the navbar once styling is ready -->
     <NavBar />
-    <main>
+    <main class="layout">
       <slot />
     </main>
     <Footer />
@@ -52,7 +52,7 @@ import Footer from "@components/Footer";
 </html>
 
 <style>
-  main {
+  main.layout {
     /*
     display: flex;
     flex-direction: column;
@@ -65,11 +65,6 @@ import Footer from "@components/Footer";
     display: flex;
     flex-direction: column;
     gap: 20rem;
-  }
-
-  main > * {
-    margin-top: 12rem;
-    margin-bottom: 12rem;
   }
 </style>
 

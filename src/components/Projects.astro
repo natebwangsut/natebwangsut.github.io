@@ -1,7 +1,7 @@
 ---
 import Projects from "./Projects";
 
-let projectFiles = await Astro.glob("../contents/projects/*.md");
+let projectFiles = await Astro.glob("../content/projects/*.md");
 let projects = projectFiles
   .map((exp, index) => ({
     title: exp.frontmatter.title,
