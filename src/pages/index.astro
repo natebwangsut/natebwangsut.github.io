@@ -8,33 +8,8 @@ import BaseLayout from "src/layout/BaseLayout.astro";
 ---
 
 <BaseLayout>
-	<div class="layout">
-		<Landing />
-		<About />
-		<Experience />
-		<Projects />
-	</div>
+  <Landing />
+  <About />
+  <Experience />
+  <Projects />
 </BaseLayout>
-
-<style>
-	div.container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-	div.layout {
-		margin: 0 auto;
-    padding: 24px;
-    max-width: 960px;
-		display: flex;
-		flex-direction: column;
-		gap: 20rem;
-	}
-
-	div.layout > * {
-		margin-top: 12rem;
-		margin-bottom: 12rem;
-	}
-</style>
