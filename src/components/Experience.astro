@@ -1,7 +1,7 @@
 ---
 import Tab from "./Tab";
 
-let experience = await Astro.glob("../contents/experience/*.md");
+let experience = await Astro.glob("../content/experience/*.md");
 let items = experience
   .map((exp, index) => ({
     title: exp.frontmatter.title,

@@ -2,14 +2,6 @@ div {
   color: #aaa;
 }
 
-div.tab-content > h2 {
-  color: var(--mint-6);
-  margin-bottom: 0.5rem;
-}
-
-div.tab-content > p {
-  color: #fff;
-}
 
 li.tab-list {
   padding: 8px;
@@ -34,5 +26,14 @@ div.tab-content {
   flex: 2;
   margin: 8px;
   padding: 8px;
-  min-height: 500px;
+  height: 600px;
+}
+
+div.tab-content > h2 {
+  color: var(--mint-6);
+  margin-bottom: 0.5rem;
+}
+
+div.tab-content > p {
+  color: #fff;
 }
