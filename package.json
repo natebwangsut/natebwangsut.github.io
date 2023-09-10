@@ -17,13 +17,13 @@
     "url": "https://github.com/natebwangsut/natebwangsut.github.io"
   },
   "dependencies": {
-    "solid-js": "^1.7.5",
-    "svelte": "^3.59.1"
+    "solid-js": "^1.7.11",
+    "svelte": "^4.2.0"
   },
   "devDependencies": {
-    "@astrojs/solid-js": "^2.2.0",
-    "@astrojs/svelte": "^2.2.0",
-    "astro": "2.5.5",
-    "sass": "^1.62.1"
+    "@astrojs/solid-js": "^3.0.1",
+    "@astrojs/svelte": "^4.0.2",
+    "astro": "3.0.12",
+    "sass": "^1.66.1"
   }
 }
