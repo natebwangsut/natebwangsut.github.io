@@ -5,20 +5,24 @@
   "version": "0.1.0",
   "author": "Nate Bhurinat Wangsutthitham <nate.bwangsut@gmail.com>",
   "license": "0BSD",
+  "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
+    "astro": "astro",
     "build": "astro build",
+    "dev": "astro dev",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "preview": "astro preview",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
+    "start": "astro dev"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/natebwangsut/natebwangsut.github.io"
   },
   "dependencies": {
+    "solid-icons": "^1.0.12",
     "solid-js": "^1.7.11",
-    "svelte": "^4.2.0"
+    "svelte": "^4.2.0",
+    "typescript": "^5.2.2"
   },
   "devDependencies": {
     "@astrojs/solid-js": "^3.0.1",

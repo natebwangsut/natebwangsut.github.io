@@ -1,14 +1,16 @@
 /** @jsxImportSource solid-js */
 
 import { For, Show } from "solid-js";
+import { HiSolidLink } from "solid-icons/hi";
 
-import "./Projects.css";
+import "./ProjectsGrid.css";
 
-const Projects = (props: {
+const ProjectsGrid = (props: {
   projects: readonly {
     title: string;
     // date: string;
     compiled: any;
+    website: string;
     stack: string[];
   }[];
 }) => {
@@ -19,10 +21,15 @@ const Projects = (props: {
           <div class="project-grid-item">
             <div class="project-grid-heading">
               <h1 class="project-grid-heading-title">{project.title}</h1>
-              {/*
-                TODO: Add link to projects
-                <a class="project-grid-heading-link" target="_blank"></a>
-              */}
+              {project.website && (
+                <a
+                  class="project-grid-heading-link"
+                  target="_blank"
+                  href={project.website}
+                >
+                  <HiSolidLink />
+                </a>
+              )}
             </div>
 
             <div class="project-grid-description">
@@ -43,4 +50,4 @@ const Projects = (props: {
   );
 };
 
-export default Projects;
+export default ProjectsGrid;

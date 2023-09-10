@@ -1,5 +1,5 @@
 ---
-import Projects from "./Projects";
+import ProjectsGrid from "./ProjectsGrid";
 
 let projectFiles = await Astro.glob("../contents/projects/*.md");
 let projects = projectFiles
@@ -29,5 +29,5 @@ let projects = projectFiles
 
 <div>
   <h1>Projects</h1>
-  <Projects projects={projects} client:visible />
+  <ProjectsGrid projects={projects} client:visible />
 </div>
