@@ -10,7 +10,8 @@
     "astro": "astro",
     "build": "astro build",
     "dev": "astro dev",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "check": "astro check",
+    "format": "bunx prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "preview": "astro preview",
     "start": "astro dev"
   },
@@ -19,13 +20,14 @@
     "url": "https://github.com/natebwangsut/natebwangsut.github.io"
   },
   "dependencies": {
-    "solid-icons": "^1.0.12",
-    "solid-js": "^1.7.12",
-    "svelte": "^4.2.0"
+    "@astrojs/check": "^0.4.1",
+    "solid-js": "^1.8.11",
+    "svelte": "^4.2.9",
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@astrojs/solid-js": "^3.0.1",
-    "@astrojs/svelte": "^4.0.2",
+    "@astrojs/solid-js": "^4.0.1",
+    "@astrojs/svelte": "^5.0.3",
     "astro": "4.2.1",
     "sass": "^1.68.0"
   }

@@ -6,7 +6,16 @@ import solid from "@astrojs/solid-js";
 export default defineConfig({
   compressHTML: true,
   trailingSlash: "never",
-  integrations: [solid(), svelte()],
+  integrations: [
+    solid({
+      include: ["**/solid/*"],
+    }),
+    // TODO: Move svelte component to /svelte folder
+    // svelte({
+    //   include: ["**/svelte/*"],
+    // }),
+    svelte(),
+  ],
   image: {
     // Example: Enable the Sharp-based image service
     service: { entrypoint: "astro/assets/services/sharp" },

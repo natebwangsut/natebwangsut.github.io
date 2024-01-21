@@ -2,10 +2,6 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": {
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"]
-    },
     // Solid specific settings
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
@@ -15,6 +11,6 @@
 
     // Enable JSON imports.
     "resolveJsonModule": true,
-    "verbatimModuleSyntax": true
-  }
+    "verbatimModuleSyntax": true,
+  },
 }
