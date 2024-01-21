@@ -31,6 +31,7 @@ const ProjectsGrid = (props: {
                   class="project-grid-heading-link"
                   target="_blank"
                   href={project.website}
+                  aria-label="Link to project website"
                 >
                   <LinkIcon />
                 </a>
