@@ -28,7 +28,7 @@ const config = {
   // External links
   links: {
     github: "https://github.com/natebwangsut",
-    instagram: "https://stagram.com/natebwangsut",
+    instagram: "https://instagram.com/natebwangsut",
     linkedin: "https://linkedin.com/in/natebwangsut/",
     twitter: "https://twitter.com/natebwangsut",
   },
@@ -43,7 +43,7 @@ if (config.pathPrefix !== "/") {
 }
 
 // Make sure siteUrl doesn't have an ending forward slash
-if (config.siteUrl.substr(-1) === "/")
+if (config.siteUrl.endsWith("/"))
   config.siteUrl = config.siteUrl.slice(0, -1);
 
 export default config;
