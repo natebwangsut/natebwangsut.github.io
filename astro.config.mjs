@@ -1,23 +1,31 @@
 import { defineConfig } from "astro/config";
-import svelte from "@astrojs/svelte";
-import solid from "@astrojs/solid-js";
+import sitemap from "@astrojs/sitemap";
+import netlify from "@astrojs/netlify";
+import robotsTxt from "astro-robots-txt";
+import UnoCSS from "@unocss/astro";
+import icon from "astro-icon";
+
+import solidJs from "@astrojs/solid-js";
+import { remarkReadingTime } from "./src/lib/remark-reading-time";
 
 // https://astro.build/config
 export default defineConfig({
-  compressHTML: true,
-  trailingSlash: "never",
+  site: "",
   integrations: [
-    solid({
-      include: ["**/solid/*"],
+    sitemap(),
+    robotsTxt({
+      sitemap: [
+        "",
+        "",
+      ],
     }),
-    // TODO: Move svelte component to /svelte folder
-    // svelte({
-    //   include: ["**/svelte/*"],
-    // }),
-    svelte(),
+    solidJs(),
+    UnoCSS({ injectReset: true }),
+    icon()
   ],
-  image: {
-    // Example: Enable the Sharp-based image service
-    service: { entrypoint: "astro/assets/services/sharp" },
+  markdown: {
+    remarkPlugins: [remarkReadingTime],
   },
+  output: "server",
+  adapter: netlify(),
 });
