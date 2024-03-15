@@ -2,7 +2,7 @@ export function trimText(input: string, maxLength: number = 100): string {
   if (input.length <= maxLength) return input;
   return input.substring(0, maxLength - 3) + "...";
 }
-export function getCurrentTimeInItaly(): Date {
+export function getCurrentTime(): Date {
   // Create a date object with the current UTC time
   const now = new Date();
 
@@ -13,7 +13,7 @@ export function getCurrentTimeInItaly(): Date {
   return now;
 }
 
-export function formatTimeForItaly(date: Date): string {
+export function formatTime(date: Date): string {
   const options: Intl.DateTimeFormatOptions = {
     hour: "2-digit",
     minute: "2-digit",

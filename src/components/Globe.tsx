@@ -1,85 +1,86 @@
-import { onMount } from "solid-js";
-import * as d3 from "d3";
-import worldData from "../lib/world.json";
+import { useEffect, useRef } from "react";
 
-const GlobeComponent = () => {
-  let mapContainer: HTMLDivElement | undefined;
+import { useSpring } from "@react-spring/web";
 
-  const visitedCountries = [
-    "France",
-    "China",
-    "Italy",
-    "Sri Lanka",
-    "Turkey",
-    "Greece",
-    "Malta",
-    "Hungary",
-    "Portugal",
-    "Marocco",
-  ];
+import cobe from "cobe";
 
-  onMount(() => {
-    if (!mapContainer) return;
+const Globe = () => {
+  const ref = useRef<HTMLCanvasElement | null>(null);
+  const pointerInteracting = useRef<number | null>(null);
+  const pointerInteractionMovement = useRef<number>(0);
+  const [{ r }, api] = useSpring(() => ({ r: 0, config: { mass: 1, tension: 280, friction: 40, precision: 0.001 } }));
 
-    const width = mapContainer.clientWidth;
-    const height = 500;
-    const sensitivity = 75;
-
-    let projection = d3
-      .geoOrthographic()
-      .scale(250)
-      .center([0, 0])
-      .rotate([0, -30])
-      .translate([width / 2, height / 2]);
-
-    const initialScale = projection.scale();
-    let pathGenerator = d3.geoPath().projection(projection);
-
-    let svg = d3
-      .select(mapContainer)
-      .append("svg")
-      .attr("width", width)
-      .attr("height", height);
-
-    svg
-      .append("circle")
-      .attr("fill", "#EEE")
-      .attr("stroke", "#000")
-      .attr("stroke-width", "0.2")
-      .attr("cx", width / 2)
-      .attr("cy", height / 2)
-      .attr("r", initialScale);
-
-    let map = svg.append("g");
-
-    map
-      .append("g")
-      .attr("class", "countries")
-      .selectAll("path")
-      .data(worldData.features)
-      .enter()
-      .append("path")
-      .attr("d", (d: any) => pathGenerator(d as any))
-      .attr("fill", (d: { properties: { name: string } }) =>
-        visitedCountries.includes(d.properties.name) ? "#E63946" : "white"
-      )
-      .style("stroke", "black")
-      .style("stroke-width", 0.3)
-      .style("opacity", 0.8);
-
-    d3.timer(() => {
-      const rotate = projection.rotate();
-      const k = sensitivity / projection.scale();
-      projection.rotate([rotate[0] - 1 * k, rotate[1]]);
-      svg.selectAll("path").attr("d", (d: any) => pathGenerator(d as any));
-    }, 200);
-  });
+  useEffect(() => {
+    let phi = 0;
+    let width = 0;
+    const onResize = () => ref.current && (width = ref.current.offsetWidth);
+    window.addEventListener("resize", onResize);
+    onResize();
+    const globe = cobe(ref.current!, {
+      devicePixelRatio: 2,
+      width: width * 2,
+      height: width * 2,
+      phi: 0,
+      theta: 0.3,
+      dark: 1,
+      diffuse: 3,
+      mapSamples: 16000,
+      mapBrightness: 2,
+      baseColor: [0.431, 0.431, 0.431],
+      markerColor: [0.356, 0.356, 0.839],
+      glowColor: [0.555, 0.555, 0.555],
+      markers: [{ location: [-7.5360639, 112.2384017], size: 0.1 }],
+      onRender: (state) => {
+        if (!pointerInteracting.current) phi += 0.005;
+        state.phi = phi + r.get();
+        state.width = width * 2;
+        state.height = width * 2;
+      },
+    });
+    setTimeout(() => (ref.current!.style.opacity = "1"));
+    return () => {
+      globe.destroy();
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
 
   return (
-    <div class="flex flex-col text-white justify-center items-center w-full h-full">
-      <div class="w-full" ref={mapContainer}></div>
+    <div className="relative flex items-center justify-center w-full h-full">
+      <div className="relative w-full max-w-[900px] aspect-square m-auto">
+        <canvas
+          ref={ref}
+          onPointerDown={(e) => {
+            pointerInteracting.current = e.clientX - pointerInteractionMovement.current;
+            ref.current!.style.cursor = "grabbing";
+          }}
+          onPointerUp={() => {
+            pointerInteracting.current = null;
+            ref.current!.style.cursor = "grab";
+          }}
+          onPointerOut={() => {
+            pointerInteracting.current = null;
+            ref.current!.style.cursor = "grab";
+          }}
+          onMouseMove={(e) => {
+            if (pointerInteracting.current !== null) {
+              const delta = e.clientX - pointerInteracting.current;
+              pointerInteractionMovement.current = delta;
+              api.start({ r: delta / 200 });
+            }
+          }}
+          onTouchMove={(e) => {
+            if (pointerInteracting.current !== null && e.touches[0]) {
+              const delta = e.touches[0].clientX - pointerInteracting.current;
+              pointerInteractionMovement.current = delta;
+              api.start({ r: delta / 100 });
+            }
+          }}
+          className="w-full h-full"
+          style={{ cursor: "grab", contain: "layout paint size", opacity: 0, transition: "opacity 1s ease" }}
+        />
+      </div>
     </div>
   );
 };
 
-export default GlobeComponent;
+export default Globe;

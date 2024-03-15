@@ -1,39 +1,47 @@
 ---
-import { getCurrentTimeInItaly, formatTimeForItaly } from "../lib/helpers";
+import { getCurrentTime, formatTime } from "../lib/helpers";
 import Card from "./Card/index.astro";
 ---
 
+<!--
+// TODO: Refactor to React
 <script>
-  import { onCleanup, onMount } from "solid-js";
-  import { formatTimeForItaly } from "../lib/helpers";
+  import { useState, useEffect } from "react";
+  import { formatTime } from "../lib/helpers";
 
-  let interval: ReturnType<typeof setInterval>;
+  const [intervalState, setIntervalState] =
+    useState<ReturnType<typeof setInterval>>(() => setInterval(updateClock, 1000));
 
-  function updateClock() {
+  const updateClock = () => {
     const timeDisplay = document.getElementById("timeDisplay");
     const now = new Date();
 
     if (timeDisplay) {
-      timeDisplay.textContent = formatTimeForItaly(now);
+      timeDisplay.textContent = formatTime(now);
       timeDisplay.setAttribute("datetime", now.toISOString());
     }
-  }
+  };
 
-  onMount(() => {
-    interval = setInterval(updateClock, 1000);
-  });
-
-  onCleanup(() => {
-    clearInterval(interval);
+  useEffect(() => {
+    // interval = setInterval(updateClock, 1000);
+    setIntervalState(setInterval(updateClock, 1000));
+    return () => {
+      clearInterval(intervalState);
+    };
   });
 </script>
+-->
 
-<Card colSpan="lg:col-span-2" rowSpan="md:row-span-2" title="Current Whereabout">
+<Card
+  colSpan="lg:col-span-2"
+  rowSpan="md:row-span-2"
+  title="Current Whereabout"
+>
   <time
     datetime=""
     id="timeDisplay"
     class="text-2xl xl:text-5xl xl:whitespace-nowrap w-50 xl:w-100 h-[calc(100%-28px)] font-serif flex justify-center items-center"
   >
-    {formatTimeForItaly(getCurrentTimeInItaly())}
+    {formatTime(getCurrentTime())}
   </time>
 </Card>
