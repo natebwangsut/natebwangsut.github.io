@@ -8,7 +8,10 @@ const Globe = () => {
   const ref = useRef<HTMLCanvasElement | null>(null);
   const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef<number>(0);
-  const [{ r }, api] = useSpring(() => ({ r: 0, config: { mass: 1, tension: 280, friction: 40, precision: 0.001 } }));
+  const [{ r }, api] = useSpring(() => ({
+    r: 0,
+    config: { mass: 1, tension: 280, friction: 40, precision: 0.001 },
+  }));
 
   useEffect(() => {
     let phi = 0;
@@ -21,15 +24,21 @@ const Globe = () => {
       width: width * 2,
       height: width * 2,
       phi: 0,
-      theta: 0.3,
+      theta: 0.15,
       dark: 1,
-      diffuse: 3,
-      mapSamples: 16000,
+      diffuse: 2,
+      mapSamples: 30000,
       mapBrightness: 2,
-      baseColor: [0.431, 0.431, 0.431],
-      markerColor: [0.356, 0.356, 0.839],
-      glowColor: [0.555, 0.555, 0.555],
-      markers: [{ location: [-7.5360639, 112.2384017], size: 0.1 }],
+      baseColor: [0.60, 0.60, 0.60],
+      markerColor: [0.007, 0.780, 0.612],
+      glowColor: [0.007, 0.780, 0.612],
+      opacity: 0.8,
+      markers: [
+        { location: [13.7563, 100.5018], size: 0.1 }, // Bangkok
+        { location: [35.6764, 139.65], size: 0.1 }, // Tokyo
+        { location: [34.6937, 135.5023], size: 0.1 }, // Osaka
+        { location: [51.5072, 0.1276], size: 0.1 }, // London
+      ],
       onRender: (state) => {
         if (!pointerInteracting.current) phi += 0.005;
         state.phi = phi + r.get();
@@ -45,12 +54,13 @@ const Globe = () => {
   }, []);
 
   return (
-    <div className="relative flex items-center justify-center w-full h-full">
-      <div className="relative w-full max-w-[900px] aspect-square m-auto">
+    <div className="flex items-center justify-center w-full h-full">
+      <div className="w-full max-w-[900px] aspect-square m-auto">
         <canvas
           ref={ref}
           onPointerDown={(e) => {
-            pointerInteracting.current = e.clientX - pointerInteractionMovement.current;
+            pointerInteracting.current =
+              e.clientX - pointerInteractionMovement.current;
             ref.current!.style.cursor = "grabbing";
           }}
           onPointerUp={() => {
@@ -76,7 +86,12 @@ const Globe = () => {
             }
           }}
           className="w-full h-full"
-          style={{ cursor: "grab", contain: "layout paint size", opacity: 0, transition: "opacity 1s ease" }}
+          style={{
+            cursor: "grab",
+            contain: "layout paint size",
+            opacity: 0,
+            transition: "opacity 1s ease",
+          }}
         />
       </div>
     </div>
