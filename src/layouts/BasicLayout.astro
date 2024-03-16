@@ -5,11 +5,10 @@ interface Props {
   page?: "travel";
 }
 
-const { title, description, page } = Astro.props;
-const image =
-  page === "travel"
-    ? `${Astro.url.origin}/globe_preview.webp"`
-    : `${Astro.url.origin}/me.webp`;
+const { title, description } = Astro.props;
+
+// TODO: Edit image for preview
+const image = `${Astro.url.origin}/me.webp`;
 ---
 
 <!doctype html>

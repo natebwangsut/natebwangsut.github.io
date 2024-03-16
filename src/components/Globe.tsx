@@ -58,7 +58,8 @@ const Globe = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center w-full h-full">
+    // Putting globe on z -1 to prevent canvas blocking other items
+    <div className="flex items-center justify-center w-full h-full -mt-5 -z-1">
       <div className="w-full max-w-[900px] aspect-square m-auto">
         <canvas
           ref={ref}

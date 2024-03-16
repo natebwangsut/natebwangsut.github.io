@@ -1,6 +1,6 @@
 export const LINKS = {
-  github: "",
-  linkedin: "",
+  github: "https://github.com/natebwangsut",
+  linkedin: "https://linkedin.com/in/natebwangsut/",
   medium: "",
   discord: "",
   dribble: "",

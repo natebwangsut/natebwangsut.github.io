@@ -48,7 +48,7 @@ import Globe from "../components/Globe";
       title="Blog"
       href="/blog"
     >
-      Show thoughts and ideas
+      Shower thoughts and ideas
     </Card>
     <Card
       colSpan="md:col-span-1"
@@ -62,7 +62,15 @@ import Globe from "../components/Globe";
     </Card>
     <Now />
     <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
-      <p class="text-xs">© 2024 - Nate</p>
+      <p class="text-xs">
+        © {new Date().getFullYear()} | designed and developed by
+        <a
+          class="text-primary-400"
+          href="https://github.com/natebwangsut"
+          target="_blank"
+          rel="noreferrer">@natebwangsut</a
+        >
+      </p>
     </Card>
   </main>
 </Layout>

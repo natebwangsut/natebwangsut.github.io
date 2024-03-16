@@ -1,5 +1,5 @@
 // uno.config.ts
-import { defineConfig, presetUno, presetWebFonts } from "unocss";
+import { defineConfig, presetAttributify, presetTypography, presetUno, presetWebFonts } from "unocss";
 
 export default defineConfig({
   content: {
@@ -59,13 +59,16 @@ export default defineConfig({
     },
   },
   presets: [
+    presetAttributify(),
     presetUno(),
     presetWebFonts({
       provider: "fontshare",
       fonts: {
         sans: ["Cabinet Grotesk", "Satoshi"],
         serif: "Zodiak",
+        // mono: ["Jetbrains Mono", "Etan Mono", "monospace"],
       },
     }),
+    presetTypography(),
   ],
 });
