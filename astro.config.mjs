@@ -1,6 +1,5 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
-import netlify from "@astrojs/netlify";
 import robotsTxt from "astro-robots-txt";
 import UnoCSS from "@unocss/astro";
 import icon from "astro-icon";
@@ -15,17 +14,19 @@ export default defineConfig({
     sitemap(),
     robotsTxt({
       sitemap: [
-        "",
-        "",
+        "https://natebwangsut.github.io/sitemap-index.xml",
+        "https://natebwangsut.github.io/sitemap-0.xml",
       ],
     }),
     react(),
     UnoCSS({ injectReset: true }),
-    icon()
+    icon(),
   ],
   markdown: {
     remarkPlugins: [remarkReadingTime],
   },
-  output: "server",
-  adapter: netlify(),
+  image: {
+    // Example: Enable the Sharp-based image service
+    service: { entrypoint: "astro/assets/services/sharp" },
+  },
 });
