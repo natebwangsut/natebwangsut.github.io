@@ -10,7 +10,7 @@ const Globe = () => {
   const pointerInteractionMovement = useRef<number>(0);
   const [{ r }, api] = useSpring(() => ({
     r: 0,
-    config: { mass: 1, tension: 280, friction: 40, precision: 0.001 },
+    config: { mass: 1, tension: 400, friction: 30, precision: 0.001 },
   }));
 
   useEffect(() => {
@@ -29,15 +29,19 @@ const Globe = () => {
       diffuse: 2,
       mapSamples: 30000,
       mapBrightness: 2,
-      baseColor: [0.60, 0.60, 0.60],
-      markerColor: [0.007, 0.780, 0.612],
-      glowColor: [0.007, 0.780, 0.612],
+      baseColor: [0.6, 0.6, 0.6],
+      markerColor: [0.9, 0.9, 0.9],
+      glowColor: [0.007, 0.78, 0.612],
       opacity: 0.8,
       markers: [
-        { location: [13.7563, 100.5018], size: 0.1 }, // Bangkok
-        { location: [35.6764, 139.65], size: 0.1 }, // Tokyo
-        { location: [34.6937, 135.5023], size: 0.1 }, // Osaka
-        { location: [51.5072, 0.1276], size: 0.1 }, // London
+        { location: [13.7563, 100.5018], size: 0.06 }, // Bangkok
+        { location: [3.1408, 101.6932], size: 0.06 }, // KL
+        { location: [35.6764, 139.65], size: 0.06 }, // Tokyo
+        { location: [34.6937, 135.5023], size: 0.06 }, // Osaka
+        { location: [51.5072, 0.1276], size: 0.06 }, // London
+        { location: [47.3769, 8.5417], size: 0.06 }, // Zurich
+        { location: [-37.8409, 144.9464], size: 0.06 }, // Melbourne
+        { location: [-33.8688, 151.2093], size: 0.06 }, // Sydney
       ],
       onRender: (state) => {
         if (!pointerInteracting.current) phi += 0.005;
