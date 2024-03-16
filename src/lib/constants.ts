@@ -4,7 +4,7 @@ export const LINKS = {
   medium: "",
   discord: "",
   dribble: "",
-  twitter: ""
+  twitter: "",
 };
 
 export const loaderAnimation = [

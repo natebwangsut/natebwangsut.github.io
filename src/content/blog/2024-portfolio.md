@@ -32,9 +32,9 @@ Convinently, Gatsby at the time has gained tactions for being good static site g
 
 I tried Astro V1 at the time because I was fatigue with editing my webpage on Gatsby. You need to keep everything delcarative and things can go wrong when you have to do the manual work of mapping the GraphQL to the markdown frontmatter by yourself. Development became slow and hard to the point that I search for a better alternative that I can use while maintaining the same style / feel. I checked out Astro and it ticks all the boxes. However, this new Island Architecture breaks a lot of my component interactivity and I need to pickup the animation skill with `react-spring` to get it working.
 
-#### [v2] (*) where we are now
+#### [v2] (\*) where we are now
 
-[placeholder] 
+[placeholder]
 
 ## The Product
 

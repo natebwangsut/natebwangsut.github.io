@@ -1,13 +1,22 @@
 {
-  "name": "astro-bento-portfolio",
+  "name": "natebwangsut.github.io",
+  "private": true,
+  "version": "0.1.0",
+  "author": "Nate Bhurinat Wangsutthitham <nate.bwangsut@gmail.com>",
+  "license": "0BSD",
   "type": "module",
-  "version": "0.0.2",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "check": "astro check",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "bunx prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natebwangsut/natebwangsut.github.io"
   },
   "dependencies": {
     "@astrojs/netlify": "^5.1.3",

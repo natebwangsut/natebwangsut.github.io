@@ -16,7 +16,6 @@ const Time = () => {
     ReturnType<typeof setInterval>
   >(() => setInterval(updateClock, 1000));
 
-
   useEffect(() => {
     // interval = setInterval(updateClock, 1000);
     setIntervalState(setInterval(updateClock, 1000));

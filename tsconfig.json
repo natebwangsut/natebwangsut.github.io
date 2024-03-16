@@ -5,5 +5,5 @@
     "jsxImportSource": "react",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-  }
+  },
 }
