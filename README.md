@@ -1,20 +1,5 @@
 # natebwangsut
 
-Personal website
+> I do this for fun
 
-## Framework
-
-- React
-- Gatsby
-
-## Design
-
-> To be added
-
-## Technology
-
-> To be added
-
-## Deployment
-
-> To be added
+Personal portfiolio website

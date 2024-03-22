@@ -1,77 +1,75 @@
 ---
-import "../styles/global.css";
-import "../styles/fonts.css";
-import "../styles/palette.css";
-
-import config from "../config";
-
-import Landing from "../components/Landing.astro";
-import About from "../components/About.astro";
-import Experience from "../components/Experience.astro";
-import Projects from "../components/Projects.astro";
-
-import Layout from "../components/layout/Layout.svelte";
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card/index.astro";
+import Link from "../components/Link/index.astro";
+import IntroCard from "../components/IntroCard.astro";
+import ContactsCard from "../components/ContactsCard.astro";
+import TimeZone from "../components/TimeZoneCard.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Now from "../components/Now.astro";
+import Globe from "../components/Globe";
 ---
 
-<html lang="en">
-  <head>
-    <!-- Title -->
-    <title>{config.siteTitle}</title>
+<script>
+  import { stagger, spring, timeline, type TimelineDefinition } from "motion";
+  import { loaderAnimation } from "../lib/constants";
+  const cards = document.querySelectorAll(".card");
 
-    <!-- Preconnecting Google Fonts API -->
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin />
+  const sequence = [
+    loaderAnimation,
+    [
+      cards,
+      { y: ["40%", "0%"], opacity: [0, 1] },
+      {
+        at: "-0.1",
+        duration: 0.4,
+        delay: stagger(0.3),
+        easing: spring({ velocity: 100, stiffness: 50, damping: 10 }),
+      },
+    ],
+  ];
 
-    <!-- Base metadata -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content={config.siteDescription} />
+  timeline(sequence as TimelineDefinition);
+</script>
 
-    <!-- OpenGraph -->
-    <meta property="og:title" content={config.siteTitle} />
-    <meta property="og:description" content={config.siteDescription} />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content={`${config.siteUrl}${config.siteImage}`}
-    />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content={config.twitter.handle} />
-    <meta name="twitter:title" content={config.siteTitle} />
-    <meta name="twitter:description" content={config.siteDescription} />
-    <meta
-      name="twitter:image"
-      content={`${config.siteUrl}${config.siteImageAlt}`}
-    />
-  </head>
-  <body>
-    <Layout>
-      <Landing />
-      <About />
-      <Experience />
-      <Projects />
-    </Layout>
-  </body>
-</html>
-
-<!--
-	Global Styles
-	-
-	When <style> tag is put in front of the html tag, the astro parse would strip off html attributes
--->
-<style>
-  /* Passing down to children */
-  :global(a) {
-    color: var(--mint);
-    transition: all 0.2s ease-out;
-    text-decoration: none;
-  }
-
-  /* Change style on hover */
-  :global(a:hover),
-  :global(a:active) {
-    color: var(--mint-8);
-  }
-</style>
+<Layout
+  title="Nate Bhurinat Wangsutthitham"
+  description="Just another software engineer"
+>
+  <main
+    class="text-white m-auto p-2 grid gap-2 max-w-6xl overflow-hidden relative w-full sm:p-4 sm:gap-2 md:grid-cols-2 md:gap-3 md:p-6 lg:h-screen lg:grid-rows-8 lg:grid-cols-4 lg:gap-4 lg:max-h-[800px]"
+  >
+    <IntroCard />
+    <AboutMe />
+    <ContactsCard />
+    <TimeZone />
+    <Card
+      colSpan="md:col-span-1"
+      rowSpan="md:row-span-2"
+      title="Blog"
+      titleClass="font-bold"
+      href="blog"
+    >
+      <div class="h-full w-full absolute inset-0"></div>
+      <p class="mt-3 text-gray-500">Collection of shower thoughts & ideas</p>
+    </Card>
+    <Card
+      colSpan="md:col-span-1"
+      rowSpan="md:row-span-1"
+      title="Travel Book"
+      titleClass="font-bold"
+      href="travel"
+    >
+      <div class="h-full w-full absolute inset-0 -z-10">
+        <Globe client:load />
+      </div>
+    </Card>
+    <Now />
+    <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
+      <p class="text-xs">
+        © {new Date().getFullYear()} | designed and developed by
+        <Link href="https://github.com/natebwangsut">@natebwangsut</Link>
+      </p>
+    </Card>
+  </main>
+</Layout>

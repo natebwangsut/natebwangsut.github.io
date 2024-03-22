@@ -1,16 +1,9 @@
 {
-  "extends": "astro/tsconfigs/base",
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": ".",
-    // Solid specific settings
-    "jsx": "preserve",
-    "jsxImportSource": "solid-js",
-
-    // Enable node-style module resolution, for things like npm package imports.
-    "moduleResolution": "node",
-
-    // Enable JSON imports.
-    "resolveJsonModule": true,
-    "verbatimModuleSyntax": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
   },
 }

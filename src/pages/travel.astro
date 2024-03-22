@@ -1,0 +1,37 @@
+---
+import Globe from "../components/Globe";
+import BasicLayout from "../layouts/BasicLayout.astro";
+---
+
+<script>
+  import { timeline, type TimelineDefinition } from "motion";
+
+  const sequence = [
+    [
+      ".loaderRef",
+      { opacity: [1, 0], pointerEvents: "none" },
+      { easing: "ease-out" },
+    ],
+  ];
+
+  timeline(sequence as TimelineDefinition);
+</script>
+
+<BasicLayout
+  title="Nate Bhurinat W. - Places I've been"
+  description="Spinning globe with places I've been to."
+  page="travel"
+>
+  <main class="m-auto w-full h-full flex flex-col items-center justify-center">
+    <a
+      href="/"
+      class="text-white absolute bg-neutral-900 hover:bg-neutral-800 top-4 left-4 px-4 py-2 mb-8 border-1 border-solid border-neutral-600 rounded-lg"
+    >
+      Back
+    </a>
+    <Globe client:load />
+    <div class="text-white mb-20">
+      The globe is interactive, you can drag it around
+    </div>
+  </main>
+</BasicLayout>

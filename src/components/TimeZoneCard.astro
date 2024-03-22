@@ -1,0 +1,41 @@
+---
+import Card from "./Card/index.astro";
+---
+
+<script>
+  import { formatTime } from "../lib/helpers";
+  const updateTime = () => {
+    var now = new Date();
+    const timeDisplay = document.getElementById("timeDisplay");
+    if (timeDisplay) {
+      timeDisplay.textContent = formatTime(now);
+      timeDisplay.setAttribute("datetime", now.toISOString());
+    }
+  };
+
+  // Update time every second
+  setInterval(updateTime, 1000);
+
+  // Run initially to avoid delay
+  updateTime();
+</script>
+
+<style>
+  time {
+    /* Using slashed zero and tabular numbers */
+    font-feature-settings: "ss02", "tnum";
+  }
+</style>
+
+<Card
+  colSpan="lg:col-span-2"
+  rowSpan="md:row-span-2"
+  title="Current Local Time"
+>
+  <time
+    datetime=""
+    id="timeDisplay"
+    class="text-2xl xl:text-5xl xl:whitespace-nowrap w-full h-[calc(100%-20px)] flex xl:justify-center xl:items-center"
+  >
+  </time>
+</Card>

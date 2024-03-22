@@ -1,0 +1,60 @@
+---
+import { Icon } from "astro-icon/components";
+import Content from "./Content.astro";
+
+interface Props {
+  title?: string;
+  titleClass?: string;
+  body?: string;
+  bodyClass?: string;
+  colSpan?: string;
+  rowSpan?: string;
+  href?: string;
+  colorText?: string;
+}
+
+const {
+  title,
+  titleClass,
+  body,
+  bodyClass,
+  colSpan,
+  rowSpan,
+  href,
+  colorText,
+} = Astro.props;
+---
+
+<div
+  class={`card group overflow-hidden transfor-y-[-40%] bg-darkslate-600 shadow-lg rounded-lg p-6 border border-darkslate-100 hover:border-primary-600 align-start flex-none justify-start relative transform perspective-1200 w-full transition duration-75 ease-in-out col-span-1 h-auto ${
+    colSpan || "md:col-span-2"
+  } ${rowSpan || ""}`}
+>
+  {
+    href ? (
+      <a href={href} class={`h-full w-full ${colorText || " "}`}>
+        <Icon
+          name="ri:arrow-right-up-line"
+          class="h-6 float-right group-hover:text-primary-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ease-in-out duration-100 z-20"
+        />
+        <Content
+          title={title}
+          titleClass={`${titleClass}`}
+          body={body}
+          bodyClass={bodyClass}
+        >
+          <slot />
+        </Content>
+      </a>
+    ) : (
+      <Content
+        title={title}
+        titleClass={titleClass}
+        body={body}
+        bodyClass={bodyClass}
+      >
+        <slot />
+      </Content>
+    )
+  }
+</div>

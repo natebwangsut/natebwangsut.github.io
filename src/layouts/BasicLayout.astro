@@ -1,0 +1,70 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  page?: "travel";
+}
+
+const { title, description } = Astro.props;
+
+// TODO: Edit image for preview
+const image = `${Astro.url.origin}/me.webp`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="/favicon/sitemap-index.xml" />
+    <!-- Basic OG tags for sharing your website's content on platforms like Facebook and LinkedIn -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.origin} />
+    <meta property="og:image" content={image} />
+    <!-- Basic Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'" />
+  </head>
+  <body
+    class="bg-darkslate-800 md:h-screen flex flex-col justify-center items-center"
+  >
+    <slot name="loader" />
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    font-family: Inter, sans-serif;
+    font-feature-settings:
+      "dlig",
+      "liga" 1,
+      "calt" 1;
+  }
+  @supports (font-variation-settings: normal) {
+    :root {
+      font-family: InterVariable, sans-serif;
+    }
+  }
+
+  body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  b {
+    font-weight: 700 !important;
+  }
+</style>

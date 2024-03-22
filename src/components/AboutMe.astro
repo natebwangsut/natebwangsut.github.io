@@ -1,0 +1,26 @@
+---
+import Card from "./Card/index.astro";
+import Link from "./Link/index.astro";
+---
+
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-6" title="Me">
+  <div class="flex flex-col gap-2 mt-3">
+    <p class="text-sm font-light">
+      I am a Rust lover, who does not love <Link
+        href="https://www.rustacean.net">Ferris</Link
+      >, our rustacean? My primary tools of choice includes:
+      <ul class="list-disc list-inside">
+        <li class="text-sm font-light">Rust</li>
+        <li class="text-sm font-light">Golang</li>
+        <li class="text-sm font-light">React</li>
+        <li class="text-sm font-light">Node.js</li>
+      </ul>
+    </p>
+    <p class="text-sm font-light">
+      I am an engineer at heart and I love contributing to opensource projects.
+    </p>
+    <p class="text-sm font-light">
+      I enjoyed travelling and connecting to people across the globe.
+    </p>
+  </div>
+</Card>
