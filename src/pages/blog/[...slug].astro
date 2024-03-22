@@ -13,6 +13,13 @@ if (slug === undefined) {
 // );
 
 // const entry = posts.find((entry) => entry.slug === slug);
+
+export function getStaticPaths() {
+  return [
+    {params: {slug: '2024-portfolio'}},
+  ];
+}
+
 const entry = await getEntry("blog", slug);
 if (entry === undefined) {
   return Astro.redirect("/404");
