@@ -44,7 +44,7 @@ const Globe = () => {
         { location: [-33.8688, 151.2093], size: 0.06 }, // Sydney
       ],
       onRender: (state) => {
-        if (!pointerInteracting.current) phi += 0.005;
+        if (!pointerInteracting.current) phi += 0.002;
         state.phi = phi + r.get();
         state.width = width * 2;
         state.height = width * 2;
@@ -59,8 +59,8 @@ const Globe = () => {
 
   return (
     // Putting globe on z -1 to prevent canvas blocking other items
-    <div className="flex items-center justify-center w-full h-full -mt-5 -z-1">
-      <div className="w-full max-w-[900px] aspect-square m-auto">
+    <div className="flex items-center justify-center w-full h-full mt-20">
+      <div className="w-full max-w-[900px] aspect-square">
         <canvas
           ref={ref}
           onPointerDown={(e) => {

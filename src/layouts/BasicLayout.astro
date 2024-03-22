@@ -33,7 +33,9 @@ const image = `${Astro.url.origin}/me.webp`;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
 
-    <link rel="preconnect" href="https://cdn.fontshare.com" />
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'" />
   </head>
   <body
     class="bg-darkslate-800 md:h-screen flex flex-col justify-center items-center"
@@ -44,39 +46,22 @@ const image = `${Astro.url.origin}/me.webp`;
 </html>
 
 <style is:global>
-  @font-face {
-    font-family: "CabinetGrotesk";
-    src: url("/fonts/CabinetGrotesk-Variable.ttf") format("truetype-variations");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-    font-weight: 100 1000;
+  :root {
+    font-family: Inter, sans-serif;
+    font-feature-settings:
+      "dlig",
+      "liga" 1,
+      "calt" 1;
   }
-  @font-face {
-    font-family: "Satoshi";
-    src: url("/fonts/Satoshi-Variable.ttf") format("truetype-variations");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-    font-weight: 100 1000;
+  @supports (font-variation-settings: normal) {
+    :root {
+      font-family: InterVariable, sans-serif;
+    }
   }
 
   body {
     margin: 0;
-    font-family: "Satoshi", sans-serif;
     -webkit-font-smoothing: antialiased;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Cabinet Grotesk", sans-serif;
-  }
-  p {
-    font-family: "Satoshi";
   }
 
   b {

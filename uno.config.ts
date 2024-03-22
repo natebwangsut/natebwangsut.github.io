@@ -4,7 +4,7 @@ import {
   presetAttributify,
   presetTypography,
   presetUno,
-  presetWebFonts,
+  // presetWebFonts,
 } from "unocss";
 
 export default defineConfig({
@@ -15,9 +15,6 @@ export default defineConfig({
     boxShadow: {
       custom: `2px 2px 0`,
       "custom-hover": `1px 1px 0`,
-    },
-    fontFamily: {
-      sans: ["CabinetGrotesk", "Satoshi"],
     },
     gridTemplateRows: {
       "auto-250": "repeat(auto-fill, 250px)",
@@ -67,14 +64,12 @@ export default defineConfig({
   presets: [
     presetAttributify(),
     presetUno(),
-    presetWebFonts({
-      provider: "fontshare",
-      fonts: {
-        sans: ["Cabinet Grotesk", "Satoshi"],
-        serif: "Zodiak",
-        // mono: ["Jetbrains Mono", "Etan Mono", "monospace"],
-      },
-    }),
+    // presetWebFonts({
+    //   provider: "google",
+    //   fonts: {
+    //     sans: "Inter",
+    //   },
+    // }),
     presetTypography(),
   ],
 });

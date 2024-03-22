@@ -4,12 +4,15 @@ import Pulse from "./Pulse.astro";
 ---
 
 <Card colSpan="md:col-span-1" rowSpan="md:row-span-2">
-  <div class="flex justify-between w-full items-start mb-3">
+  <div class="flex justify-between w-full items-start">
     <div class="flex flex-col">
-      <h2>Now</h2>
+      <h2 class="text-xl font-light">Now</h2>
       <span class="text-xs text-gray-500 cursor-pointer"></span>
     </div>
     <Pulse />
   </div>
-  <p class="text-xs">Stuck in series of meetings</p>
+  <ul class="mt-3 list-disc list-inside">
+    <li class="text-xs">Stuck in series of meetings</li>
+    <li class="text-xs">Not moving in Bangkok traffic</li>
+  </ul>
 </Card>

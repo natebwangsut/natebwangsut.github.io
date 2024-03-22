@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card/index.astro";
+import Link from "../components/Link/index.astro";
 import IntroCard from "../components/IntroCard.astro";
 import ContactsCard from "../components/ContactsCard.astro";
 import TimeZone from "../components/TimeZoneCard.astro";
@@ -46,14 +47,17 @@ import Globe from "../components/Globe";
       colSpan="md:col-span-1"
       rowSpan="md:row-span-2"
       title="Blog"
-      href="/blog"
+      titleClass="font-bold"
+      href="blog"
     >
-      Shower thoughts and ideas
+      <div class="h-full w-full absolute inset-0"></div>
+      <p class="mt-3 text-gray-500">Collection of shower thoughts & ideas</p>
     </Card>
     <Card
       colSpan="md:col-span-1"
       rowSpan="md:row-span-1"
-      title="Places I've been to"
+      title="Travel Book"
+      titleClass="font-bold"
       href="travel"
     >
       <div class="h-full w-full absolute inset-0 -z-10">
@@ -64,12 +68,7 @@ import Globe from "../components/Globe";
     <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
       <p class="text-xs">
         © {new Date().getFullYear()} | designed and developed by
-        <a
-          class="text-primary-400"
-          href="https://github.com/natebwangsut"
-          target="_blank"
-          rel="noreferrer">@natebwangsut</a
-        >
+        <Link href="https://github.com/natebwangsut">@natebwangsut</Link>
       </p>
     </Card>
   </main>
