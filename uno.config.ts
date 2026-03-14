@@ -3,8 +3,7 @@ import {
   defineConfig,
   presetAttributify,
   presetTypography,
-  presetUno,
-  // presetWebFonts,
+  presetWind3,
 } from "unocss";
 
 export default defineConfig({
@@ -63,13 +62,7 @@ export default defineConfig({
   },
   presets: [
     presetAttributify(),
-    presetUno(),
-    // presetWebFonts({
-    //   provider: "google",
-    //   fonts: {
-    //     sans: "Inter",
-    //   },
-    // }),
+    presetWind3(),
     presetTypography(),
   ],
 });

@@ -1,31 +1,42 @@
 ---
-import { getEntry } from "astro:content";
+import { getCollection, render } from "astro:content";
+import { formatDate } from "../../lib/helpers";
+import BasicLayout from "../../layouts/BasicLayout.astro";
 
-const { slug } = Astro.params;
-
-if (slug === undefined) {
-  throw new Error("slug is missing");
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: post,
+  }));
 }
 
-// const posts = (await getCollection("blog")).sort(
-//   (blogEntryA, blogEntryB) =>
-//     blogEntryB.data.pubDate.getTime() - blogEntryA.data.pubDate.getTime()
-// );
-
-// const entry = posts.find((entry) => entry.slug === slug);
-
-export function getStaticPaths() {
-  return [
-    {params: {slug: '2024-portfolio'}},
-  ];
-}
-
-const entry = await getEntry("blog", slug);
-if (entry === undefined) {
-  return Astro.redirect("/404");
-}
-
-const { Content } = await entry.render();
+const entry = Astro.props;
+const { Content, remarkPluginFrontmatter } = await render(entry);
+const title = entry.data.title ?? entry.id;
+const pubDate = entry.data.pubDate;
 ---
 
-<Content />
+<BasicLayout
+  title={`${title} - Bhurinat Wangsutthitham`}
+  description={entry.data.description ?? "Blog post"}
+>
+  <main class="mx-auto max-w-3xl w-full h-screen p-8 text-neutral-100">
+    <a
+      href="/blog"
+      class="text-white bg-neutral-900 hover:bg-neutral-800 px-4 py-2 border-1 border-solid border-neutral-600 rounded-lg mb-8"
+    >Back</a>
+    <div class="my-10">
+      <h1 class="text-5xl font-semibold">{title}</h1>
+      <div class="flex justify-between pt-4 text-gray-500 text-sm">
+        {pubDate && <p>{formatDate(new Date(pubDate))}</p>}
+        {remarkPluginFrontmatter.minutesRead && (
+          <span>{remarkPluginFrontmatter.minutesRead}</span>
+        )}
+      </div>
+    </div>
+    <article class="pb-8 prose prose-slate prose-invert">
+      <Content />
+    </article>
+  </main>
+</BasicLayout>

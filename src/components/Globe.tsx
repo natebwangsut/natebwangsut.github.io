@@ -14,12 +14,14 @@ const Globe = () => {
   }));
 
   useEffect(() => {
+    if (!ref.current) return;
+
     let phi = 0;
     let width = 0;
     const onResize = () => ref.current && (width = ref.current.offsetWidth);
     window.addEventListener("resize", onResize);
     onResize();
-    const globe = cobe(ref.current!, {
+    const globe = cobe(ref.current, {
       devicePixelRatio: 2,
       width: width * 2,
       height: width * 2,
@@ -50,7 +52,9 @@ const Globe = () => {
         state.height = width * 2;
       },
     });
-    setTimeout(() => (ref.current!.style.opacity = "1"));
+    setTimeout(() => {
+      if (ref.current) ref.current.style.opacity = "1";
+    });
     return () => {
       globe.destroy();
       window.removeEventListener("resize", onResize);
@@ -66,15 +70,15 @@ const Globe = () => {
           onPointerDown={(e) => {
             pointerInteracting.current =
               e.clientX - pointerInteractionMovement.current;
-            ref.current!.style.cursor = "grabbing";
+            if (ref.current) ref.current.style.cursor = "grabbing";
           }}
           onPointerUp={() => {
             pointerInteracting.current = null;
-            ref.current!.style.cursor = "grab";
+            if (ref.current) ref.current.style.cursor = "grab";
           }}
           onPointerOut={() => {
             pointerInteracting.current = null;
-            ref.current!.style.cursor = "grab";
+            if (ref.current) ref.current.style.cursor = "grab";
           }}
           onMouseMove={(e) => {
             if (pointerInteracting.current !== null) {
