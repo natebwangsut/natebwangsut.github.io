@@ -4,7 +4,7 @@ import BasicLayout from "../layouts/BasicLayout.astro";
 ---
 
 <script>
-  import { timeline, type TimelineDefinition } from "motion";
+  import { timeline } from "motion";
 
   const sequence = [
     [
@@ -14,7 +14,7 @@ import BasicLayout from "../layouts/BasicLayout.astro";
     ],
   ];
 
-  timeline(sequence as TimelineDefinition);
+  timeline(sequence);
 </script>
 
 <BasicLayout

@@ -26,7 +26,9 @@ export default defineConfig({
     remarkPlugins: [remarkReadingTime],
   },
   image: {
-    // Example: Enable the Sharp-based image service
     service: { entrypoint: "astro/assets/services/sharp" },
+  },
+  experimental: {
+    rustCompiler: true,
   },
 });

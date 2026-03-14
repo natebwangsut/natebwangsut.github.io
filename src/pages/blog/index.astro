@@ -10,12 +10,12 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <script>
-  import { timeline, type TimelineDefinition } from "motion";
+  import { timeline } from "motion";
   import { loaderAnimation } from "../../lib/constants";
 
   const sequence = [loaderAnimation];
 
-  timeline(sequence as TimelineDefinition);
+  timeline(sequence);
 </script>
 
 <Layout
@@ -37,7 +37,7 @@ const posts = (await getCollection("blog")).sort(
           <PostRow
             title={post.data.title}
             date={post.data.pubDate}
-            url={post.slug}
+            url={post.id}
           />
         ))
       }

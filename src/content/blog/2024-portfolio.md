@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/LayoutBlogPost.astro
 title: "Evolution of my portfolio website"
 description: "Journey of how creating one portfolio would expose you to technologies that you've never know existed"
 pubDate: 2024-01-01

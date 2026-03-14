@@ -6,8 +6,7 @@ export function getCurrentTime(): Date {
   // Create a date object with the current UTC time
   const now = new Date();
 
-  // Convert the UTC time to Thailand's time
-  const offsetThailand = 7; // Thailand is in Central European Summer Time (UTC+2), but you might need to adjust this based on Daylight Saving Time
+  const offsetThailand = 7; // UTC+7
   now.setHours(now.getUTCHours() + offsetThailand);
 
   return now;
