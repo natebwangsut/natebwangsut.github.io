@@ -20,43 +20,35 @@
   },
   "dependencies": {
     "@astrojs/compiler-rs": "latest",
-    "@astrojs/react": "^5.0.0",
-    "@astrojs/rss": "^4.0.17",
-    "@astrojs/sitemap": "^3.7.1",
-    "@iconify-json/ri": "^1.1.22",
-    "@react-spring/web": "^9.7.4",
-    "astro": "^6.0.0",
-    "astro-icon": "^1.1.0",
+    "@astrojs/markdown-remark": "^7.2.0",
+    "@astrojs/react": "^5.0.6",
+    "@astrojs/rss": "^4.0.18",
+    "@astrojs/sitemap": "^3.7.3",
+    "@iconify-json/ri": "^1.2.10",
+    "@react-spring/web": "^10.1.0",
+    "astro": "^6.4.0",
+    "astro-icon": "^1.1.5",
     "astro-robots-txt": "^1.0.0",
-    "cobe": "^0.6.3",
+    "cobe": "^2.0.1",
     "mdast-util-to-string": "^4.0.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
     "reading-time": "^1.5.0"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.7",
+    "@astrojs/check": "^0.9.9",
     "@types/markdown-it": "^14.1.2",
     "@types/mdast": "^4.0.4",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
     "@types/sanitize-html": "^2.16.1",
-    "@unocss/astro": "^66.6.6",
-    "@unocss/postcss": "^66.6.6",
-    "@unocss/reset": "^66.6.6",
-    "markdown-it": "^14.1.0",
-    "motion": "^10.18.0",
-    "sanitize-html": "^2.13.0",
-    "typescript": "^5.9.3",
-    "unocss": "^66.6.6"
-  },
-  "pnpm": {
-    "overrides": {
-      "vite": "^8.0.0"
-    },
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "sharp"
-    ]
+    "@unocss/astro": "^66.7.0",
+    "@unocss/postcss": "^66.7.0",
+    "@unocss/reset": "^66.7.0",
+    "markdown-it": "^14.2.0",
+    "motion": "^12.40.0",
+    "sanitize-html": "^2.17.4",
+    "typescript": "^6.0.3",
+    "unocss": "^66.7.0"
   }
 }
