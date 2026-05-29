@@ -4,17 +4,15 @@ import BasicLayout from "../layouts/BasicLayout.astro";
 ---
 
 <script>
-  import { timeline } from "motion";
+  import { animate } from "motion";
 
-  const sequence = [
+  animate([
     [
       ".loaderRef",
       { opacity: [1, 0], pointerEvents: "none" },
-      { easing: "ease-out" },
+      { ease: "easeOut" },
     ],
-  ];
-
-  timeline(sequence);
+  ]);
 </script>
 
 <BasicLayout

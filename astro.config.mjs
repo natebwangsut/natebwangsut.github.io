@@ -5,6 +5,7 @@ import UnoCSS from "@unocss/astro";
 import icon from "astro-icon";
 
 import react from "@astrojs/react";
+import { unified } from "@astrojs/markdown-remark";
 import { remarkReadingTime } from "./src/lib/remark-reading-time";
 
 // https://astro.build/config
@@ -23,7 +24,9 @@ export default defineConfig({
     icon(),
   ],
   markdown: {
-    remarkPlugins: [remarkReadingTime],
+    processor: unified({
+      remarkPlugins: [remarkReadingTime],
+    }),
   },
   image: {
     service: { entrypoint: "astro/assets/services/sharp" },

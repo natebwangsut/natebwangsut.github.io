@@ -10,12 +10,10 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <script>
-  import { timeline } from "motion";
+  import { animate } from "motion";
   import { loaderAnimation } from "../../lib/constants";
 
-  const sequence = [loaderAnimation];
-
-  timeline(sequence);
+  animate([loaderAnimation]);
 </script>
 
 <Layout
