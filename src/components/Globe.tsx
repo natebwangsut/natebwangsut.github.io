@@ -10,6 +10,10 @@ type City = {
   country: string;
 };
 
+type GlobeProps = {
+  showMarkerLabels?: boolean;
+};
+
 const CITIES: City[] = [
   { location: [13.7563, 100.5018], city: "Bangkok", country: "Thailand" },
   { location: [3.1408, 101.6932], city: "Kuala Lumpur", country: "Malaysia" },
@@ -53,7 +57,7 @@ const project = (location: [number, number], phi: number) => {
   return { x: (c + 1) / 2, y: (-s + 1) / 2, facing };
 };
 
-const Globe = () => {
+const Globe = ({ showMarkerLabels = true }: GlobeProps) => {
   const ref = useRef<HTMLCanvasElement | null>(null);
   const markerRefs = useRef<(HTMLDivElement | null)[]>([]);
   const pointerInteracting = useRef<number | null>(null);
@@ -110,7 +114,8 @@ const Globe = () => {
         // Fade out as a marker rotates to the back of the globe.
         const opacity = facing > 0 ? Math.min(1, facing * 6) : 0;
         el.style.opacity = `${opacity}`;
-        el.style.pointerEvents = opacity > 0.5 ? "auto" : "none";
+        el.style.pointerEvents =
+          showMarkerLabels && opacity > 0.5 ? "auto" : "none";
       }
       raf = requestAnimationFrame(render);
     };
@@ -124,7 +129,7 @@ const Globe = () => {
       globe.destroy();
       window.removeEventListener("resize", onResize);
     };
-  }, []);
+  }, [showMarkerLabels]);
 
   return (
     // Putting globe on z -1 to prevent canvas blocking other items
@@ -173,6 +178,20 @@ const Globe = () => {
               0% { transform: translate(-50%, -50%) scale(1); opacity: 0.45; }
               70%, 100% { transform: translate(-50%, -50%) scale(3); opacity: 0; }
             }
+
+            .globe-marker:hover .globe-marker-ring {
+              border-color: rgba(255, 255, 255, 0.7);
+              transform: translate(-50%, -50%) scale(1);
+            }
+
+            .globe-marker:hover .globe-marker-core {
+              transform: translate(-50%, -50%) scale(1.25);
+            }
+
+            .globe-marker:hover .globe-marker-tooltip {
+              opacity: 1;
+              transform: translate(-50%, 0) scale(1);
+            }
           `}</style>
           {CITIES.map((c, i) => (
             <div
@@ -180,8 +199,8 @@ const Globe = () => {
               ref={(el) => {
                 markerRefs.current[i] = el;
               }}
-              className="group absolute top-0 left-0 h-6 w-6 cursor-pointer will-change-transform"
-              style={{ opacity: 0 }}
+              className="globe-marker absolute top-0 left-0 h-6 w-6 cursor-pointer will-change-transform"
+              style={{ opacity: 0, pointerEvents: "none" }}
             >
               {/* slow pulse halo */}
               <span
@@ -192,19 +211,21 @@ const Globe = () => {
               {/* expanding ring on hover */}
               <span
                 aria-hidden="true"
-                className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 scale-50 rounded-full ring-1 ring-white/0 transition-all duration-200 ease-out group-hover:scale-100 group-hover:ring-white/70"
+                className="globe-marker-ring absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 scale-50 rounded-full border border-white/0 transition-all duration-200 ease-out"
               ></span>
               {/* crisp core dot */}
               <span
                 aria-hidden="true"
-                className="absolute left-1/2 top-1/2 h-[7px] w-[7px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_6px_1px_rgba(255,255,255,0.55)] transition-transform duration-200 ease-out group-hover:scale-125"
+                className="globe-marker-core absolute left-1/2 top-1/2 h-[7px] w-[7px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_6px_1px_rgba(255,255,255,0.55)] transition-transform duration-200 ease-out"
               ></span>
-              <span
-                role="tooltip"
-                className="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 translate-y-1 scale-95 whitespace-nowrap rounded-md border border-white/10 bg-darkslate-900/90 px-2.5 py-1 text-xs font-light tracking-wide text-white opacity-0 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100"
-              >
-                {c.city}, {c.country}
-              </span>
+              {showMarkerLabels && (
+                <span
+                  role="tooltip"
+                  className="globe-marker-tooltip pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 translate-y-1 scale-95 whitespace-nowrap rounded-md border border-white/10 bg-darkslate-900/90 px-2.5 py-1 text-xs font-light tracking-wide text-white opacity-0 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+                >
+                  {c.city}, {c.country}
+                </span>
+              )}
             </div>
           ))}
         </div>
